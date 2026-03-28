@@ -51,7 +51,7 @@ export function Sidebar() {
   };
 
   return (
-    <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 w-[260px] min-w-[260px]">
+    <div className="flex shrink-0 flex-col gap-y-5 overflow-y-auto bg-gray-900 px-4 w-[200px]">
       {/* Logo / Brand */}
       <div className="flex h-16 shrink-0 items-center">
         <span className="text-base font-semibold text-white">Fleet <span className="text-xs text-gray-400">clone</span></span>

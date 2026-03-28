@@ -4,6 +4,7 @@ import { useAppStore } from "../stores/appStore";
 import { updateAgent } from "../api/agents";
 import { GraphCanvas } from "./graph/GraphCanvas";
 import { InspectorPanel } from "./graph/InspectorPanel";
+import { EditorChatPanel } from "./EditorChatPanel";
 import { buildGraphElements } from "./graph/useGraphLayout";
 import type { ToolConfig, SubAgentConfig, AvailableTool } from "../types";
 
@@ -21,6 +22,9 @@ export function AgentEditor() {
   const [availableTools, setAvailableTools] = useState<AvailableTool[]>([]);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+
+  // Chat panel
+  const [showChat, setShowChat] = useState(true);
 
   // Graph state
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>("agent");
@@ -207,8 +211,25 @@ export function AgentEditor() {
         </div>
       </div>
 
-      {/* Canvas + Inspector split */}
+      {/* Chat + Canvas + Inspector split */}
       <div className="flex-1 flex overflow-hidden" style={{ minHeight: 0 }}>
+        {/* Embedded chat panel */}
+        {showChat && (
+          <div style={{ width: 400, flexShrink: 0 }}>
+            <EditorChatPanel onHide={() => setShowChat(false)} />
+          </div>
+        )}
+        {/* Show Chat toggle when hidden */}
+        {!showChat && (
+          <button
+            onClick={() => setShowChat(true)}
+            className="flex items-center gap-1.5 px-3 py-2 border-r border-gray-800 text-xs text-gray-500 hover:text-white bg-[#0f1117] hover:bg-white/5 transition-colors"
+            style={{ writingMode: "vertical-rl" }}
+          >
+            Show Chat
+          </button>
+        )}
+        {/* Graph canvas */}
         <div style={{ flex: 1, minWidth: 0 }}>
           <GraphCanvas
           nodes={nodes}
