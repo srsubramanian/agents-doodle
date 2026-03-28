@@ -51,19 +51,31 @@ export function Sidebar() {
   };
 
   return (
-    <div className="w-[280px] min-w-[280px] bg-[#111827] border-r border-gray-800 flex flex-col h-full">
+    <div className="w-[220px] min-w-[220px] bg-[#111827] border-r border-gray-800 flex flex-col h-full">
       {/* Header */}
-      <div className="p-4 border-b border-gray-800">
-        <h1 className="text-lg font-semibold text-white">Agents Doodle</h1>
+      <div className="px-4 py-3 border-b border-gray-800">
+        <h1 className="text-base font-semibold text-white">Fleet <span className="text-gray-500 text-xs">clone</span></h1>
       </div>
 
-      {/* New Agent Button */}
-      <div className="p-3">
+      {/* Nav links */}
+      <div className="px-2 py-2 space-y-0.5">
+        <div className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg cursor-pointer">
+          <span className="text-xs">💬</span> Chat
+        </div>
+        <div className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg cursor-pointer">
+          <span className="text-xs">📥</span> Inbox
+        </div>
+      </div>
+
+      {/* My Agents + New Agent Button */}
+      <div className="flex items-center justify-between px-3 py-1.5">
+        <span className="text-xs text-gray-500 uppercase tracking-wider font-medium">My Agents</span>
         <button
           onClick={handleNewAgent}
-          className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+          className="text-gray-400 hover:text-white text-lg leading-none"
+          title="New agent"
         >
-          + New Agent
+          +
         </button>
       </div>
 
@@ -124,15 +136,32 @@ export function Sidebar() {
         ))}
       </div>
 
-      {/* Footer */}
-      <div className="p-3 border-t border-gray-800">
-        <div className="flex items-center gap-2">
-          <div
-            onClick={() => setView("editor")}
-            className="text-xs text-gray-500 hover:text-gray-300 cursor-pointer"
-          >
-            Edit Agent
+      {/* Explore section */}
+      <div className="px-2 py-2 border-t border-gray-800 mt-auto">
+        <div className="px-3 py-1 text-xs text-gray-600 uppercase tracking-wider font-medium">Explore</div>
+        <div className="space-y-0.5">
+          <div className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-500 hover:text-gray-300 hover:bg-gray-800/50 rounded-lg cursor-pointer">
+            <span>🔌</span> Integrations
           </div>
+          <div className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-500 hover:text-gray-300 hover:bg-gray-800/50 rounded-lg cursor-pointer">
+            <span>⚡</span> Skills
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-500 hover:text-gray-300 hover:bg-gray-800/50 rounded-lg cursor-pointer">
+            <span>📋</span> Templates
+          </div>
+        </div>
+      </div>
+
+      {/* Settings + user */}
+      <div className="px-3 py-3 border-t border-gray-800">
+        <div className="flex items-center gap-2 px-2 py-1.5 text-xs text-gray-500 hover:text-gray-300 cursor-pointer mb-2">
+          <span>⚙️</span> Settings
+        </div>
+        <div className="flex items-center gap-2 px-2">
+          <div className="w-6 h-6 rounded-full bg-green-600/30 text-green-400 flex items-center justify-center text-[10px] font-bold">
+            U
+          </div>
+          <div className="text-[11px] text-gray-500 truncate">Personal</div>
         </div>
       </div>
     </div>

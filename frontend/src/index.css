@@ -26,3 +26,28 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #4b5563;
 }
+
+/* React Flow dark theme overrides */
+.react-flow__controls button {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  fill: #9ca3af !important;
+}
+.react-flow__controls button:hover {
+  background: #374151 !important;
+  fill: #e5e7eb !important;
+}
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+.react-flow__handle {
+  width: 6px !important;
+  height: 6px !important;
+  background: #1a192b !important;
+  border: 1px solid #8790ab !important;
+  border-radius: 100% !important;
+  opacity: 1 !important;
+}
+.react-flow__handle:hover {
+  opacity: 1;
+}

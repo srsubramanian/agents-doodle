@@ -152,7 +152,45 @@ cd frontend && npm run build       # production build
 - Startup migration helper: `PRAGMA table_info` + `ALTER TABLE ADD COLUMN`
 - Added: `agents.tools_config`, `agents.subagents_config`, `messages.metadata_json`
 
+## Phase 3 Status: COMPLETE (Verified end-to-end)
+
+### Visual Graph Editor
+- **React Flow** (`@xyflow/react` v12) canvas with dark theme, dot grid background, zoom controls
+- **4 custom nodes** with color-coded left borders and connection handles:
+  - **Channels** (cyan `#06b6d4`) — shows "Chat" as the active channel
+  - **Agent** (purple `#8b5cf6`) — shows name, model, truncated instructions, purple avatar
+  - **Toolbox** (blue `#3b82f6`) — lists enabled tools with count, updates in real-time
+  - **Sub-agents** (green `#10b981`) — lists configured sub-agents with count
+- **Colored edges**: animated cyan dashed (Channels→Agent), blue (Agent→Toolbox), green (Agent→Sub-agents)
+- **Inspector panel** (360px right panel) — shows node-specific properties:
+  - Click Agent node → Name, Description, Model, Instructions form
+  - Click Toolbox node → Tool checkboxes (enable/disable)
+  - Click Sub-agents node → Add/remove/edit sub-agents form
+  - Click Channels node → Read-only channel info
+- **Real-time sync**: editing in inspector instantly updates graph node data
+- **Draggable nodes** with position persistence during session
+- **Same Save button** persists via existing `PUT /api/agents/{id}` — no backend changes needed
+
+### New Files
+```
+src/components/graph/
+├── GraphCanvas.tsx          # ReactFlow wrapper with dark theme
+├── InspectorPanel.tsx       # Right panel with node-specific forms
+├── graphTypes.ts            # Node data interfaces
+├── useGraphLayout.ts        # buildGraphElements() for initial layout
+└── nodes/
+    ├── AgentNode.tsx         # Purple center node
+    ├── ToolboxNode.tsx       # Blue tools node
+    ├── SubAgentsNode.tsx     # Green sub-agents node
+    └── ChannelsNode.tsx      # Cyan channels node
+```
+
+### Modified Files
+- `App.tsx` — added `w-full` to fix flex layout at high viewport widths
+- `AgentEditor.tsx` — replaced form layout with canvas + inspector split (absolute positioning)
+- `index.css` — React Flow dark theme CSS overrides for controls and handles
+
 ## Future Phases (Not Yet Implemented)
 
-- Phase 3: Visual graph editor, channels (Slack, Gmail), schedules, skills
-- Phase 4: Human-in-the-loop approvals, memory/AGENTS.md, traces/observability
+- Phase 4: Channels (Slack, Gmail triggers), schedules, human-in-the-loop approvals
+- Phase 5: Skills (SKILL.md), memory/AGENTS.md, traces/observability
