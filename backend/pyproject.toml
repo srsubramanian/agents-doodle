@@ -1,0 +1,18 @@
+[project]
+name = "agents-doodle-backend"
+version = "0.1.0"
+description = "Agents Doodle - A minimal Fleet lookalike backend"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "deepagents>=0.1",
+    "sqlalchemy[asyncio]>=2.0",
+    "aiosqlite>=0.20",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
