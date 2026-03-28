@@ -116,8 +116,14 @@ export function ChatView() {
 
   if (!agent) {
     return (
-      <div className="flex-1 flex items-center justify-center text-gray-500">
-        <p>Select an agent to start chatting</p>
+      <div className="flex-1 flex items-center justify-center">
+        <div className="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mx-auto size-12 text-gray-500">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+          </svg>
+          <h3 className="mt-2 text-sm font-semibold text-white">No agent selected</h3>
+          <p className="mt-1 text-sm text-gray-500">Select an agent to start chatting</p>
+        </div>
       </div>
     );
   }
@@ -127,9 +133,9 @@ export function ChatView() {
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-purple-600/30 text-purple-400 flex items-center justify-center text-sm font-medium">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-sm font-medium text-gray-300">
             {agent.name.charAt(0).toUpperCase()}
-          </div>
+          </span>
           <div>
             <h2 className="text-sm font-semibold text-white">{agent.name}</h2>
             <p className="text-xs text-gray-500">{agent.model}</p>
@@ -138,7 +144,7 @@ export function ChatView() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setView("editor")}
-            className="px-3 py-1.5 text-xs text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+            className="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-white/20"
           >
             Edit
           </button>
@@ -148,7 +154,7 @@ export function ChatView() {
               setMessages([]);
               clearStreamingState();
             }}
-            className="px-3 py-1.5 text-xs text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           >
             New Chat
           </button>
@@ -159,13 +165,13 @@ export function ChatView() {
       {messages.length === 0 && !isStreaming ? (
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <div className="w-16 h-16 rounded-2xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl font-semibold mx-auto mb-4">
-              {agent.name.charAt(0).toUpperCase()}
-            </div>
-            <h3 className="text-lg font-medium text-white mb-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mx-auto size-12 text-gray-500">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+            </svg>
+            <h3 className="mt-2 text-sm font-semibold text-white">
               Chat with {agent.name}
             </h3>
-            <p className="text-sm text-gray-500">Send a message to get started</p>
+            <p className="mt-1 text-sm text-gray-500">Send a message to get started</p>
           </div>
         </div>
       ) : (

@@ -30,7 +30,9 @@ interface Props {
 }
 
 const inputClass =
-  "w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-blue-500";
+  "block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6";
+
+const labelClass = "block text-sm/6 font-medium text-white";
 
 export function InspectorPanel({
   selectedNodeId,
@@ -44,7 +46,7 @@ export function InspectorPanel({
   const nodeId = selectedNodeId || "agent";
 
   return (
-    <div className="h-full border-l border-gray-800 bg-[#111827] overflow-y-auto">
+    <div className="h-full border-l border-gray-800 bg-gray-900 overflow-y-auto">
       {/* Header */}
       <div className="p-4 border-b border-gray-800">
         <h3 className="text-sm font-semibold text-white">
@@ -60,30 +62,38 @@ export function InspectorPanel({
         {nodeId === "agent" && (
           <>
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1">Name</label>
-              <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={inputClass} placeholder="Agent name..." />
+              <label className={labelClass}>Name</label>
+              <div className="mt-2">
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={inputClass} placeholder="Agent name..." />
+              </div>
             </div>
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1">Description</label>
-              <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className={inputClass} placeholder="Short description..." />
+              <label className={labelClass}>Description</label>
+              <div className="mt-2">
+                <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className={inputClass} placeholder="Short description..." />
+              </div>
             </div>
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1">Model</label>
-              <select value={model} onChange={(e) => setModel(e.target.value)} className={inputClass}>
-                {MODEL_OPTIONS.map((m) => (
-                  <option key={m} value={m}>{m}</option>
-                ))}
-              </select>
+              <label className={labelClass}>Model</label>
+              <div className="mt-2">
+                <select value={model} onChange={(e) => setModel(e.target.value)} className={inputClass}>
+                  {MODEL_OPTIONS.map((m) => (
+                    <option key={m} value={m}>{m}</option>
+                  ))}
+                </select>
+              </div>
             </div>
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1">Instructions</label>
-              <textarea
-                value={systemPrompt}
-                onChange={(e) => setSystemPrompt(e.target.value)}
-                rows={10}
-                className={`${inputClass} font-mono resize-y`}
-                placeholder="You are a helpful assistant..."
-              />
+              <label className={labelClass}>Instructions</label>
+              <div className="mt-2">
+                <textarea
+                  value={systemPrompt}
+                  onChange={(e) => setSystemPrompt(e.target.value)}
+                  rows={10}
+                  className={`${inputClass} font-mono resize-y`}
+                  placeholder="You are a helpful assistant..."
+                />
+              </div>
             </div>
           </>
         )}
@@ -94,19 +104,19 @@ export function InspectorPanel({
             {availableTools.map((tool) => (
               <label
                 key={tool.name}
-                className="flex items-start gap-3 p-3 bg-gray-800 border border-gray-700 rounded-lg cursor-pointer hover:border-gray-600"
+                className="flex items-start gap-3 p-3 bg-white/5 rounded-lg ring-1 ring-white/10 cursor-pointer hover:ring-white/20"
               >
                 <input
                   type="checkbox"
                   checked={isToolEnabled(tool.name)}
                   onChange={() => toggleTool(tool.name)}
-                  className="mt-0.5 rounded border-gray-600 bg-gray-700 text-blue-600"
+                  className="mt-0.5 rounded border-gray-600 bg-gray-700 text-indigo-600 focus:ring-indigo-500"
                 />
                 <div>
                   <div className="text-sm text-white font-medium">{tool.name}</div>
                   <div className="text-xs text-gray-500">{tool.description}</div>
                   {tool.requires_env.length > 0 && (
-                    <div className="text-[10px] text-yellow-600 mt-0.5">
+                    <div className="text-[10px] text-yellow-500 mt-0.5">
                       Requires: {tool.requires_env.join(", ")}
                     </div>
                   )}
@@ -114,7 +124,7 @@ export function InspectorPanel({
               </label>
             ))}
             {availableTools.length === 0 && (
-              <div className="text-xs text-gray-600 italic">No tools available</div>
+              <div className="text-sm text-gray-500">No tools available</div>
             )}
           </div>
         )}
@@ -122,21 +132,21 @@ export function InspectorPanel({
         {/* Sub-agents */}
         {nodeId === "subagents" && (
           <>
-            <button onClick={addSubAgent} className="text-xs text-blue-400 hover:text-blue-300">
+            <button onClick={addSubAgent} className="inline-flex items-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
               + Add sub-agent
             </button>
             <div className="space-y-3">
               {subagentsConfig.map((sa, i) => (
-                <div key={i} className="p-3 bg-gray-800 border border-gray-700 rounded-lg space-y-2">
+                <div key={i} className="p-3 bg-white/5 rounded-lg ring-1 ring-white/10 space-y-2">
                   <div className="flex items-center justify-between">
                     <input
                       type="text"
                       value={sa.name}
                       onChange={(e) => updateSubAgent(i, "name", e.target.value)}
-                      className="px-2 py-1 bg-gray-900 border border-gray-700 rounded text-white text-xs focus:outline-none focus:border-blue-500"
+                      className={inputClass}
                       placeholder="Sub-agent name"
                     />
-                    <button onClick={() => removeSubAgent(i)} className="text-xs text-red-400 hover:text-red-300">
+                    <button onClick={() => removeSubAgent(i)} className="ml-2 rounded-md bg-white/10 px-2 py-1 text-xs font-semibold text-red-400 hover:bg-white/20">
                       Remove
                     </button>
                   </div>
@@ -144,20 +154,20 @@ export function InspectorPanel({
                     type="text"
                     value={sa.description}
                     onChange={(e) => updateSubAgent(i, "description", e.target.value)}
-                    className="w-full px-2 py-1 bg-gray-900 border border-gray-700 rounded text-white text-xs focus:outline-none focus:border-blue-500"
+                    className={inputClass}
                     placeholder="When should this sub-agent be used?"
                   />
                   <textarea
                     value={sa.system_prompt}
                     onChange={(e) => updateSubAgent(i, "system_prompt", e.target.value)}
                     rows={3}
-                    className="w-full px-2 py-1 bg-gray-900 border border-gray-700 rounded text-white text-xs font-mono focus:outline-none focus:border-blue-500 resize-y"
+                    className={`${inputClass} font-mono resize-y`}
                     placeholder="Sub-agent instructions..."
                   />
                 </div>
               ))}
               {subagentsConfig.length === 0 && (
-                <div className="text-xs text-gray-600 italic">No sub-agents configured</div>
+                <div className="text-sm text-gray-500">No sub-agents configured</div>
               )}
             </div>
           </>
@@ -166,16 +176,16 @@ export function InspectorPanel({
         {/* Channels */}
         {nodeId === "channels" && (
           <div className="space-y-3">
-            <div className="flex items-center gap-2 p-3 bg-gray-800 border border-gray-700 rounded-lg">
+            <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg ring-1 ring-white/10">
               <span className="w-2 h-2 rounded-full bg-cyan-500" />
               <div>
                 <div className="text-sm text-white font-medium">Chat</div>
                 <div className="text-xs text-gray-500">Messages from the chat UI</div>
               </div>
             </div>
-            <div className="text-[10px] text-gray-600 italic">
+            <p className="text-sm text-gray-500">
               More channels (Slack, Gmail, etc.) coming in future updates.
-            </div>
+            </p>
           </div>
         )}
       </div>

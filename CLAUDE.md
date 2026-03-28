@@ -46,7 +46,7 @@ agents-doodle/
 ## Tech Stack
 
 - **Backend**: Python 3.12, FastAPI, SQLAlchemy (async + aiosqlite), deepagents
-- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Vite, Zustand, @microsoft/fetch-event-source
+- **Frontend**: React 19, TypeScript, Tailwind CSS v4 (with Tailwind Plus patterns), Vite, Zustand, @xyflow/react, react-markdown, @microsoft/fetch-event-source
 - **Database**: SQLite (persisted via Docker volume)
 - **Docker**: uv for Python deps, multi-stage Node build + nginx
 
@@ -152,45 +152,67 @@ cd frontend && npm run build       # production build
 - Startup migration helper: `PRAGMA table_info` + `ALTER TABLE ADD COLUMN`
 - Added: `agents.tools_config`, `agents.subagents_config`, `messages.metadata_json`
 
-## Phase 3 Status: COMPLETE (Verified end-to-end)
+## Phase 3 Status: COMPLETE (Verified end-to-end, Fleet-matched styling)
 
 ### Visual Graph Editor
-- **React Flow** (`@xyflow/react` v12) canvas with dark theme, dot grid background, zoom controls
-- **4 custom nodes** with color-coded left borders and connection handles:
-  - **Channels** (cyan `#06b6d4`) — shows "Chat" as the active channel
-  - **Agent** (purple `#8b5cf6`) — shows name, model, truncated instructions, purple avatar
-  - **Toolbox** (blue `#3b82f6`) — lists enabled tools with count, updates in real-time
-  - **Sub-agents** (green `#10b981`) — lists configured sub-agents with count
-- **Colored edges**: animated cyan dashed (Channels→Agent), blue (Agent→Toolbox), green (Agent→Sub-agents)
-- **Inspector panel** (360px right panel) — shows node-specific properties:
-  - Click Agent node → Name, Description, Model, Instructions form
-  - Click Toolbox node → Tool checkboxes (enable/disable)
-  - Click Sub-agents node → Add/remove/edit sub-agents form
-  - Click Channels node → Read-only channel info
-- **Real-time sync**: editing in inspector instantly updates graph node data
-- **Draggable nodes** with position persistence during session
-- **Same Save button** persists via existing `PUT /api/agents/{id}` — no backend changes needed
+- **React Flow** (`@xyflow/react` v12) canvas — transparent background, no grid (matches Fleet)
+- **6 custom nodes** styled to match Fleet's exact CSS values:
+  - **Schedule** — "SCHEDULE + Add", empty state placeholder
+  - **Channels** — Rich list: Chat (active, green dot), Slack (+ Connect), Gmail (+ Connect)
+  - **Agent** — Central node: name, "INSTRUCTIONS" section with Edit button, full prompt text
+  - **Toolbox** — "+ Add" + "MCP" badge, tool rows with name/source/action icons
+  - **Sub-agents** — "+ Add" button, sub-agent list or empty state
+  - **Skills** — "+ Add" + "Create" buttons, empty state placeholder
+- **Node styling** — reverse-engineered from Fleet's DOM:
+  - Background: `#09090f` (nearly black), header: `#12121a` (slightly lighter)
+  - Border: `1px solid #393f55`, radius: `8px` (`rounded-lg`), shadow: `shadow-sm`
+  - Handles: 6px circles, `bg: #1a192b`, `border: #8790ab`
+- **Edges** — amber/orange (`#f59e0b`), `strokeDasharray: 5 5`, `opacity: 0.25` (matches Fleet exactly)
+- **Inspector panel** (360px right panel) — node-specific property forms
+- **Header bar** — Fleet-style: back arrow, agent name, green "Editing" badge, gray "Private" badge, Share/Settings icons, "Save Changes" button
+- **Sidebar** — Fleet-style: Chat, Inbox, My Agents (+), Explore section (Integrations, Skills, Templates), Settings, Personal
 
-### New Files
+### Graph Files
 ```
 src/components/graph/
-├── GraphCanvas.tsx          # ReactFlow wrapper with dark theme
+├── GraphCanvas.tsx          # ReactFlow wrapper, transparent bg, bottom-right controls
 ├── InspectorPanel.tsx       # Right panel with node-specific forms
 ├── graphTypes.ts            # Node data interfaces
-├── useGraphLayout.ts        # buildGraphElements() for initial layout
+├── useGraphLayout.ts        # buildGraphElements() with amber dashed edges
 └── nodes/
-    ├── AgentNode.tsx         # Purple center node
-    ├── ToolboxNode.tsx       # Blue tools node
-    ├── SubAgentsNode.tsx     # Green sub-agents node
-    └── ChannelsNode.tsx      # Cyan channels node
+    ├── AgentNode.tsx         # Central node with Instructions section
+    ├── ToolboxNode.tsx       # Tools list with + Add / MCP header
+    ├── SubAgentsNode.tsx     # Sub-agents with + Add
+    ├── ChannelsNode.tsx      # Rich channel list (Chat/Slack/Gmail)
+    ├── ScheduleNode.tsx      # Schedule placeholder with + Add
+    └── SkillsNode.tsx        # Skills placeholder with + Add / Create
 ```
 
-### Modified Files
-- `App.tsx` — added `w-full` to fix flex layout at high viewport widths
-- `AgentEditor.tsx` — replaced form layout with canvas + inspector split (absolute positioning)
-- `index.css` — React Flow dark theme CSS overrides for controls and handles
+### Key Files Modified
+- `App.tsx` — added `w-full` for full viewport width
+- `AgentEditor.tsx` — canvas + inspector split layout, Fleet-style header with badges
+- `Sidebar.tsx` — Fleet-style nav (Chat, Inbox, My Agents, Explore, Settings, Personal)
+- `index.css` — React Flow handle overrides matching Fleet's exact 6px circle style
+
+## UI Polish: Tailwind Plus Upgrade (COMPLETE)
+
+Upgraded all components from hand-rolled Tailwind to **Tailwind Plus** (tailwindcss.com/plus) dark theme patterns. Reverse-engineered Fleet's exact CSS values for the graph canvas.
+
+### Tailwind Plus Patterns Applied
+- **Sidebar Navigation** (Dark) — Heroicon SVGs (`size-6 shrink-0`), nav items with `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold`, active: `bg-white/5 text-white`, inactive: `text-gray-400 hover:bg-white/5 hover:text-white`. Letter avatars: `rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem]`. Section labels: `text-xs/6 font-semibold text-gray-400`.
+- **Badges** — Ring-based pills: `inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset`. Editing: `bg-green-500/10 text-green-400 ring-green-500/20`. Private: `bg-gray-400/10 text-gray-400 ring-gray-400/20`.
+- **Buttons** — Primary: `rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400`. Secondary: `bg-white/10 hover:bg-white/20`. Saved: `bg-green-500/10 text-green-400 ring-1 ring-green-500/20`.
+- **Inputs** — `block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6`
+- **Empty States** — SVG icon `mx-auto size-12 text-gray-500`, heading `text-sm font-semibold text-white`, description `text-sm text-gray-500`, CTA button with indigo styling
+- **Cards** — Tool/sub-agent cards: `bg-white/5 rounded-lg ring-1 ring-white/10`
+
+### Fleet CSS Values (reverse-engineered from DOM inspection)
+- Node background: `#09090f`, header: `#12121a`, border: `#393f55`
+- Edges: `stroke: #f59e0b` (amber), `strokeDasharray: 5 5`, `opacity: 0.25`
+- Handles: 6px circles, `bg: #1a192b`, `border: #8790ab`
+- Canvas: transparent background (no grid)
 
 ## Future Phases (Not Yet Implemented)
 
-- Phase 4: Channels (Slack, Gmail triggers), schedules, human-in-the-loop approvals
-- Phase 5: Skills (SKILL.md), memory/AGENTS.md, traces/observability
+- Phase 4: Chat+Graph simultaneous split view, channels (Slack, Gmail triggers), schedules
+- Phase 5: Human-in-the-loop approvals, skills (SKILL.md), memory/AGENTS.md, traces/observability

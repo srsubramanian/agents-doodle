@@ -152,10 +152,13 @@ export function AgentEditor() {
 
   if (!agent) {
     return (
-      <div className="flex-1 flex items-center justify-center text-gray-500">
+      <div className="flex-1 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-4xl mb-4">&#x1f916;</div>
-          <p className="text-lg">Select an agent or create a new one</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mx-auto size-12 text-gray-500">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+          <h3 className="mt-2 text-sm font-semibold text-white">No agent selected</h3>
+          <p className="mt-1 text-sm text-gray-500">Select an agent or create a new one</p>
         </div>
       </div>
     );
@@ -163,7 +166,7 @@ export function AgentEditor() {
 
   return (
     <div className="flex-1 flex flex-col h-full">
-      {/* Header — Fleet style */}
+      {/* Header */}
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-800">
         <div className="flex items-center gap-3">
           <button
@@ -175,28 +178,28 @@ export function AgentEditor() {
             </svg>
           </button>
           <span className="text-sm font-semibold text-white">{name}</span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-green-600/20 text-green-400 font-medium">
+          <span className="inline-flex items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-green-500/20 ring-inset">
             Editing
           </span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-gray-600/30 text-gray-400 font-medium">
+          <span className="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-gray-400/20 ring-inset">
             Private
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <button className="px-3 py-1.5 text-xs text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors flex items-center gap-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5"><path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11ZM7.5 2a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Z" /><path d="M2 5.5a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1Z" /></svg>
+          <button className="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-white/20 flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4"><path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11ZM7.5 2a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Z" /><path d="M2 5.5a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1Z" /></svg>
             Share
           </button>
-          <button className="p-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
+          <button className="rounded-md bg-white/10 p-2 text-white shadow-xs hover:bg-white/20">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M7.84 1.804A1 1 0 018.82 1h2.36a1 1 0 01.98.804l.331 1.652a6.993 6.993 0 011.929 1.115l1.598-.54a1 1 0 011.186.447l1.18 2.044a1 1 0 01-.205 1.251l-1.267 1.113a7.047 7.047 0 010 2.228l1.267 1.113a1 1 0 01.206 1.25l-1.18 2.045a1 1 0 01-1.187.447l-1.598-.54a6.993 6.993 0 01-1.929 1.115l-.33 1.652a1 1 0 01-.98.804H8.82a1 1 0 01-.98-.804l-.331-1.652a6.993 6.993 0 01-1.929-1.115l-1.598.54a1 1 0 01-1.186-.447l-1.18-2.044a1 1 0 01.205-1.251l1.267-1.114a7.05 7.05 0 010-2.227L1.821 7.773a1 1 0 01-.206-1.25l1.18-2.045a1 1 0 011.187-.447l1.598.54A6.993 6.993 0 017.51 3.456l.33-1.652zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" /></svg>
           </button>
           <button
             onClick={handleSave}
             disabled={saving}
-            className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+            className={`rounded-md px-3 py-2 text-sm font-semibold shadow-xs ${
               saved
-                ? "bg-green-600/20 text-green-400 border border-green-600/30"
-                : "bg-blue-600 hover:bg-blue-700 text-white"
+                ? "bg-green-500/10 text-green-400 ring-1 ring-green-500/20 ring-inset"
+                : "bg-indigo-500 text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             }`}
           >
             {saved ? "\u2713 Saved" : saving ? "Saving..." : "Save Changes"}

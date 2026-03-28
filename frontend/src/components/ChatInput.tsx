@@ -42,12 +42,12 @@ export function ChatInput({ onSend, disabled }: Props) {
           placeholder="Write your message..."
           disabled={disabled}
           rows={1}
-          className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white text-sm resize-none focus:outline-none focus:border-blue-500 placeholder-gray-500 disabled:opacity-50"
+          className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 resize-none disabled:opacity-50"
         />
         <button
           onClick={handleSubmit}
           disabled={disabled || !value.trim()}
-          className="p-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 disabled:text-gray-500 text-white rounded-xl transition-colors"
+          className="rounded-md bg-indigo-500 p-2 text-white shadow-xs hover:bg-indigo-400 disabled:bg-gray-700 disabled:text-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
