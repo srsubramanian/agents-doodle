@@ -1,4 +1,6 @@
-import type { SubAgentConfig, AvailableTool } from "../../types";
+import { useState, useEffect, useCallback } from "react";
+import type { SubAgentConfig, AvailableTool, Skill } from "../../types";
+import { fetchSkills, fetchAgentSkills, attachSkill, detachSkill } from "../../api/skills";
 
 const MODEL_OPTIONS = [
   "anthropic:claude-sonnet-4-6",
@@ -9,6 +11,7 @@ const MODEL_OPTIONS = [
 
 interface Props {
   selectedNodeId: string | null;
+  agentId: string;
   // Agent fields
   name: string;
   setName: (v: string) => void;
@@ -27,6 +30,8 @@ interface Props {
   addSubAgent: () => void;
   removeSubAgent: (index: number) => void;
   updateSubAgent: (index: number, field: keyof SubAgentConfig, value: string) => void;
+  // Callback when skills change
+  onSkillsChange?: () => void;
 }
 
 const inputClass =
@@ -34,14 +39,87 @@ const inputClass =
 
 const labelClass = "block text-sm/6 font-medium text-white";
 
+function SkillsInspector({ agentId, onSkillsChange }: { agentId: string; onSkillsChange?: () => void }) {
+  const [allSkills, setAllSkills] = useState<Skill[]>([]);
+  const [agentSkillIds, setAgentSkillIds] = useState<Set<string>>(new Set());
+  const [toggling, setToggling] = useState<string | null>(null);
+
+  const loadSkills = useCallback(async () => {
+    try {
+      const [all, attached] = await Promise.all([
+        fetchSkills(),
+        fetchAgentSkills(agentId),
+      ]);
+      setAllSkills(all);
+      setAgentSkillIds(new Set(attached.map((s) => s.id)));
+    } catch (err) {
+      console.error(err);
+    }
+  }, [agentId]);
+
+  useEffect(() => {
+    loadSkills();
+  }, [loadSkills]);
+
+  const handleToggle = async (skillId: string) => {
+    setToggling(skillId);
+    try {
+      if (agentSkillIds.has(skillId)) {
+        await detachSkill(agentId, skillId);
+        setAgentSkillIds((prev) => {
+          const next = new Set(prev);
+          next.delete(skillId);
+          return next;
+        });
+      } else {
+        await attachSkill(agentId, skillId);
+        setAgentSkillIds((prev) => new Set(prev).add(skillId));
+      }
+      onSkillsChange?.();
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setToggling(null);
+    }
+  };
+
+  return (
+    <div className="space-y-2">
+      {allSkills.map((skill) => (
+        <label
+          key={skill.id}
+          className="flex items-start gap-3 p-3 bg-white/5 rounded-lg ring-1 ring-white/10 cursor-pointer hover:ring-white/20"
+        >
+          <input
+            type="checkbox"
+            checked={agentSkillIds.has(skill.id)}
+            onChange={() => handleToggle(skill.id)}
+            disabled={toggling === skill.id}
+            className="mt-0.5 rounded border-gray-600 bg-gray-700 text-indigo-600 focus:ring-indigo-500"
+          />
+          <div>
+            <div className="text-sm text-white font-medium">{skill.name}</div>
+            <div className="text-xs text-gray-500">{skill.description || "No description"}</div>
+          </div>
+        </label>
+      ))}
+      {allSkills.length === 0 && (
+        <div className="text-sm text-gray-500">No skills available. Create skills from the Skills page.</div>
+      )}
+    </div>
+  );
+}
+
 export function InspectorPanel({
   selectedNodeId,
+  agentId,
   name, setName,
   description, setDescription,
   model, setModel,
   systemPrompt, setSystemPrompt,
   availableTools, toggleTool, isToolEnabled,
   subagentsConfig, addSubAgent, removeSubAgent, updateSubAgent,
+  onSkillsChange,
 }: Props) {
   const nodeId = selectedNodeId || "agent";
 
@@ -54,6 +132,7 @@ export function InspectorPanel({
           {nodeId === "toolbox" && "Tools"}
           {nodeId === "subagents" && "Sub-Agents"}
           {nodeId === "channels" && "Channels"}
+          {nodeId === "skills" && "Skills"}
         </h3>
       </div>
 
@@ -187,6 +266,11 @@ export function InspectorPanel({
               More channels (Slack, Gmail, etc.) coming in future updates.
             </p>
           </div>
+        )}
+
+        {/* Skills */}
+        {nodeId === "skills" && (
+          <SkillsInspector agentId={agentId} onSkillsChange={onSkillsChange} />
         )}
       </div>
     </div>

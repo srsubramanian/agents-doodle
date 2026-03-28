@@ -1,6 +1,7 @@
 import { Sidebar } from "./components/Sidebar";
 import { AgentEditor } from "./components/AgentEditor";
 import { ChatView } from "./components/ChatView";
+import { SkillsPage } from "./components/SkillsPage";
 import { useAppStore } from "./stores/appStore";
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <div className="flex h-screen w-full bg-[#0f1117]">
       <Sidebar />
       <main className="flex-1 flex flex-col overflow-hidden">
-        {!selectedAgentId ? (
+        {view === "skills" ? (
+          <SkillsPage />
+        ) : !selectedAgentId ? (
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mx-auto size-12 text-gray-500">

@@ -17,3 +17,7 @@ export interface SubAgentsNodeData {
 export interface ChannelsNodeData {
   channels: string[];
 }
+
+export interface SkillsNodeData {
+  skills: Array<{ name: string; description: string }>;
+}

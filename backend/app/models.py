@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import String, Text, DateTime, ForeignKey
+from sqlalchemy import String, Text, DateTime, ForeignKey, Table, Column
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
@@ -15,6 +15,14 @@ def utcnow() -> datetime:
 
 def new_uuid() -> str:
     return str(uuid.uuid4())
+
+
+agent_skills = Table(
+    "agent_skills",
+    Base.metadata,
+    Column("agent_id", String(36), ForeignKey("agents.id", ondelete="CASCADE"), primary_key=True),
+    Column("skill_id", String(36), ForeignKey("skills.id", ondelete="CASCADE"), primary_key=True),
+)
 
 
 class Agent(Base):
@@ -33,6 +41,7 @@ class Agent(Base):
     conversations: Mapped[list["Conversation"]] = relationship(
         back_populates="agent", cascade="all, delete-orphan"
     )
+    skills: Mapped[list["Skill"]] = relationship(secondary=agent_skills, back_populates="agents")
 
 
 class Conversation(Base):
@@ -63,3 +72,16 @@ class Message(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
     conversation: Mapped["Conversation"] = relationship(back_populates="messages")
+
+
+class Skill(Base):
+    __tablename__ = "skills"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=new_uuid)
+    name: Mapped[str] = mapped_column(String(255))
+    description: Mapped[str] = mapped_column(Text, default="")
+    content: Mapped[str] = mapped_column(Text, default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+    agents: Mapped[list["Agent"]] = relationship(secondary=agent_skills, back_populates="skills")

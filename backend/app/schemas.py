@@ -119,3 +119,26 @@ class MessageResponse(BaseModel):
         return data
 
     model_config = {"from_attributes": True}
+
+
+# --- Skill schemas ---
+
+class SkillCreate(BaseModel):
+    name: str
+    description: str = ""
+    content: str = ""
+
+class SkillUpdate(BaseModel):
+    name: str | None = None
+    description: str | None = None
+    content: str | None = None
+
+class SkillResponse(BaseModel):
+    id: str
+    name: str
+    description: str
+    content: str
+    created_at: datetime
+    updated_at: datetime
+
+    model_config = {"from_attributes": True}

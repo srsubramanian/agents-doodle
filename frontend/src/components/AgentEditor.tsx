@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useNodesState, useEdgesState, type Node, type Edge } from "@xyflow/react";
 import { useAppStore } from "../stores/appStore";
 import { updateAgent } from "../api/agents";
+import { fetchAgentSkills } from "../api/skills";
 import { GraphCanvas } from "./graph/GraphCanvas";
 import { InspectorPanel } from "./graph/InspectorPanel";
 import { EditorChatPanel } from "./EditorChatPanel";
@@ -20,6 +21,7 @@ export function AgentEditor() {
   const [toolsConfig, setToolsConfig] = useState<ToolConfig[]>([]);
   const [subagentsConfig, setSubagentsConfig] = useState<SubAgentConfig[]>([]);
   const [availableTools, setAvailableTools] = useState<AvailableTool[]>([]);
+  const [agentSkills, setAgentSkills] = useState<Array<{ name: string; description: string }>>([]);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
@@ -40,6 +42,21 @@ export function AgentEditor() {
       .catch(console.error);
   }, []);
 
+  // Fetch agent skills
+  const loadAgentSkills = useCallback(async () => {
+    if (!agent) return;
+    try {
+      const skills = await fetchAgentSkills(agent.id);
+      setAgentSkills(skills.map((s) => ({ name: s.name, description: s.description })));
+    } catch (err) {
+      console.error(err);
+    }
+  }, [agent]);
+
+  useEffect(() => {
+    loadAgentSkills();
+  }, [loadAgentSkills]);
+
   // Hydrate form from agent
   useEffect(() => {
     if (agent) {
@@ -59,13 +76,13 @@ export function AgentEditor() {
     if (!initialized && agent) {
       const { nodes: n, edges: e } = buildGraphElements(
         name, model, systemPrompt, description,
-        toolsConfig, subagentsConfig, availableTools
+        toolsConfig, subagentsConfig, availableTools, agentSkills
       );
       setNodes(n);
       setEdges(e);
       setInitialized(true);
     }
-  }, [initialized, agent, name, model, systemPrompt, description, toolsConfig, subagentsConfig, availableTools, setNodes, setEdges]);
+  }, [initialized, agent, name, model, systemPrompt, description, toolsConfig, subagentsConfig, availableTools, agentSkills, setNodes, setEdges]);
 
   // Sync form state → node data (preserve positions)
   useEffect(() => {
@@ -92,10 +109,16 @@ export function AgentEditor() {
             },
           };
         }
+        if (node.id === "skills") {
+          return {
+            ...node,
+            data: { skills: agentSkills },
+          };
+        }
         return node;
       })
     );
-  }, [name, model, systemPrompt, description, toolsConfig, subagentsConfig, availableTools, initialized, setNodes]);
+  }, [name, model, systemPrompt, description, toolsConfig, subagentsConfig, availableTools, agentSkills, initialized, setNodes]);
 
   // Tool helpers
   const toggleTool = useCallback((toolName: string) => {
@@ -242,6 +265,7 @@ export function AgentEditor() {
         <div style={{ width: 360, flexShrink: 0 }}>
           <InspectorPanel
           selectedNodeId={selectedNodeId}
+          agentId={agent.id}
           name={name} setName={setName}
           description={description} setDescription={setDescription}
           model={model} setModel={setModel}
@@ -250,6 +274,7 @@ export function AgentEditor() {
           toggleTool={toggleTool} isToolEnabled={isToolEnabled}
           subagentsConfig={subagentsConfig}
           addSubAgent={addSubAgent} removeSubAgent={removeSubAgent} updateSubAgent={updateSubAgent}
+          onSkillsChange={loadAgentSkills}
         />
         </div>
       </div>

@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database import engine, run_migrations
 from app.models import Base
-from app.routers import agents, chat
+from app.routers import agents, chat, skills
 
 
 @asynccontextmanager
@@ -31,6 +31,7 @@ app.add_middleware(
 
 app.include_router(agents.router)
 app.include_router(chat.router)
+app.include_router(skills.router)
 
 
 @app.get("/api/health")

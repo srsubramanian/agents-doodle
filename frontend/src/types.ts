@@ -66,4 +66,13 @@ export interface AvailableTool {
   requires_env: string[];
 }
 
-export type View = "editor" | "chat";
+export interface Skill {
+  id: string;
+  name: string;
+  description: string;
+  content: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export type View = "editor" | "chat" | "skills";

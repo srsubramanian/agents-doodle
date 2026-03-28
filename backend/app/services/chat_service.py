@@ -34,6 +34,7 @@ def get_or_create_agent(agent_config: AgentModel):
             system_prompt=agent_config.system_prompt,
             tools=tools,
             subagents=subagents,
+            skills=["/skills/"],
         )
         _agent_cache[cache_key] = agent
 
@@ -56,7 +57,7 @@ def _extract_text(content) -> str:
 
 
 async def stream_agent_response(
-    agent, messages: list[dict], conversation_id: str
+    agent, messages: list[dict], conversation_id: str, skills_files: dict | None = None
 ) -> AsyncGenerator[str, None]:
     """Stream deepagent response as SSE events including tool calls."""
     full_content = ""
@@ -65,8 +66,11 @@ async def stream_agent_response(
     latest_todos: list[dict] | None = None
 
     try:
+        astream_input = {"messages": messages}
+        if skills_files:
+            astream_input["files"] = skills_files
         async for chunk in agent.astream(
-            {"messages": messages},
+            astream_input,
             stream_mode="messages",
             version="v2",
         ):
@@ -143,7 +147,7 @@ async def stream_agent_response(
 
         # Fallback: if no text was streamed and no tool calls, try invoke
         if not full_content and not tool_calls_seen:
-            result = await agent.ainvoke({"messages": messages})
+            result = await agent.ainvoke(astream_input)
             for msg in reversed(result.get("messages", [])):
                 if getattr(msg, "type", None) == "ai" and not getattr(msg, "tool_calls", None):
                     text = _extract_text(msg.content)

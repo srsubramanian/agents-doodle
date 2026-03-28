@@ -1,6 +1,11 @@
 import { Handle, Position, type NodeProps } from "@xyflow/react";
+import type { SkillsNodeData } from "../graphTypes";
 
-export function SkillsNode({ selected }: NodeProps) {
+type SkillsNodeProps = NodeProps & { data: SkillsNodeData };
+
+export function SkillsNode({ selected, data }: SkillsNodeProps) {
+  const skills = data.skills || [];
+
   return (
     <div
       className={`rounded-lg min-w-[200px] max-w-[300px] overflow-hidden shadow-sm ${
@@ -20,19 +25,29 @@ export function SkillsNode({ selected }: NodeProps) {
         <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
           Skills
         </span>
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center text-[10px] text-blue-400 cursor-pointer hover:text-blue-300 transition-all">
-            + Add
-          </span>
-          <span className="inline-flex items-center text-[10px] text-blue-400 cursor-pointer hover:text-blue-300 transition-all">
-            ✏️ Create
-          </span>
-        </div>
+        <span className="text-[10px] text-gray-600">
+          {skills.length} attached
+        </span>
       </div>
 
       {/* Content */}
-      <div className="px-4 py-3 text-[11px] text-gray-600 italic">
-        No skills configured
+      <div className="px-4 py-3">
+        {skills.length > 0 ? (
+          <div className="space-y-1.5">
+            {skills.map((skill, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3 text-blue-400 shrink-0">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                </svg>
+                <span className="text-[11px] text-gray-300 truncate">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-[11px] text-gray-600 italic">
+            No skills configured
+          </div>
+        )}
       </div>
     </div>
   );

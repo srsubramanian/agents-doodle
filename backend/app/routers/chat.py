@@ -8,7 +8,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db, async_session
-from app.models import Agent, Conversation, Message
+from app.models import Agent, Conversation, Message, Skill, agent_skills as agent_skills_table
 from app.schemas import ConversationResponse, MessageResponse, SendMessageRequest
 from app.services.chat_service import get_or_create_agent, stream_agent_response
 
@@ -92,12 +92,27 @@ async def send_message(conv_id: str, body: SendMessageRequest, db: AsyncSession 
     # Create deepagent
     agent = get_or_create_agent(agent_config)
 
+    # Load agent's skills
+    skills_result = await db.execute(
+        select(Skill)
+        .join(agent_skills_table, Skill.id == agent_skills_table.c.skill_id)
+        .where(agent_skills_table.c.agent_id == conv.agent_id)
+    )
+    agent_skills_list = list(skills_result.scalars().all())
+
+    # Build skills files dict for StateBackend
+    skills_files = {}
+    for skill in agent_skills_list:
+        skill_path = f"/skills/{skill.name}/SKILL.md"
+        skill_md = f"---\nname: {skill.name}\ndescription: {skill.description}\n---\n\n{skill.content}"
+        skills_files[skill_path] = {"type": "file", "data": {"content": skill_md}}
+
     # Stream response, persisting the assistant message when done
     async def generate():
         full_content = ""
         metadata_json = None
 
-        async for event in stream_agent_response(agent, messages, conv_id):
+        async for event in stream_agent_response(agent, messages, conv_id, skills_files=skills_files or None):
             # Capture done payload for persistence
             if event.startswith("event: done"):
                 data_line = event.split("\n")[1]

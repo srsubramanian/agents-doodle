@@ -10,7 +10,8 @@ export function buildGraphElements(
   description: string,
   toolsConfig: ToolConfig[],
   subagentsConfig: SubAgentConfig[],
-  availableTools: AvailableTool[]
+  availableTools: AvailableTool[],
+  agentSkills: Array<{ name: string; description: string }> = []
 ): { nodes: Node[]; edges: Edge[] } {
   const nodes: Node[] = [
     {
@@ -55,7 +56,7 @@ export function buildGraphElements(
       id: "skills",
       type: "skills",
       position: { x: 780, y: 380 },
-      data: {},
+      data: { skills: agentSkills },
     },
   ];
 

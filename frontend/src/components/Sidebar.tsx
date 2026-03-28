@@ -163,12 +163,17 @@ export function Sidebar() {
                 </a>
               </li>
               <li>
-                <a href="#" className="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white">
+                <button
+                  onClick={() => {
+                    useAppStore.setState({ selectedAgentId: null, selectedConversationId: null, messages: [], view: "skills" });
+                  }}
+                  className="group flex w-full gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 shrink-0">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
                   </svg>
                   Skills
-                </a>
+                </button>
               </li>
               <li>
                 <a href="#" className="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white">
