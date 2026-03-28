@@ -25,6 +25,8 @@ class Agent(Base):
     description: Mapped[str] = mapped_column(Text, default="")
     system_prompt: Mapped[str] = mapped_column(Text, default="You are a helpful assistant.")
     model: Mapped[str] = mapped_column(String(100), default="anthropic:claude-sonnet-4-6")
+    tools_config: Mapped[str] = mapped_column(Text, default="[]")
+    subagents_config: Mapped[str] = mapped_column(Text, default="[]")
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
 
@@ -57,6 +59,7 @@ class Message(Base):
     )
     role: Mapped[str] = mapped_column(String(20))  # "user" or "assistant"
     content: Mapped[str] = mapped_column(Text)
+    metadata_json: Mapped[str | None] = mapped_column(Text, nullable=True, default=None)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
     conversation: Mapped["Conversation"] = relationship(back_populates="messages")

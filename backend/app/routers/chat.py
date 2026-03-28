@@ -1,3 +1,4 @@
+import json
 import uuid
 from datetime import datetime, timezone
 
@@ -94,27 +95,37 @@ async def send_message(conv_id: str, body: SendMessageRequest, db: AsyncSession 
     # Stream response, persisting the assistant message when done
     async def generate():
         full_content = ""
+        metadata_json = None
+
         async for event in stream_agent_response(agent, messages, conv_id):
-            # Capture content for persistence
+            # Capture done payload for persistence
             if event.startswith("event: done"):
-                import json
                 data_line = event.split("\n")[1]
                 data = json.loads(data_line.replace("data: ", ""))
                 full_content = data.get("full_content", "")
 
+                # Build metadata from tool calls and todos
+                metadata = {}
+                if data.get("tool_calls"):
+                    metadata["tool_calls"] = data["tool_calls"]
+                if data.get("todos"):
+                    metadata["todos"] = data["todos"]
+                if metadata:
+                    metadata_json = json.dumps(metadata)
+
             yield event
 
-        # Persist assistant message
-        if full_content:
+        # Persist assistant message (even if empty content, if there were tool calls)
+        if full_content or metadata_json:
             async with async_session() as session:
                 assistant_msg = Message(
                     id=str(uuid.uuid4()),
                     conversation_id=conv_id,
                     role="assistant",
                     content=full_content,
+                    metadata_json=metadata_json,
                 )
                 session.add(assistant_msg)
-                # Update conversation timestamp
                 conv_update = await session.get(Conversation, conv_id)
                 if conv_update:
                     conv_update.updated_at = datetime.now(timezone.utc)

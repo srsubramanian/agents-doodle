@@ -4,8 +4,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.schemas import AgentCreate, AgentUpdate, AgentResponse
 from app.services import agent_service
+from app.services.tool_registry import AVAILABLE_TOOLS
 
 router = APIRouter(prefix="/api/agents", tags=["agents"])
+
+
+@router.get("/tools", tags=["tools"])
+async def list_available_tools():
+    """Return the list of tools that can be enabled on agents."""
+    return AVAILABLE_TOOLS
 
 
 @router.post("", response_model=AgentResponse, status_code=201)

@@ -1,3 +1,4 @@
+import json
 from datetime import datetime, timezone
 
 from sqlalchemy import select
@@ -7,8 +8,17 @@ from app.models import Agent
 from app.schemas import AgentCreate, AgentUpdate
 
 
+def _serialize_agent_data(data: dict) -> dict:
+    """Convert list fields to JSON strings for storage."""
+    for key in ("tools_config", "subagents_config"):
+        if key in data and not isinstance(data[key], str):
+            data[key] = json.dumps([item.model_dump() if hasattr(item, "model_dump") else item for item in data[key]])
+    return data
+
+
 async def create_agent(db: AsyncSession, data: AgentCreate) -> Agent:
-    agent = Agent(**data.model_dump())
+    agent_data = _serialize_agent_data(data.model_dump())
+    agent = Agent(**agent_data)
     db.add(agent)
     await db.commit()
     await db.refresh(agent)
@@ -28,7 +38,7 @@ async def update_agent(db: AsyncSession, agent_id: str, data: AgentUpdate) -> Ag
     agent = await db.get(Agent, agent_id)
     if not agent:
         return None
-    update_data = data.model_dump(exclude_unset=True)
+    update_data = _serialize_agent_data(data.model_dump(exclude_unset=True))
     for key, value in update_data.items():
         setattr(agent, key, value)
     agent.updated_at = datetime.now(timezone.utc)

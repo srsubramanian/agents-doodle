@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Agent, Conversation, Message, View } from "../types";
+import type { Agent, Conversation, Message, View, ToolCallInfo, TodoItem } from "../types";
 
 interface AppState {
   // Agents
@@ -29,12 +29,26 @@ interface AppState {
   setMessages: (messages: Message[]) => void;
   addMessage: (message: Message) => void;
 
-  // Streaming
+  // Streaming text
   streamingContent: string;
   setStreamingContent: (content: string) => void;
   appendStreamingContent: (token: string) => void;
   isStreaming: boolean;
   setIsStreaming: (streaming: boolean) => void;
+
+  // Streaming tool calls
+  streamingToolCalls: Record<string, ToolCallInfo>;
+  addStreamingToolCall: (id: string, name: string) => void;
+  appendToolCallArgs: (id: string, argsDelta: string) => void;
+  finalizeToolCall: (id: string, name: string, args: Record<string, unknown>) => void;
+  setToolCallResult: (id: string, name: string, content: string) => void;
+
+  // Streaming todos
+  streamingTodos: TodoItem[];
+  setStreamingTodos: (todos: TodoItem[]) => void;
+
+  // Clear all streaming state
+  clearStreamingState: () => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -66,4 +80,47 @@ export const useAppStore = create<AppState>((set) => ({
   appendStreamingContent: (token) => set((s) => ({ streamingContent: s.streamingContent + token })),
   isStreaming: false,
   setIsStreaming: (streaming) => set({ isStreaming: streaming }),
+
+  // Tool calls
+  streamingToolCalls: {},
+  addStreamingToolCall: (id, name) =>
+    set((s) => ({
+      streamingToolCalls: {
+        ...s.streamingToolCalls,
+        [id]: { id, name, args: {}, args_partial: "", status: "calling" },
+      },
+    })),
+  appendToolCallArgs: (id, argsDelta) =>
+    set((s) => {
+      const tc = s.streamingToolCalls[id];
+      if (!tc) return s;
+      return {
+        streamingToolCalls: {
+          ...s.streamingToolCalls,
+          [id]: { ...tc, args_partial: (tc.args_partial || "") + argsDelta, status: "streaming_args" },
+        },
+      };
+    }),
+  finalizeToolCall: (id, name, args) =>
+    set((s) => ({
+      streamingToolCalls: {
+        ...s.streamingToolCalls,
+        [id]: { ...s.streamingToolCalls[id], id, name, args, status: "executing" },
+      },
+    })),
+  setToolCallResult: (id, name, content) =>
+    set((s) => ({
+      streamingToolCalls: {
+        ...s.streamingToolCalls,
+        [id]: { ...s.streamingToolCalls[id], id, name, result: content, status: "done" },
+      },
+    })),
+
+  // Todos
+  streamingTodos: [],
+  setStreamingTodos: (todos) => set({ streamingTodos: todos }),
+
+  // Clear
+  clearStreamingState: () =>
+    set({ streamingContent: "", streamingToolCalls: {}, streamingTodos: [], isStreaming: false }),
 }));

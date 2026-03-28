@@ -23,6 +23,12 @@ export function ChatView() {
     setIsStreaming,
     setView,
     addConversation,
+    addStreamingToolCall,
+    appendToolCallArgs,
+    finalizeToolCall,
+    setToolCallResult,
+    setStreamingTodos,
+    clearStreamingState,
   } = useAppStore();
 
   const agent = agents.find((a) => a.id === selectedAgentId);
@@ -60,28 +66,35 @@ export function ChatView() {
       setIsStreaming(true);
       setStreamingContent("");
 
-      await sendMessageStream(
-        convId,
-        content,
-        (token) => appendStreamingContent(token),
-        (fullContent) => {
+      await sendMessageStream(convId, content, {
+        onToken: (token) => appendStreamingContent(token),
+        onToolCallStart: (id, name) => addStreamingToolCall(id, name),
+        onToolCallArgs: (id, argsDelta) => appendToolCallArgs(id, argsDelta),
+        onToolCallEnd: (id, name, args) => finalizeToolCall(id, name, args),
+        onToolResult: (id, name, resultContent) => setToolCallResult(id, name, resultContent),
+        onTodos: (todos) => setStreamingTodos(todos),
+        onDone: (data) => {
           const assistantMsg = {
             id: crypto.randomUUID(),
             conversation_id: convId!,
             role: "assistant" as const,
-            content: fullContent,
+            content: data.full_content,
+            metadata: data.tool_calls || data.todos
+              ? {
+                  tool_calls: (data.tool_calls || []).map((tc) => ({ ...tc, status: "done" as const })),
+                  todos: data.todos || [],
+                }
+              : undefined,
             created_at: new Date().toISOString(),
           };
           addMessage(assistantMsg);
-          setStreamingContent("");
-          setIsStreaming(false);
+          clearStreamingState();
         },
-        (error) => {
+        onError: (error) => {
           console.error("Stream error:", error);
-          setStreamingContent("");
-          setIsStreaming(false);
-        }
-      );
+          clearStreamingState();
+        },
+      });
     },
     [
       selectedAgentId,
@@ -92,6 +105,12 @@ export function ChatView() {
       setIsStreaming,
       setStreamingContent,
       appendStreamingContent,
+      addStreamingToolCall,
+      appendToolCallArgs,
+      finalizeToolCall,
+      setToolCallResult,
+      setStreamingTodos,
+      clearStreamingState,
     ]
   );
 
@@ -127,6 +146,7 @@ export function ChatView() {
             onClick={() => {
               setSelectedConversationId(null);
               setMessages([]);
+              clearStreamingState();
             }}
             className="px-3 py-1.5 text-xs text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
           >

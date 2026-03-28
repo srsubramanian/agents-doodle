@@ -1,5 +1,5 @@
 import { fetchEventSource } from "@microsoft/fetch-event-source";
-import type { Conversation, Message } from "../types";
+import type { Conversation, Message, ToolCallInfo, TodoItem } from "../types";
 
 export async function createConversation(agentId: string): Promise<Conversation> {
   const res = await fetch(`/api/agents/${agentId}/conversations`, { method: "POST" });
@@ -19,12 +19,25 @@ export async function fetchMessages(conversationId: string): Promise<Message[]> 
   return res.json();
 }
 
+export interface StreamCallbacks {
+  onToken: (token: string) => void;
+  onToolCallStart: (id: string, name: string) => void;
+  onToolCallArgs: (id: string, argsDelta: string) => void;
+  onToolCallEnd: (id: string, name: string, args: Record<string, unknown>) => void;
+  onToolResult: (id: string, name: string, content: string) => void;
+  onTodos: (todos: TodoItem[]) => void;
+  onDone: (data: {
+    full_content: string;
+    tool_calls?: ToolCallInfo[];
+    todos?: TodoItem[];
+  }) => void;
+  onError: (error: string) => void;
+}
+
 export async function sendMessageStream(
   conversationId: string,
   content: string,
-  onToken: (token: string) => void,
-  onDone: (fullContent: string) => void,
-  onError: (error: string) => void
+  callbacks: StreamCallbacks
 ): Promise<void> {
   const ctrl = new AbortController();
 
@@ -34,19 +47,36 @@ export async function sendMessageStream(
     body: JSON.stringify({ content }),
     signal: ctrl.signal,
     onmessage(ev) {
-      if (ev.event === "token") {
-        const data = JSON.parse(ev.data);
-        onToken(data.content);
-      } else if (ev.event === "done") {
-        const data = JSON.parse(ev.data);
-        onDone(data.full_content);
-      } else if (ev.event === "error") {
-        const data = JSON.parse(ev.data);
-        onError(data.detail);
+      const data = JSON.parse(ev.data);
+      switch (ev.event) {
+        case "token":
+          callbacks.onToken(data.content);
+          break;
+        case "tool_call_start":
+          callbacks.onToolCallStart(data.id, data.name);
+          break;
+        case "tool_call_args":
+          callbacks.onToolCallArgs(data.id, data.args_partial);
+          break;
+        case "tool_call_end":
+          callbacks.onToolCallEnd(data.id, data.name, data.args);
+          break;
+        case "tool_result":
+          callbacks.onToolResult(data.id, data.name, data.content);
+          break;
+        case "todos":
+          callbacks.onTodos(data.todos);
+          break;
+        case "done":
+          callbacks.onDone(data);
+          break;
+        case "error":
+          callbacks.onError(data.detail);
+          break;
       }
     },
     onerror(err) {
-      onError("Connection lost");
+      callbacks.onError("Connection lost");
       ctrl.abort();
       throw err;
     },
