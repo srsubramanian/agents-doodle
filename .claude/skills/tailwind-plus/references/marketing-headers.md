@@ -1,0 +1,89 @@
+# Marketing Headers
+Source: https://tailwindcss.com/plus/ui-blocks/marketing/elements/headers
+
+## Classes (85 unique)
+- `bg-gray-900`
+- `mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8`
+- `flex lg:flex-1`
+- `-m-1.5 p-1.5`
+- `sr-only`
+- `h-8 w-auto`
+- `flex lg:hidden`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400`
+- `size-6`
+- `hidden lg:flex lg:gap-x-12`
+- `relative`
+- `flex items-center gap-x-1 text-sm/6 font-semibold text-white`
+- `size-5 flex-none text-gray-500`
+- `w-screen max-w-md overflow-hidden rounded-3xl bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `p-4`
+- `group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5`
+- `flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700`
+- `size-6 text-gray-400 group-hover:text-white`
+- `flex-auto`
+- `block font-semibold text-white`
+- `absolute inset-0`
+- `mt-1 text-gray-400`
+- `grid grid-cols-2 divide-x divide-white/10 bg-gray-700/50`
+- `flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-700/50`
+- `text-sm/6 font-semibold text-white`
+- `hidden lg:flex lg:flex-1 lg:justify-end`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 focus:outline-none`
+- `fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10`
+- `flex items-center justify-between`
+- `-m-2.5 rounded-md p-2.5 text-gray-400`
+- `mt-6 flow-root`
+- `-my-6 divide-y divide-white/10`
+- `space-y-2 py-6`
+- `-mx-3`
+- `flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5`
+- `size-5 flex-none in-aria-expanded:rotate-180`
+- `mt-2 block space-y-2`
+- `block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5`
+- `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5`
+- `py-6`
+- `-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5`
+- `bg-indigo-900`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-indigo-200`
+- `-my-6 divide-y divide-gray-500/20`
+- `relative isolate z-10 bg-gray-900`
+- `absolute top-16 w-full overflow-visible bg-gray-900 transition transition-discrete backdrop:bg-transparent open:block data-closed:-translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `absolute inset-0 top-1/2 bg-gray-900 ring-1 ring-white/15`
+- `relative bg-gray-900`
+- `mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8`
+- `group relative rounded-lg p-6 text-sm/6 hover:bg-white/5`
+- `flex size-11 items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700`
+- `mt-6 block font-semibold text-white`
+- `bg-gray-800/50`
+- `mx-auto max-w-7xl px-6 lg:px-8`
+- `grid grid-cols-3 divide-x divide-white/5 border-x border-white/10`
+- `flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-800`
+- `flex items-center justify-between p-6 lg:px-8`
+- `mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8`
+- `flex flex-1 items-center justify-end gap-x-6`
+- `hidden text-sm/6 font-semibold text-white lg:block`
+- `rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `flex items-center gap-x-6`
+- `ml-auto rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `w-56 overflow-visible rounded-xl bg-gray-800 p-2 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `block rounded-lg px-3 py-2 text-sm/6 font-semibold text-white hover:bg-white/5`
+- `w-96 overflow-visible rounded-3xl bg-gray-800 p-4 shadow-lg outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `relative rounded-lg p-4 hover:bg-white/5`
+- `block text-sm/6 font-semibold text-white`
+- `mt-1 text-sm/6 text-gray-400`
+- `fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-gray-900 sm:max-w-sm sm:ring-1 sm:ring-white/10`
+- `p-6`
+- `group -mx-3 flex items-center gap-x-6 rounded-lg p-3 text-base/7 font-semibold text-white hover:bg-white/5`
+- `flex size-11 flex-none items-center justify-center rounded-lg bg-gray-800 group-hover:bg-gray-700`
+- `size-6 text-gray-300 group-hover:text-white`
+- `sticky bottom-0 grid grid-cols-2 divide-x divide-white/5 bg-gray-800/50 text-center`
+- `p-3 text-base/7 font-semibold text-white hover:bg-gray-800`
+- `flex items-center gap-x-12`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400 hover:text-white`
+- `hidden lg:flex`
+- `-m-2.5 rounded-md p-2.5 text-gray-400 hover:text-white`
+- `flex flex-1`
+- `flex flex-1 justify-end`
+- `fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6`
+- `mt-6 space-y-2`

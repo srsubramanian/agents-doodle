@@ -1,0 +1,133 @@
+# Ecommerce Category Filters
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/category-filters
+
+## Classes (129 unique)
+- `bg-gray-50`
+- `overflow-hidden backdrop:bg-transparent sm:hidden`
+- `fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `relative ml-auto flex size-full max-w-xs transform flex-col overflow-y-auto bg-white pt-4 pb-6 shadow-xl transition duration-300 ease-in-out data-closed:translate-x-full`
+- `flex items-center justify-between px-4`
+- `text-lg font-medium text-gray-900`
+- `relative -mr-2 flex size-10 items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:outline-hidden`
+- `absolute -inset-0.5`
+- `sr-only`
+- `size-6`
+- `mt-4`
+- `border-t border-gray-200 px-4 py-6`
+- `-mx-2 -my-3 flow-root`
+- `flex w-full items-center justify-between bg-white px-2 py-3 text-sm text-gray-400`
+- `font-medium text-gray-900`
+- `ml-6 flex items-center`
+- `size-5 transform not-in-aria-expanded:rotate-0 in-aria-expanded:-rotate-180`
+- `block pt-6`
+- `space-y-6`
+- `flex gap-3`
+- `flex h-5 shrink-0 items-center`
+- `group grid size-4 grid-cols-1`
+- `col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto`
+- `pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25`
+- `opacity-0 group-has-checked:opacity-100`
+- `opacity-0 group-has-indeterminate:opacity-100`
+- `text-sm text-gray-500`
+- `mx-auto max-w-3xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8`
+- `py-24`
+- `text-4xl font-bold tracking-tight text-gray-900`
+- `mx-auto mt-4 max-w-3xl text-base text-gray-500`
+- `border-t border-gray-200 py-6`
+- `flex items-center justify-between`
+- `relative inline-block text-left`
+- `group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900`
+- `-mr-1 ml-1 size-5 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `w-40 origin-top-left rounded-md bg-white shadow-2xl ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `py-1`
+- `block px-4 py-2 text-sm font-medium text-gray-900 focus:bg-gray-100 focus:outline-hidden`
+- `inline-block text-sm font-medium text-gray-700 hover:text-gray-900 sm:hidden`
+- `hidden sm:flex sm:items-baseline sm:space-x-8`
+- `group inline-flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-900`
+- `ml-1.5 rounded-sm bg-gray-200 px-1.5 py-0.5 text-xs font-semibold text-gray-700 tabular-nums`
+- `origin-top-right overflow-visible rounded-md bg-white p-4 shadow-2xl ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] backdrop:bg-transparent open:block focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `space-y-4`
+- `pr-6 text-sm font-medium whitespace-nowrap text-gray-900`
+- `bg-white`
+- `mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8`
+- `text-3xl font-bold tracking-tight text-gray-900`
+- `mt-4 max-w-xl text-sm text-gray-700`
+- `border-b border-gray-200 bg-white pb-4`
+- `mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8`
+- `block px-4 py-2 text-sm text-gray-500 focus:bg-gray-100 focus:outline-hidden`
+- `hidden sm:block`
+- `flow-root`
+- `-mx-4 flex items-center divide-x divide-gray-200`
+- `relative inline-block px-4 text-left`
+- `bg-gray-100`
+- `mx-auto max-w-7xl px-4 py-3 sm:flex sm:items-center sm:px-6 lg:px-8`
+- `text-sm font-medium text-gray-500`
+- `hidden h-5 w-px bg-gray-300 sm:ml-4 sm:block`
+- `mt-2 sm:mt-0 sm:ml-4`
+- `-m-1 flex flex-wrap items-center`
+- `m-1 inline-flex items-center rounded-full border border-gray-200 bg-white py-1.5 pr-2 pl-3 text-sm font-medium text-gray-900`
+- `ml-1 inline-flex size-4 shrink-0 rounded-full p-1 text-gray-400 hover:bg-gray-200 hover:text-gray-500`
+- `size-2`
+- `px-4 py-16 text-center sm:px-6 lg:px-8`
+- `mx-auto mt-4 max-w-xl text-base text-gray-500`
+- `grid items-center border-t border-b border-gray-200`
+- `relative col-start-1 row-start-1 py-4`
+- `mx-auto flex max-w-7xl divide-x divide-gray-200 px-4 text-sm sm:px-6 lg:px-8`
+- `pr-6`
+- `group flex items-center font-medium text-gray-700`
+- `mr-2 size-5 flex-none text-gray-400 group-hover:text-gray-500`
+- `pl-6`
+- `text-gray-500`
+- `block border-t border-gray-200 py-10`
+- `mx-auto grid max-w-7xl grid-cols-2 gap-x-4 px-4 text-sm sm:px-6 md:gap-x-6 lg:px-8`
+- `grid auto-rows-min grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-6`
+- `block font-medium`
+- `space-y-6 pt-6 sm:space-y-4 sm:pt-4`
+- `text-base text-gray-600 sm:text-sm`
+- `col-start-1 row-start-1 py-4`
+- `mx-auto flex max-w-7xl justify-end px-4 sm:px-6 lg:px-8`
+- `relative inline-block`
+- `flex`
+- `w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `overflow-hidden backdrop:bg-transparent lg:hidden`
+- `mt-4 border-t border-gray-200`
+- `px-2 py-3 font-medium text-gray-900`
+- `block px-2 py-3`
+- `flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500`
+- `size-5 in-aria-expanded:hidden`
+- `size-5 not-in-aria-expanded:hidden`
+- `min-w-0 flex-1 text-gray-500`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6`
+- `flex items-center`
+- `-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7`
+- `size-5`
+- `-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden`
+- `pt-6 pb-24`
+- `grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4`
+- `hidden lg:block`
+- `space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900`
+- `border-b border-gray-200 py-6`
+- `-my-3 flow-root`
+- `flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500`
+- `text-sm text-gray-600`
+- `lg:col-span-3`
+- `border-t border-gray-200 pt-4 pb-4`
+- `w-full px-2`
+- `flex w-full items-center justify-between p-2 text-gray-400 hover:text-gray-500`
+- `text-sm font-medium text-gray-900`
+- `ml-6 flex h-7 items-center`
+- `block px-4 pt-4 pb-2`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `border-b border-gray-200 pb-10`
+- `mt-4 text-base text-gray-500`
+- `pt-12 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4`
+- `inline-flex items-center lg:hidden`
+- `text-sm font-medium text-gray-700`
+- `ml-1 size-5 shrink-0 text-gray-400`
+- `divide-y divide-gray-200`
+- `py-10 first:pt-0 last:pb-0`
+- `block text-sm font-medium text-gray-900`
+- `space-y-3 pt-6`
+- `mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3`

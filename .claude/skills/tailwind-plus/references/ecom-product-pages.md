@@ -1,0 +1,75 @@
+# Ecommerce Product Pages
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/page-examples/product-pages
+
+## Classes (386 unique)
+- `bg-white`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `flex px-4 pt-5 pb-2`
+- `relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400`
+- `absolute -inset-0.5`
+- `sr-only`
+- `size-6`
+- `mt-2 block`
+- `border-b border-gray-200`
+- `-mb-px flex space-x-8 px-4`
+- `flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 aria-selected:border-indigo-600 aria-selected:text-indigo-600`
+- `space-y-10 px-4 pt-10 pb-8`
+- `space-y-4`
+- `group relative overflow-hidden rounded-md bg-gray-100`
+- `aspect-square w-full object-cover group-hover:opacity-75`
+- `absolute inset-0 flex flex-col justify-end`
+- `bg-white/60 p-4 text-base sm:text-sm`
+- `font-medium text-gray-900`
+- `absolute inset-0`
+- `mt-0.5 text-gray-700 sm:mt-1`
+- `space-y-10`
+- `mt-6 flex flex-col space-y-6`
+- `flow-root`
+- `-m-2 block p-2 text-gray-500`
+- `space-y-6 border-t border-gray-200 px-4 py-6`
+- `-m-2 block p-2 font-medium text-gray-900`
+- `border-t border-gray-200 px-4 py-6`
+- `-m-2 flex items-center p-2`
+- `block h-auto w-5 shrink-0`
+- `ml-3 block text-base font-medium text-gray-900`
+- `relative bg-white`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 items-center justify-between`
+- `flex flex-1 items-center lg:hidden`
+- `-ml-2 rounded-md bg-white p-2 text-gray-400`
+- `ml-2 p-2 text-gray-400 hover:text-gray-500`
+- `group/popover-group hidden lg:block lg:flex-1 lg:self-stretch`
+- `flex h-full space-x-8`
+- `group/popover flex`
+- `relative flex`
+- `relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out group-not-has-open/popover:text-gray-700 group-has-open/popover:text-indigo-600 group-not-has-open/popover:hover:text-gray-800`
+- `absolute inset-x-0 -bottom-px z-30 h-0.5 bg-transparent duration-200 ease-in group-has-open/popover:bg-indigo-600 group-has-open/popover-group:duration-150 group-has-open/popover-group:ease-out`
+- `w-full overflow-visible bg-white text-sm text-gray-500 transition transition-discrete [--anchor-gap:1px] backdrop:bg-transparent open:block data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `absolute inset-0 top-1/2 bg-white shadow-sm`
+- `mx-auto max-w-7xl px-8`
+- `grid grid-cols-2 gap-x-8 gap-y-10 py-16`
+- `pt-10 sm:pt-16`
+- `mx-auto mt-8 max-w-2xl px-4 pb-16 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8`
+- `mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 sm:pt-24 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8`
+- `mx-auto px-4 pt-14 pb-24 sm:px-6 sm:pt-16 sm:pb-32 lg:max-w-7xl lg:px-8`
+- `mx-auto max-w-7xl sm:px-6 sm:pt-16 lg:px-8`
+- `mt-16 sm:mt-24`
+- `mt-16 lg:mt-24`
+- `border-t border-gray-200 pt-10 lg:pt-16`
+- `border-t border-gray-200 bg-white`
+- `grid grid-cols-2 gap-8 py-20 sm:gap-y-0 lg:grid-cols-4`
+- `border-t border-gray-100 py-10 sm:flex sm:items-center sm:justify-between`
+- `flex items-center justify-center text-sm text-gray-500`
+- `ml-3 border-l border-gray-200 pl-3`
+- `mt-6 text-center text-sm text-gray-500 sm:mt-0`
+- `mt-10 border-t border-gray-200 px-4 py-16 sm:px-0`
+- `mx-auto mt-24 max-w-2xl sm:mt-32 lg:max-w-none`
+- `grid grid-cols-1 py-20 md:grid-flow-col md:auto-rows-min md:grid-cols-12 md:gap-x-8 md:gap-y-16`
+- `mt-3 sm:flex lg:block xl:flex`
+- `mt-4 sm:mt-0 sm:ml-4 sm:shrink-0 lg:mt-4 lg:ml-0 xl:mt-0 xl:ml-4`
+- `border-t border-gray-200 py-10 text-center`
+
+Note: This page composes from product-overviews, reviews, product-lists, features, and navigation components. The 386 total unique classes are largely shared with those component files. Only key page-level layout additions are listed above.

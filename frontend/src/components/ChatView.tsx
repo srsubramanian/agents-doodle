@@ -133,7 +133,7 @@ export function ChatView() {
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800">
         <div className="flex items-center gap-3">
-          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-sm font-medium text-gray-300">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm font-medium text-gray-300">
             {agent.name.charAt(0).toUpperCase()}
           </span>
           <div>
@@ -144,7 +144,7 @@ export function ChatView() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setView("editor")}
-            className="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-white/20"
+            className="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white hover:bg-white/20 inset-ring inset-ring-white/5"
           >
             Edit
           </button>
@@ -154,7 +154,7 @@ export function ChatView() {
               setMessages([]);
               clearStreamingState();
             }}
-            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           >
             New Chat
           </button>

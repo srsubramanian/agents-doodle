@@ -1,0 +1,212 @@
+# Marketing Pricing Pages
+Source: https://tailwindcss.com/plus/ui-blocks/marketing/page-examples/pricing-pages
+
+## Classes (208 unique)
+- `bg-gray-900`
+- `mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8`
+- `flex lg:flex-1`
+- `-m-1.5 p-1.5`
+- `sr-only`
+- `h-8 w-auto`
+- `flex lg:hidden`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200`
+- `size-6`
+- `hidden lg:flex lg:gap-x-12`
+- `text-sm/6 font-semibold text-white`
+- `hidden lg:flex lg:flex-1 lg:justify-end`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 focus:outline-none`
+- `fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10`
+- `flex items-center justify-between`
+- `-m-2.5 rounded-md p-2.5 text-gray-200`
+- `mt-6 flow-root`
+- `-my-6 divide-y divide-white/10`
+- `space-y-2 py-6`
+- `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5`
+- `py-6`
+- `-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5`
+- `group/tiers bg-gray-900 pt-24 sm:pt-32`
+- `mx-auto max-w-7xl px-6 lg:px-8`
+- `mx-auto max-w-4xl text-center`
+- `text-base/7 font-semibold text-indigo-400`
+- `mt-2 text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl`
+- `mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-400 sm:text-xl/8`
+- `mt-16 flex justify-center`
+- `grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs/5 font-semibold inset-ring inset-ring-white/10`
+- `group relative rounded-full px-2.5 py-1 has-checked:bg-indigo-500`
+- `absolute inset-0 appearance-none rounded-full`
+- `text-gray-400 group-has-checked:text-white`
+- `isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4`
+- `group/tier rounded-3xl bg-gray-800/50 p-8 ring-1 ring-white/15 data-featured:ring-2 data-featured:ring-indigo-400`
+- `flex items-center justify-between gap-x-4`
+- `text-lg/8 font-semibold text-white group-data-featured/tier:text-indigo-400`
+- `rounded-full bg-indigo-500 px-2.5 py-1 text-xs/5 font-semibold text-white group-not-data-featured/tier:hidden`
+- `mt-4 text-sm/6 text-gray-300`
+- `mt-6 flex items-baseline gap-x-1 group-not-has-[[name=frequency][value=monthly]:checked]/tiers:hidden`
+- `text-4xl font-semibold tracking-tight text-white`
+- `text-sm/6 font-semibold text-gray-400`
+- `mt-6 flex items-baseline gap-x-1 group-not-has-[[name=frequency][value=annually]:checked]/tiers:hidden`
+- `mt-6 block w-full rounded-md bg-white/10 px-3 py-2 text-center text-sm/6 font-semibold text-white inset-ring inset-ring-white/5 group-data-featured/tier:bg-indigo-500 group-data-featured/tier:inset-ring-0 hover:bg-white/20 group-data-featured/tier:hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 group-not-data-featured/tier:focus-visible:outline-white/75`
+- `mt-8 space-y-3 text-sm/6 text-gray-300`
+- `flex gap-x-3`
+- `h-6 w-5 flex-none text-indigo-400`
+- `mx-auto mt-24 max-w-7xl px-6 sm:mt-32 lg:px-8`
+- `mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5`
+- `col-span-2 max-h-12 w-full object-contain lg:col-span-1`
+- `col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1`
+- `col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1`
+- `relative rounded-full bg-gray-800/75 px-4 py-1.5 text-sm/6 text-gray-400 inset-ring inset-ring-white/10`
+- `hidden md:inline`
+- `font-semibold text-indigo-400 hover:text-indigo-300`
+- `absolute inset-0`
+- `mx-auto mt-24 max-w-7xl sm:mt-56 sm:px-6 lg:px-8`
+- `relative overflow-hidden bg-black px-6 py-20 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-10 sm:py-24 after:sm:rounded-3xl md:px-12 lg:px-20`
+- `absolute inset-0 size-full object-cover brightness-150 saturate-0`
+- `absolute inset-0 bg-gray-900/90 mix-blend-multiply`
+- `absolute -top-56 -left-80 transform-gpu blur-3xl`
+- `aspect-1097/845 w-274.25 bg-linear-to-r from-[#ff4694] to-[#776fff] opacity-[0.30]`
+- `hidden md:absolute md:bottom-16 md:left-200 md:block md:transform-gpu md:blur-3xl`
+- `aspect-1097/845 w-274.25 bg-linear-to-r from-[#ff4694] to-[#776fff] opacity-20`
+- `relative mx-auto max-w-2xl lg:mx-0`
+- `h-12 w-auto`
+- `mt-6 text-lg font-semibold text-white sm:text-xl/8`
+- `mt-6 text-base text-gray-200`
+- `font-semibold`
+- `mt-1`
+- `mx-auto mt-24 max-w-7xl px-6 sm:mt-56 lg:px-8`
+- `mx-auto max-w-4xl`
+- `text-4xl font-semibold tracking-tight text-white sm:text-5xl`
+- `mt-16 divide-y divide-white/10`
+- `py-6 first:pt-0 last:pb-0`
+- `flex w-full items-start justify-between text-left text-white`
+- `text-base/7 font-semibold`
+- `ml-6 flex h-7 items-center`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `contents`
+- `mt-2 pr-12`
+- `text-base/7 text-gray-400`
+- `mx-auto max-w-7xl px-6 pt-24 pb-8 sm:pt-56 lg:px-8`
+- `border-t border-white/10 pt-24`
+- `xl:grid xl:grid-cols-3 xl:gap-8`
+- `h-9`
+- `mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0`
+- `md:grid md:grid-cols-2 md:gap-8`
+- `mt-6 space-y-4`
+- `text-sm/6 text-gray-400 hover:text-white`
+- `mt-10 md:mt-0`
+- `bg-gray-800/25`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400`
+- `fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10`
+- `-m-2.5 rounded-md p-2.5 text-gray-400`
+- `-my-6 divide-y divide-gray-500/25`
+- `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800`
+- `-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-gray-800`
+- `group/tiers isolate overflow-hidden`
+- `flow-root border-b border-b-white/5 bg-gray-800/25 pt-24 pb-16 sm:pt-32 lg:pb-0`
+- `relative z-10`
+- `mx-auto max-w-4xl text-center text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl`
+- `grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs/5 font-semibold text-white`
+- `text-white`
+- `relative mx-auto mt-10 grid max-w-md grid-cols-1 gap-y-8 lg:mx-0 lg:-mb-14 lg:max-w-none lg:grid-cols-3`
+- `absolute -bottom-48 left-1/2 h-256 -translate-x-1/2 translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] lg:-top-48 lg:bottom-auto lg:translate-y-0`
+- `hidden lg:absolute lg:inset-x-px lg:top-4 lg:bottom-0 lg:block lg:rounded-t-2xl lg:bg-gray-800/80 lg:ring-1 lg:ring-white/10`
+- `group/tier relative rounded-2xl bg-gray-800/80 outline-1 -outline-offset-1 outline-white/10 lg:bg-transparent lg:pb-14 lg:outline-0`
+- `p-8 lg:pt-12 xl:p-10 xl:pt-14`
+- `flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:flex-col lg:items-stretch`
+- `mt-2 flex items-center gap-x-4`
+- `text-4xl font-semibold tracking-tight text-white group-not-has-[[name=frequency][value=monthly]:checked]/tiers:hidden`
+- `text-4xl font-semibold tracking-tight text-white group-not-has-[[name=frequency][value=annually]:checked]/tiers:hidden`
+- `text-sm`
+- `text-gray-400 group-not-has-[[name=frequency][value=monthly]:checked]/tiers:hidden`
+- `text-gray-400 group-not-has-[[name=frequency][value=annually]:checked]/tiers:hidden`
+- `w-full rounded-md bg-white/10 px-3 py-2 text-center text-sm/6 font-semibold text-white not-group-data-featured:inset-ring not-group-data-featured:inset-ring-white/5 group-data-featured/tier:bg-indigo-500 hover:bg-white/20 group-data-featured/tier:hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/75 group-data-featured/tier:focus-visible:outline-indigo-500`
+- `mt-8 flow-root sm:mt-10`
+- `-my-2 divide-y divide-white/5 border-t border-white/5 text-sm/6 text-white group-data-featured/tier:divide-white/10 group-data-featured/tier:border-white/10 lg:border-t-0`
+- `flex gap-x-3 py-2`
+- `h-6 w-5 flex-none text-gray-500 group-data-featured/tier:text-indigo-400`
+- `group/tier relative z-10 rounded-2xl bg-gray-800 outline-1 -outline-offset-1 outline-white/10`
+- `relative bg-gray-900 lg:pt-14`
+- `mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8`
+- `lg:hidden`
+- `mx-auto max-w-2xl space-y-16`
+- `border-t border-white/10`
+- `-mt-px w-72 border-t-2 border-transparent pt-10 md:w-80`
+- `mt-1 text-sm/6 text-gray-400`
+- `mt-10 space-y-10`
+- `relative mt-6`
+- `absolute inset-y-0 right-0 hidden w-1/2 rounded-lg bg-gray-800/50 sm:block`
+- `relative rounded-lg bg-gray-800/50 ring-1 ring-white/10 sm:rounded-none sm:bg-transparent sm:ring-0`
+- `divide-y divide-white/10 text-sm/6`
+- `flex items-center justify-between px-4 py-3 sm:grid sm:grid-cols-2 sm:px-0`
+- `pr-4 text-gray-400`
+- `flex items-center justify-end sm:justify-center sm:px-4`
+- `mx-auto size-5 text-indigo-400`
+- `mx-auto size-5 text-gray-600`
+- `pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 rounded-lg ring-1 ring-white/10 sm:block`
+- `-mt-px w-72 border-t-2 border-indigo-500 pt-10 md:w-80`
+- `text-sm/6 font-semibold text-indigo-400`
+- `relative rounded-lg bg-gray-800/50 ring-2 ring-indigo-500 sm:rounded-none sm:bg-transparent sm:ring-0`
+- `font-semibold text-indigo-400`
+- `pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 rounded-lg ring-2 ring-indigo-500 sm:block`
+- `hidden lg:block`
+- `grid grid-cols-4 gap-x-8 border-t border-white/10 before:block`
+- `-mt-px`
+- `border-t-2 border-transparent pt-10`
+- `border-t-2 border-indigo-500 pt-10`
+- `-mt-6 space-y-16`
+- `relative -mx-8 mt-10`
+- `absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block`
+- `size-full rounded-lg bg-gray-800/50`
+- `relative w-full border-separate border-spacing-x-8`
+- `text-left`
+- `w-1/4 py-3 pr-4 text-left text-sm/6 font-normal text-white`
+- `absolute inset-x-8 mt-3 h-px bg-white/10`
+- `relative w-1/4 px-4 py-0 text-center`
+- `relative size-full py-3`
+- `text-sm/6 text-white`
+- `pointer-events-none absolute inset-x-8 inset-y-0 grid grid-cols-4 gap-x-8 before:block`
+- `rounded-lg ring-1 ring-white/10`
+- `rounded-lg ring-2 ring-indigo-500`
+- `mt-20 divide-y divide-white/10`
+- `py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8`
+- `text-base/7 font-semibold text-white lg:col-span-5`
+- `mt-4 lg:col-span-7 lg:mt-0`
+- `space-y-8`
+- `text-sm/6 text-balance text-gray-400`
+- `flex gap-x-6`
+- `text-gray-400 hover:text-gray-300`
+- `text-sm/6 text-gray-400 hover:text-gray-300`
+- `mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24`
+- `text-sm/6 text-gray-400`
+- `group/tiers pt-24 sm:pt-32`
+- `isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3`
+- `group/tier rounded-3xl bg-gray-800/50 p-8 ring-1 ring-white/15 data-featured:ring-2 data-featured:ring-indigo-400 xl:p-10`
+- `mt-8 space-y-3 text-sm/6 text-gray-300 xl:mt-10`
+- `mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2`
+- `flex flex-col pb-10 sm:pb-16 lg:pr-8 lg:pb-0 xl:pr-20`
+- `h-12 self-start`
+- `mt-10 flex flex-auto flex-col justify-between`
+- `text-lg/8 text-gray-100`
+- `mt-10 flex items-center gap-x-6`
+- `size-14 rounded-full bg-gray-800`
+- `text-base`
+- `font-semibold text-white`
+- `mt-1 text-gray-400`
+- `flex flex-col border-t border-white/10 pt-10 sm:pt-16 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8 xl:pl-20`
+- `mt-6 max-w-2xl text-base/7 text-gray-400`
+- `mt-20`
+- `space-y-16 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-x-6 sm:gap-y-16 lg:gap-x-10`
+- `text-base/7 font-semibold text-white`
+- `mt-2 text-base/7 text-gray-400`
+- `grid grid-cols-2 gap-8 xl:col-span-2`
+- `mt-10 xl:mt-0`
+- `mt-2 text-sm/6 text-gray-400`
+- `mt-6 sm:flex sm:max-w-md`
+- `w-full min-w-0 rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-gray-700 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:w-64 sm:text-sm/6 xl:w-full`
+- `mt-4 sm:mt-0 sm:ml-4 sm:shrink-0`
+- `flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24`
+- `flex gap-x-6 md:order-2`
+- `text-gray-400 hover:text-white`
+- `mt-8 text-sm/6 text-gray-400 md:order-1 md:mt-0`

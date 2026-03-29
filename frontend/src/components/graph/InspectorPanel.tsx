@@ -88,14 +88,14 @@ function SkillsInspector({ agentId, onSkillsChange }: { agentId: string; onSkill
       {allSkills.map((skill) => (
         <label
           key={skill.id}
-          className="flex items-start gap-3 p-3 bg-white/5 rounded-lg ring-1 ring-white/10 cursor-pointer hover:ring-white/20"
+          className="flex items-start gap-3 p-3 bg-white/5 rounded-lg inset-ring inset-ring-white/10 cursor-pointer hover:inset-ring-white/20"
         >
           <input
             type="checkbox"
             checked={agentSkillIds.has(skill.id)}
             onChange={() => handleToggle(skill.id)}
             disabled={toggling === skill.id}
-            className="mt-0.5 rounded border-gray-600 bg-gray-700 text-indigo-600 focus:ring-indigo-500"
+            className="mt-0.5 rounded border-white/10 bg-white/5 text-indigo-500 focus:ring-indigo-500"
           />
           <div>
             <div className="text-sm text-white font-medium">{skill.name}</div>
@@ -183,13 +183,13 @@ export function InspectorPanel({
             {availableTools.map((tool) => (
               <label
                 key={tool.name}
-                className="flex items-start gap-3 p-3 bg-white/5 rounded-lg ring-1 ring-white/10 cursor-pointer hover:ring-white/20"
+                className="flex items-start gap-3 p-3 bg-white/5 rounded-lg inset-ring inset-ring-white/10 cursor-pointer hover:inset-ring-white/20"
               >
                 <input
                   type="checkbox"
                   checked={isToolEnabled(tool.name)}
                   onChange={() => toggleTool(tool.name)}
-                  className="mt-0.5 rounded border-gray-600 bg-gray-700 text-indigo-600 focus:ring-indigo-500"
+                  className="mt-0.5 rounded border-white/10 bg-white/5 text-indigo-500 focus:ring-indigo-500"
                 />
                 <div>
                   <div className="text-sm text-white font-medium">{tool.name}</div>
@@ -211,12 +211,12 @@ export function InspectorPanel({
         {/* Sub-agents */}
         {nodeId === "subagents" && (
           <>
-            <button onClick={addSubAgent} className="inline-flex items-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <button onClick={addSubAgent} className="inline-flex items-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
               + Add sub-agent
             </button>
             <div className="space-y-3">
               {subagentsConfig.map((sa, i) => (
-                <div key={i} className="p-3 bg-white/5 rounded-lg ring-1 ring-white/10 space-y-2">
+                <div key={i} className="p-3 bg-white/5 rounded-lg inset-ring inset-ring-white/10 space-y-2">
                   <div className="flex items-center justify-between">
                     <input
                       type="text"
@@ -255,8 +255,8 @@ export function InspectorPanel({
         {/* Channels */}
         {nodeId === "channels" && (
           <div className="space-y-3">
-            <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg ring-1 ring-white/10">
-              <span className="w-2 h-2 rounded-full bg-cyan-500" />
+            <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg inset-ring inset-ring-white/10">
+              <span className="size-2 rounded-full bg-cyan-500" />
               <div>
                 <div className="text-sm text-white font-medium">Chat</div>
                 <div className="text-xs text-gray-500">Messages from the chat UI</div>

@@ -1,0 +1,117 @@
+# Ecommerce Order History
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/order-history
+
+## Classes (113 unique)
+- `bg-white`
+- `py-16 sm:py-24`
+- `mx-auto max-w-7xl sm:px-2 lg:px-8`
+- `mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0`
+- `text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl`
+- `mt-2 text-sm text-gray-500`
+- `mt-16`
+- `sr-only`
+- `mx-auto max-w-2xl space-y-8 sm:px-4 lg:max-w-4xl lg:px-0`
+- `border-t border-b border-gray-200 bg-white shadow-xs sm:rounded-lg sm:border`
+- `flex items-center border-b border-gray-200 p-4 sm:grid sm:grid-cols-4 sm:gap-x-6 sm:p-6`
+- `grid flex-1 grid-cols-2 gap-x-6 text-sm sm:col-span-3 sm:grid-cols-3 lg:col-span-2`
+- `font-medium text-gray-900`
+- `mt-1 text-gray-500`
+- `hidden sm:block`
+- `mt-1 font-medium text-gray-900`
+- `flex justify-end lg:hidden`
+- `relative`
+- `relative flex items-center text-gray-400 hover:text-gray-500`
+- `absolute -inset-2`
+- `size-6`
+- `w-40 origin-bottom-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `py-1`
+- `block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden`
+- `hidden lg:col-span-2 lg:flex lg:items-center lg:justify-end lg:space-x-4`
+- `flex items-center justify-center rounded-md border border-gray-300 bg-white px-2.5 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden`
+- `divide-y divide-gray-200`
+- `p-4 sm:p-6`
+- `flex items-center sm:items-start`
+- `size-20 shrink-0 overflow-hidden rounded-lg bg-gray-200 sm:size-40`
+- `size-full object-cover`
+- `ml-6 flex-1 text-sm`
+- `font-medium text-gray-900 sm:flex sm:justify-between`
+- `mt-2 sm:mt-0`
+- `hidden text-gray-500 sm:mt-2 sm:block`
+- `mt-6 sm:flex sm:justify-between`
+- `flex items-center`
+- `size-5 text-green-500`
+- `ml-2 text-sm font-medium text-gray-500`
+- `mt-6 flex items-center divide-x divide-gray-200 border-t border-gray-200 pt-4 text-sm font-medium sm:mt-0 sm:ml-4 sm:border-none sm:pt-0`
+- `flex flex-1 justify-center pr-4`
+- `whitespace-nowrap text-indigo-600 hover:text-indigo-500`
+- `flex flex-1 justify-center pl-4`
+- `mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pb-24`
+- `max-w-xl`
+- `space-y-20`
+- `rounded-lg bg-gray-50 px-4 py-6 sm:flex sm:items-center sm:justify-between sm:space-x-6 sm:px-6 lg:space-x-8`
+- `flex-auto divide-y divide-gray-200 text-sm text-gray-600 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8`
+- `max-sm:flex max-sm:justify-between max-sm:py-6 max-sm:first:pt-0 max-sm:last:pb-0`
+- `sm:mt-1`
+- `font-medium text-gray-900 sm:mt-1`
+- `mt-6 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden sm:mt-0 sm:w-auto`
+- `mt-4 w-full text-gray-500 sm:mt-6`
+- `sr-only text-left text-sm text-gray-500 sm:not-sr-only`
+- `py-3 pr-8 font-normal sm:w-2/5 lg:w-1/3`
+- `hidden w-1/5 py-3 pr-8 font-normal sm:table-cell`
+- `hidden py-3 pr-8 font-normal sm:table-cell`
+- `w-0 py-3 text-right font-normal`
+- `divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t`
+- `py-6 pr-8`
+- `mr-6 size-16 rounded-sm object-cover`
+- `mt-1 sm:hidden`
+- `hidden py-6 pr-8 sm:table-cell`
+- `py-6 text-right font-medium whitespace-nowrap`
+- `text-indigo-600`
+- `hidden lg:inline`
+- `mx-auto max-w-4xl py-16 sm:px-6 sm:py-24`
+- `px-4 sm:px-0`
+- `space-y-16 sm:space-y-24`
+- `bg-gray-50 px-4 py-6 sm:rounded-lg sm:p-6 md:flex md:items-center md:justify-between md:space-x-6 lg:space-x-8`
+- `flex-auto divide-y divide-gray-200 text-sm text-gray-600 md:grid md:grid-cols-3 md:gap-x-6 md:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8`
+- `max-md:flex max-md:justify-between max-md:py-4 max-md:first:pt-0 max-md:last:pb-0`
+- `md:mt-1`
+- `font-medium text-gray-900 md:mt-1`
+- `mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-4 md:mt-0`
+- `flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden md:w-auto`
+- `mt-6 flow-root px-4 sm:mt-10 sm:px-0`
+- `-my-6 divide-y divide-gray-200 sm:-my-10`
+- `flex py-6 sm:py-10`
+- `min-w-0 flex-1 lg:flex lg:flex-col`
+- `lg:flex-1`
+- `sm:flex`
+- `mt-2 hidden text-sm text-gray-500 sm:block`
+- `mt-1 font-medium text-gray-900 sm:mt-0 sm:ml-6`
+- `mt-2 flex text-sm font-medium sm:mt-4`
+- `text-indigo-600 hover:text-indigo-500`
+- `ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6`
+- `mt-6 font-medium`
+- `ml-4 shrink-0 sm:order-first sm:m-0 sm:mr-6`
+- `col-start-2 col-end-3 size-20 rounded-lg object-cover sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:size-40 lg:size-52`
+- `flex space-x-2`
+- `size-6 flex-none text-green-500`
+- `hidden sm:inline`
+- `text-gray-500`
+- `mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24`
+- `text-3xl font-bold tracking-tight text-gray-900`
+- `mt-12 space-y-16 sm:mt-16`
+- `space-y-1 md:flex md:items-baseline md:space-y-0 md:space-x-4`
+- `text-lg font-medium text-gray-900 md:shrink-0`
+- `space-y-5 sm:flex sm:items-baseline sm:justify-between sm:space-y-0 md:min-w-0 md:flex-1`
+- `text-sm font-medium text-gray-500`
+- `flex text-sm font-medium`
+- `mt-6 -mb-6 flow-root divide-y divide-gray-200 border-t border-gray-200`
+- `py-6 sm:flex`
+- `flex space-x-4 sm:min-w-0 sm:flex-1 sm:space-x-6 lg:space-x-8`
+- `size-20 flex-none rounded-md object-cover sm:size-48`
+- `min-w-0 flex-1 pt-1.5 sm:pt-0`
+- `text-sm font-medium text-gray-900`
+- `truncate text-sm text-gray-500`
+- `mx-1 text-gray-400`
+- `mt-6 space-y-4 sm:mt-0 sm:ml-6 sm:w-40 sm:flex-none`
+- `flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-2.5 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden sm:grow-0`
+- `flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2.5 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden sm:grow-0`

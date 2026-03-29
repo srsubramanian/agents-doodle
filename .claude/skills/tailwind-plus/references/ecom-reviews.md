@@ -1,0 +1,66 @@
+# Ecommerce Reviews
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/reviews
+
+## Classes (62 unique)
+- `bg-white`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `text-lg font-medium text-gray-900`
+- `mt-6 divide-y divide-gray-200 border-t border-b border-gray-200`
+- `py-10 lg:grid lg:grid-cols-12 lg:gap-x-8`
+- `lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8`
+- `flex items-center xl:col-span-1`
+- `flex items-center`
+- `size-5 shrink-0 text-yellow-400`
+- `ml-3 text-sm text-gray-700`
+- `sr-only`
+- `mt-4 lg:mt-6 xl:col-span-2 xl:mt-0`
+- `text-sm font-medium text-gray-900`
+- `mt-3 space-y-6 text-sm text-gray-500`
+- `mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3`
+- `font-medium text-gray-900`
+- `ml-4 border-l border-gray-200 pl-4 text-gray-500 lg:mt-2 lg:ml-0 lg:border-0 lg:pl-0`
+- `size-5 shrink-0 text-gray-200`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:py-32`
+- `lg:col-span-4`
+- `text-2xl font-bold tracking-tight text-gray-900`
+- `mt-3 flex items-center`
+- `size-5 shrink-0 text-gray-300`
+- `ml-2 text-sm text-gray-900`
+- `mt-6`
+- `space-y-3`
+- `flex items-center text-sm`
+- `flex flex-1 items-center`
+- `w-3 font-medium text-gray-900`
+- `ml-1 flex flex-1 items-center`
+- `relative ml-3 flex-1`
+- `h-3 rounded-full border border-gray-200 bg-gray-100`
+- `absolute inset-y-0 rounded-full border border-yellow-400 bg-yellow-400`
+- `ml-3 w-10 text-right text-sm text-gray-900 tabular-nums`
+- `mt-10`
+- `mt-1 text-sm text-gray-600`
+- `mt-6 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 sm:w-auto lg:w-full`
+- `mt-16 lg:col-span-7 lg:col-start-6 lg:mt-0`
+- `flow-root`
+- `-my-12 divide-y divide-gray-200`
+- `py-12`
+- `size-12 rounded-full`
+- `ml-4`
+- `text-sm font-bold text-gray-900`
+- `mt-1 flex items-center`
+- `mt-4 space-y-6 text-base text-gray-600 italic`
+- `space-y-10`
+- `flex flex-col sm:flex-row`
+- `order-2 mt-6 sm:mt-0 sm:ml-16`
+- `mt-3 space-y-6 text-sm text-gray-600`
+- `order-1 flex items-center sm:flex-col sm:items-start`
+- `ml-4 sm:mt-4 sm:ml-0`
+- `mt-2 flex items-center`
+- `size-5 shrink-0 text-gray-900`
+- `-my-10`
+- `flex space-x-4 text-sm text-gray-500`
+- `flex-none py-10`
+- `size-10 rounded-full bg-gray-100`
+- `flex-1 py-10`
+- `mt-4 flex items-center`
+- `mt-4 text-sm/6 text-gray-500`
+- `flex-1 border-t border-gray-200 py-10`

@@ -1,0 +1,384 @@
+# Sidebar Layouts
+Source: https://tailwindcss.com/plus/ui-blocks/application-ui/application-shells/sidebar
+Components: 8
+
+## Variant: Simple sidebar
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring ring-white/10 before:pointer-events-none before:absolute before:inset-0 before:bg-black/10`
+- `relative flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `relative flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-white/5 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0 text-white`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `size-6 shrink-0 text-gray-400 group-hover:text-white`
+- `text-xs/6 font-semibold text-gray-400`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-[0.625rem] font-medium text-gray-400 group-hover:border-white/20 group-hover:text-white`
+- `truncate`
+- `hidden bg-gray-900 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `flex grow flex-col gap-y-5 overflow-y-auto border-r border-white/10 bg-black/10 px-6`
+- `flex h-16 shrink-0 items-center`
+- `flex flex-1 flex-col`
+- `-mx-6 mt-auto`
+- `flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-white/5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 after:pointer-events-none after:absolute after:inset-0 after:border-b after:border-white/10 after:bg-black/10 sm:px-6 lg:hidden`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `flex-1 text-sm/6 font-semibold text-white`
+- `py-10 lg:pl-72`
+- `px-4 sm:px-6 lg:px-8`
+
+## Variant: Simple dark sidebar
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring-1 ring-white/10 before:pointer-events-none before:absolute before:inset-0 before:bg-black/10`
+- `relative flex h-16 shrink-0 items-center`
+- `relative h-8 w-auto`
+- `flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-white/5 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `text-xs/6 font-semibold text-gray-400`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:border-white/20 group-hover:text-white`
+- `truncate`
+- `hidden bg-gray-900 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `flex grow flex-col gap-y-5 overflow-y-auto border-r border-white/10 bg-black/10 px-6`
+- `flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white`
+- `-mx-6 mt-auto`
+- `flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-white/5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 after:pointer-events-none after:absolute after:inset-0 after:border-b after:border-white/10 after:bg-black/10 sm:px-6 lg:hidden`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `flex-1 text-sm/6 font-semibold text-white`
+- `py-10 lg:pl-72`
+- `px-4 sm:px-6 lg:px-8`
+
+## Variant: Sidebar with header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4 ring ring-white/10 before:pointer-events-none before:absolute before:inset-0 before:bg-black/10`
+- `relative flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `relative flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-white/5 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0 text-white`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `size-6 shrink-0 text-gray-400 group-hover:text-white`
+- `text-xs/6 font-semibold text-gray-400`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-[0.625rem] font-medium text-gray-400 group-hover:border-white/20 group-hover:text-white`
+- `truncate`
+- `mt-auto`
+- `group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-300 hover:bg-white/5 hover:text-white`
+- `hidden bg-gray-900 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `flex grow flex-col gap-y-5 overflow-y-auto border-r border-white/10 bg-black/10 px-6 pb-4`
+- `flex h-16 shrink-0 items-center`
+- `flex flex-1 flex-col`
+- `lg:pl-72`
+- `sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-white/10 bg-gray-900 px-4 sm:gap-x-6 sm:px-6 lg:px-8`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `h-6 w-px bg-white/10 lg:hidden`
+- `flex flex-1 gap-x-4 self-stretch lg:gap-x-6`
+- `grid flex-1 grid-cols-1`
+- `col-start-1 row-start-1 block size-full bg-gray-900 pl-8 text-base text-white outline-hidden placeholder:text-gray-500 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 size-5 self-center text-gray-400`
+- `flex items-center gap-x-4 lg:gap-x-6`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white`
+- `hidden lg:block lg:h-6 lg:w-px lg:bg-white/10`
+- `relative`
+- `relative flex items-center`
+- `absolute -inset-1.5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `hidden lg:flex lg:items-center`
+- `ml-4 text-sm/6 font-semibold text-white`
+- `ml-2 size-5 text-gray-500`
+- `w-32 origin-top-right rounded-md bg-gray-800 py-2 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-3 py-1 text-sm/6 text-white focus:bg-white/5 focus:outline-hidden`
+- `py-10`
+- `px-4 sm:px-6 lg:px-8`
+
+## Variant: Dark sidebar with header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4 ring-1 ring-white/10 before:pointer-events-none before:absolute before:inset-0 before:bg-black/10`
+- `relative flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `relative flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-white/5 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `text-xs/6 font-semibold text-gray-400`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-[0.625rem] font-medium text-gray-400 group-hover:border-white/20 group-hover:text-white`
+- `truncate`
+- `mt-auto`
+- `group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `hidden bg-gray-900 ring-1 ring-white/10 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `flex grow flex-col gap-y-5 overflow-y-auto bg-black/10 px-6 pb-4`
+- `flex h-16 shrink-0 items-center`
+- `flex flex-1 flex-col`
+- `lg:pl-72`
+- `sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-white/10 bg-gray-900 px-4 shadow-xs sm:gap-x-6 sm:px-6 lg:px-8`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `h-6 w-px bg-white/10 lg:hidden`
+- `flex flex-1 gap-x-4 self-stretch lg:gap-x-6`
+- `grid flex-1 grid-cols-1`
+- `col-start-1 row-start-1 block size-full bg-gray-900 pl-8 text-base text-white outline-hidden placeholder:text-gray-500 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 size-5 self-center text-gray-400`
+- `flex items-center gap-x-4 lg:gap-x-6`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-gray-300`
+- `hidden lg:block lg:h-6 lg:w-px lg:bg-gray-100/10`
+- `relative`
+- `relative flex items-center`
+- `absolute -inset-1.5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `hidden lg:flex lg:items-center`
+- `ml-4 text-sm/6 font-semibold text-white`
+- `ml-2 size-5 text-gray-500`
+- `w-32 origin-top-right rounded-md bg-gray-800 py-2 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-3 py-1 text-sm/6 text-white focus:bg-white/5 focus:outline-hidden`
+- `py-10`
+- `px-4 sm:px-6 lg:px-8`
+
+## Variant: With constrained content area
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4 ring ring-white/10 before:pointer-events-none before:absolute before:inset-0 before:bg-black/10`
+- `relative flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `relative flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-white/5 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0 text-white`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `size-6 shrink-0 text-gray-400 group-hover:text-white`
+- `text-xs/6 font-semibold text-gray-400`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-[0.625rem] font-medium text-gray-400 group-hover:border-white/20 group-hover:text-white`
+- `truncate`
+- `mt-auto`
+- `group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `hidden bg-gray-900 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `flex grow flex-col gap-y-5 overflow-y-auto border-r border-white/10 bg-black/10 px-6 pb-4`
+- `flex h-16 shrink-0 items-center`
+- `flex flex-1 flex-col`
+- `group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-300 hover:bg-white/5 hover:text-white`
+- `lg:pl-72`
+- `sticky top-0 z-40 lg:mx-auto lg:max-w-7xl lg:px-8`
+- `flex h-16 items-center gap-x-4 border-b border-white/10 bg-gray-900 px-4 sm:gap-x-6 sm:px-6 lg:px-0`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `h-6 w-px bg-gray-700 lg:hidden`
+- `flex flex-1 gap-x-4 self-stretch lg:gap-x-6`
+- `grid flex-1 grid-cols-1`
+- `col-start-1 row-start-1 block size-full bg-gray-900 pl-8 text-base text-white outline-hidden placeholder:text-gray-500 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 size-5 self-center text-gray-400`
+- `flex items-center gap-x-4 lg:gap-x-6`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white`
+- `hidden lg:block lg:h-6 lg:w-px lg:bg-white/10`
+- `relative`
+- `relative flex items-center`
+- `absolute -inset-1.5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `hidden lg:flex lg:items-center`
+- `ml-4 text-sm/6 font-semibold text-white`
+- `ml-2 size-5 text-gray-400`
+- `w-32 origin-top-right rounded-md bg-gray-800 py-2 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-3 py-1 text-sm/6 text-white focus:bg-gray-700 focus:outline-hidden`
+- `py-10`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+
+## Variant: With off-white background
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring ring-white/10 before:pointer-events-none before:absolute before:inset-0 before:bg-black/10`
+- `relative flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `relative flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-white/5 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0 text-white`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-white/5 hover:text-white`
+- `size-6 shrink-0 text-gray-400 group-hover:text-white`
+- `text-xs/6 font-semibold text-gray-400`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-[0.625rem] font-medium text-gray-400 group-hover:border-white/20 group-hover:text-white`
+- `truncate`
+- `hidden bg-gray-900 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `flex grow flex-col gap-y-5 overflow-y-auto border-r border-white/10 bg-black/10 px-6`
+- `flex h-16 shrink-0 items-center`
+- `flex flex-1 flex-col`
+- `-mx-6 mt-auto`
+- `flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-white/5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 after:pointer-events-none after:absolute after:inset-0 after:border-b after:border-white/10 after:bg-black/10 sm:px-6 lg:hidden`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `flex-1 text-sm/6 font-semibold text-white`
+- `py-10 lg:pl-72`
+- `px-4 sm:px-6 lg:px-8`
+
+## Variant: Simple brand sidebar
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-800 px-6 pb-2 ring-1 ring-white/10`
+- `flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-indigo-950/25 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0 text-white`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-indigo-100 hover:bg-indigo-950/25 hover:text-white`
+- `size-6 shrink-0 text-indigo-100 group-hover:text-white`
+- `text-xs/6 font-semibold text-indigo-100`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-indigo-500/50 bg-indigo-700 text-[0.625rem] font-medium text-white`
+- `truncate`
+- `hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-800 px-6 after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:w-px after:bg-white/10`
+- `-mx-6 mt-auto`
+- `flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-indigo-950/25`
+- `size-8 rounded-full bg-indigo-800 outline -outline-offset-1 outline-white/10`
+- `sticky top-0 z-40 flex items-center gap-x-6 bg-indigo-800 px-4 py-4 shadow-xs after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 sm:px-6 lg:hidden`
+- `-m-2.5 p-2.5 text-indigo-200 hover:text-white lg:hidden`
+- `size-6`
+- `flex-1 text-sm/6 font-semibold text-white`
+- `py-10 lg:pl-72`
+- `px-4 sm:px-6 lg:px-8`
+
+## Variant: Brand sidebar with header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-closed/dialog-panel:opacity-0`
+- `-m-2.5 p-2.5`
+- `sr-only`
+- `size-6 text-white`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-800 px-6 pb-4 ring-1 ring-white/10`
+- `flex h-16 shrink-0 items-center`
+- `h-8 w-auto`
+- `flex flex-1 flex-col`
+- `flex flex-1 flex-col gap-y-7`
+- `-mx-2 space-y-1`
+- `group flex gap-x-3 rounded-md bg-indigo-950/25 p-2 text-sm/6 font-semibold text-white`
+- `size-6 shrink-0 text-white`
+- `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-indigo-100 hover:bg-indigo-950/25 hover:text-white`
+- `size-6 shrink-0 text-indigo-100 group-hover:text-white`
+- `text-xs/6 font-semibold text-indigo-100`
+- `-mx-2 mt-2 space-y-1`
+- `flex size-6 shrink-0 items-center justify-center rounded-lg border border-indigo-500/50 bg-indigo-700 text-[0.625rem] font-medium text-white`
+- `truncate`
+- `mt-auto`
+- `group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-indigo-100 hover:bg-indigo-950/25 hover:text-white`
+- `hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col`
+- `relative flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-800 px-6 pb-4 after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:w-px after:bg-white/10`
+- `lg:pl-72`
+- `sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-white/10 bg-gray-900 px-4 sm:gap-x-6 sm:px-6 lg:px-8`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white lg:hidden`
+- `size-6`
+- `h-6 w-px bg-white/10 lg:hidden`
+- `flex flex-1 gap-x-4 self-stretch lg:gap-x-6`
+- `grid flex-1 grid-cols-1`
+- `col-start-1 row-start-1 block size-full bg-gray-900 pl-8 text-base text-white outline-hidden placeholder:text-gray-500 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 size-5 self-center text-gray-400`
+- `flex items-center gap-x-4 lg:gap-x-6`
+- `-m-2.5 p-2.5 text-gray-400 hover:text-white`
+- `hidden lg:block lg:h-6 lg:w-px lg:bg-gray-100/10`
+- `relative`
+- `relative flex items-center`
+- `absolute -inset-1.5`
+- `size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `hidden lg:flex lg:items-center`
+- `ml-4 text-sm/6 font-semibold text-white`
+- `ml-2 size-5 text-gray-500`
+- `w-32 origin-top-right rounded-md bg-gray-800 py-2 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-3 py-1 text-sm/6 text-white focus:bg-white/5 focus:outline-hidden`
+- `py-10`
+- `px-4 sm:px-6 lg:px-8`

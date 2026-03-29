@@ -1,0 +1,53 @@
+# Ecommerce Incentives
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/incentives
+
+## Classes (49 unique)
+- `bg-gray-50`
+- `mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4`
+- `mx-auto max-w-2xl px-4 lg:max-w-none`
+- `grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2`
+- `text-4xl font-bold tracking-tight text-gray-900`
+- `mt-4 text-gray-500`
+- `aspect-3/2 w-full rounded-lg bg-gray-100 object-cover`
+- `mt-16 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3`
+- `sm:flex lg:block`
+- `sm:shrink-0`
+- `size-16`
+- `mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0`
+- `text-sm font-medium text-gray-900`
+- `mt-2 text-sm text-gray-500`
+- `mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8`
+- `grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8`
+- `h-24 w-auto`
+- `mt-6 text-sm font-medium text-gray-900`
+- `bg-white`
+- `max-w-3xl`
+- `mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 px-4 lg:max-w-none lg:grid-cols-3`
+- `text-center sm:flex sm:text-left lg:block lg:text-center`
+- `flow-root`
+- `mx-auto h-24 w-28`
+- `mt-3 sm:mt-0 sm:ml-3 lg:mt-3 lg:ml-0`
+- `mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8`
+- `rounded-2xl bg-gray-50 px-6 py-16 sm:p-16`
+- `mx-auto max-w-xl lg:max-w-none`
+- `text-center`
+- `text-2xl font-bold tracking-tight text-gray-900`
+- `mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3`
+- `mx-auto size-16`
+- `mt-3 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0`
+- `sr-only`
+- `mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 px-4 lg:max-w-none lg:grid-cols-2 lg:gap-y-16`
+- `sm:flex`
+- `h-24 w-28`
+- `mt-3 sm:mt-0 sm:ml-3`
+- `mx-auto max-w-7xl divide-y divide-gray-200 lg:flex lg:justify-center lg:divide-x lg:divide-y-0 lg:py-8`
+- `py-8 lg:w-1/3 lg:flex-none lg:py-0`
+- `mx-auto flex max-w-xs items-center px-4 lg:max-w-none lg:px-8`
+- `size-8 shrink-0 text-indigo-600`
+- `ml-4 flex flex-auto flex-col-reverse`
+- `font-medium text-gray-900`
+- `text-sm text-gray-500`
+- `flex overflow-x-auto`
+- `mx-auto flex space-x-12 px-4 py-3 whitespace-nowrap sm:px-6 lg:space-x-24 lg:px-8`
+- `flex items-center text-sm font-medium text-indigo-600`
+- `mr-2 size-6 flex-none`

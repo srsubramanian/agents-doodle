@@ -83,7 +83,7 @@ export function SkillsPage() {
           </div>
           <button
             onClick={handleCreate}
-            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 inline-flex items-center gap-1"
+            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 inline-flex items-center gap-1"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-4">
               <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
@@ -137,7 +137,7 @@ export function SkillsPage() {
                 <h3 className="mt-2 text-sm font-semibold text-white">No skills yet</h3>
                 <p className="mt-1 text-sm text-gray-500">Skills teach your agents how to handle specific tasks.</p>
                 <div className="mt-6">
-                  <button onClick={handleCreate} className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 inline-flex items-center gap-1.5">
+                  <button onClick={handleCreate} className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 inline-flex items-center gap-1.5">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-4">
                       <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
                     </svg>
@@ -166,10 +166,10 @@ export function SkillsPage() {
               </button>
               {editing ? (
                 <>
-                  <button onClick={handleSave} disabled={saving} className="rounded-md bg-indigo-500 px-3 py-1 text-xs font-semibold text-white shadow-xs hover:bg-indigo-400">
+                  <button onClick={handleSave} disabled={saving} className="rounded-md bg-indigo-500 px-3 py-1 text-xs font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                     {saving ? "Saving..." : "Save Changes"}
                   </button>
-                  <button onClick={() => setEditing(false)} className="rounded-md bg-white/10 px-3 py-1 text-xs font-semibold text-white shadow-xs hover:bg-white/20 inline-flex items-center gap-1">
+                  <button onClick={() => setEditing(false)} className="rounded-md bg-white/10 px-3 py-1 text-xs font-semibold text-white hover:bg-white/20 inset-ring inset-ring-white/5 inline-flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-3">
                       <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
                     </svg>
@@ -177,7 +177,7 @@ export function SkillsPage() {
                   </button>
                 </>
               ) : (
-                <button onClick={() => setEditing(true)} className="rounded-md bg-white/10 px-3 py-1 text-xs font-semibold text-white shadow-xs hover:bg-white/20">
+                <button onClick={() => setEditing(true)} className="rounded-md bg-white/10 px-3 py-1 text-xs font-semibold text-white hover:bg-white/20 inset-ring inset-ring-white/5">
                   Edit
                 </button>
               )}
@@ -248,10 +248,10 @@ export function SkillsPage() {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={handleSave} disabled={saving} className="rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">
+                  <button onClick={handleSave} disabled={saving} className="rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                     {saving ? "Saving..." : "Save"}
                   </button>
-                  <button onClick={() => setEditing(false)} className="rounded-md bg-white/10 px-3 py-1.5 text-sm font-semibold text-white shadow-xs hover:bg-white/20">
+                  <button onClick={() => setEditing(false)} className="rounded-md bg-white/10 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/20 inset-ring inset-ring-white/5">
                     Cancel
                   </button>
                 </div>

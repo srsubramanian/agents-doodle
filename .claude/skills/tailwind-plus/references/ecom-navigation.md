@@ -1,0 +1,150 @@
+# Ecommerce Store Navigation
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/store-navigation
+
+## Classes (146 unique)
+- `bg-white`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0`
+- `fixed inset-0 flex focus:outline-none`
+- `relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full`
+- `flex px-4 pt-5 pb-2`
+- `relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400`
+- `absolute -inset-0.5`
+- `sr-only`
+- `size-6`
+- `mt-2 block`
+- `border-b border-gray-200`
+- `-mb-px flex space-x-8 px-4`
+- `flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 aria-selected:border-indigo-600 aria-selected:text-indigo-600`
+- `space-y-12 px-4 py-6`
+- `grid grid-cols-2 gap-x-4 gap-y-10`
+- `group relative`
+- `aspect-square w-full rounded-md bg-gray-100 object-cover group-hover:opacity-75`
+- `mt-6 block text-sm font-medium text-gray-900`
+- `absolute inset-0 z-10`
+- `mt-1 text-sm text-gray-500`
+- `space-y-6 border-t border-gray-200 px-4 py-6`
+- `flow-root`
+- `-m-2 block p-2 font-medium text-gray-900`
+- `-ml-2 inline-grid grid-cols-1`
+- `col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-0.5 pr-7 pl-2 text-base font-medium text-gray-700 group-hover:text-gray-800 focus:outline-2 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 mr-1 size-5 self-center justify-self-end fill-gray-500`
+- `relative`
+- `bg-gray-900`
+- `mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8`
+- `col-start-1 row-start-1 w-full appearance-none rounded-md bg-gray-900 py-0.5 pr-7 pl-2 text-left text-base font-medium text-white focus:outline-2 focus:-outline-offset-1 focus:outline-white sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 mr-1 size-5 self-center justify-self-end fill-gray-300`
+- `flex items-center space-x-6`
+- `text-sm font-medium text-white hover:text-gray-100`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 items-center justify-between`
+- `hidden lg:flex lg:flex-1 lg:items-center`
+- `h-8 w-auto`
+- `hidden h-full lg:flex`
+- `group/popover-group inset-x-0 bottom-0 px-4`
+- `flex h-full justify-center space-x-8`
+- `group/popover flex`
+- `relative flex`
+- `relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out group-not-has-open/popover:text-gray-700 group-has-open/popover:text-indigo-600 group-not-has-open/popover:hover:text-gray-800`
+- `absolute inset-x-0 -bottom-px z-30 h-0.5 bg-transparent duration-200 ease-in group-has-open/popover:bg-indigo-600 group-has-open/popover-group:duration-150 group-has-open/popover-group:ease-out`
+- `w-full overflow-visible bg-white text-sm text-gray-500 transition transition-discrete [--anchor-gap:1px] backdrop:bg-transparent open:block data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `absolute inset-0 top-1/2 bg-white shadow-sm`
+- `relative bg-white`
+- `mx-auto max-w-7xl px-8`
+- `grid grid-cols-4 gap-x-8 gap-y-10 py-16`
+- `mt-4 block font-medium text-gray-900`
+- `mt-1`
+- `flex items-center text-sm font-medium text-gray-700 hover:text-gray-800`
+- `flex flex-1 items-center lg:hidden`
+- `-ml-2 rounded-md bg-white p-2 text-gray-400`
+- `ml-2 p-2 text-gray-400 hover:text-gray-500`
+- `lg:hidden`
+- `flex flex-1 items-center justify-end`
+- `hidden text-sm font-medium text-gray-700 hover:text-gray-800 lg:block`
+- `flex items-center lg:ml-8`
+- `p-2 text-gray-400 hover:text-gray-500 lg:hidden`
+- `ml-4 flow-root lg:ml-8`
+- `group -m-2 flex items-center p-2`
+- `size-6 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800`
+- `space-y-12 px-4 pt-10 pb-6`
+- `grid grid-cols-1 items-start gap-x-6 gap-y-10`
+- `grid grid-cols-1 gap-x-6 gap-y-10`
+- `font-medium text-gray-900`
+- `mt-6 space-y-6`
+- `flex`
+- `text-gray-500`
+- `hidden lg:block lg:flex-1`
+- `flex-1 text-center text-sm font-medium text-white lg:flex-none`
+- `hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6`
+- `h-6 w-px bg-gray-600`
+- `hidden lg:flex lg:items-center`
+- `grid grid-cols-2 items-start gap-x-8 gap-y-10 pt-10 pb-12`
+- `grid grid-cols-2 gap-x-8 gap-y-10`
+- `mt-6 space-y-6 sm:mt-4 sm:space-y-4`
+- `hover:text-gray-800`
+- `flex space-x-8`
+- `hidden lg:flex`
+- `-m-2 p-2 text-gray-400 hover:text-gray-500`
+- `mx-4 h-6 w-px bg-gray-200 lg:mx-6`
+- `space-y-10 px-4 pt-10 pb-8`
+- `grid grid-cols-2 gap-x-4`
+- `group relative text-sm`
+- `aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75`
+- `mt-6 block font-medium text-gray-900`
+- `mt-6 flex flex-col space-y-6`
+- `-m-2 block p-2 text-gray-500`
+- `border-t border-gray-200 px-4 py-6`
+- `-m-2 flex items-center p-2`
+- `block h-auto w-5 shrink-0`
+- `ml-3 block text-base font-medium text-gray-900`
+- `flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8`
+- `flex h-16 items-center`
+- `relative rounded-md bg-white p-2 text-gray-400 lg:hidden`
+- `ml-4 flex lg:ml-0`
+- `group/popover-group hidden lg:ml-8 lg:block lg:self-stretch`
+- `flex h-full space-x-8`
+- `grid grid-cols-2 gap-x-8 gap-y-10 py-16`
+- `col-start-2 grid grid-cols-2 gap-x-8`
+- `group relative text-base sm:text-sm`
+- `row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm`
+- `ml-auto flex items-center`
+- `text-sm font-medium text-gray-700 hover:text-gray-800`
+- `h-6 w-px bg-gray-200`
+- `hidden lg:ml-8 lg:flex`
+- `flex items-center text-gray-700 hover:text-gray-800`
+- `ml-3 block text-sm font-medium`
+- `flex lg:ml-6`
+- `p-2 text-gray-400 hover:text-gray-500`
+- `ml-4 flow-root lg:ml-6`
+- `space-y-4`
+- `group relative overflow-hidden rounded-md bg-gray-100`
+- `aspect-square w-full object-cover group-hover:opacity-75`
+- `absolute inset-0 flex flex-col justify-end`
+- `bg-white/60 p-4 text-base sm:text-sm`
+- `absolute inset-0`
+- `mt-0.5 text-gray-700 sm:mt-1`
+- `space-y-10`
+- `group/popover-group hidden lg:block lg:flex-1 lg:self-stretch`
+- `grid grid-cols-2 grid-rows-1 gap-8 text-sm`
+- `group relative col-span-2 overflow-hidden rounded-md bg-gray-100`
+- `aspect-2/1 w-full object-cover group-hover:opacity-75`
+- `bg-white/60 p-4 text-sm`
+- `grid grid-cols-3 gap-x-8 gap-y-10 text-sm text-gray-500`
+- `mt-4 space-y-4`
+- `hidden text-gray-700 hover:text-gray-800 lg:flex lg:items-center`
+- `ml-6 hidden p-2 text-gray-400 hover:text-gray-500 lg:block`
+- `p-2 text-gray-400 hover:text-gray-500 lg:ml-4`
+- `mx-auto max-w-7xl sm:px-6 lg:px-8`
+- `border-b border-gray-200 px-4 pb-14 sm:px-0 sm:pb-0`
+- `flex flex-1`
+- `group/popover-group absolute inset-x-0 bottom-0 sm:static sm:flex-1 sm:self-stretch`
+- `flex h-14 space-x-8 overflow-x-auto border-t border-gray-200 px-4 pb-px sm:h-full sm:justify-center sm:overflow-visible sm:border-t-0 sm:pb-0`
+- `w-full overflow-visible bg-white text-gray-500 transition transition-discrete [--anchor-gap:1px] backdrop:bg-transparent open:block data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in sm:text-sm`
+- `grid grid-cols-1 items-start gap-x-6 gap-y-10 pt-10 pb-12 md:grid-cols-2 lg:gap-x-8`
+- `grid grid-cols-1 gap-x-6 gap-y-10 lg:gap-x-8`
+- `mt-4 border-t border-gray-200 pt-6 sm:grid sm:grid-cols-2 sm:gap-x-6`
+- `space-y-6 sm:space-y-4`
+- `mt-6 space-y-6 sm:mt-0 sm:space-y-4`
+- `grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:gap-x-8`
+- `mt-4 space-y-6 border-t border-gray-200 pt-6 sm:space-y-4`

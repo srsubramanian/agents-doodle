@@ -1,0 +1,229 @@
+# Marketing About Pages
+Source: https://tailwindcss.com/plus/ui-blocks/marketing/page-examples/about-pages
+
+## Classes (225 unique)
+- `bg-gray-900`
+- `absolute inset-x-0 top-0 z-50`
+- `mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8`
+- `flex lg:flex-1`
+- `-m-1.5 p-1.5`
+- `sr-only`
+- `h-8 w-auto`
+- `flex lg:hidden`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200`
+- `size-6`
+- `hidden lg:flex lg:gap-x-12`
+- `text-sm/6 font-semibold text-white`
+- `hidden lg:flex lg:flex-1 lg:justify-end`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 focus:outline-none`
+- `fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10`
+- `flex items-center justify-between`
+- `-m-2.5 rounded-md p-2.5 text-gray-200`
+- `mt-6 flow-root`
+- `-my-6 divide-y divide-white/10`
+- `space-y-2 py-6`
+- `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5`
+- `py-6`
+- `-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5`
+- `isolate`
+- `relative isolate -z-10`
+- `absolute inset-x-0 top-0 -z-10 h-256 w-full mask-[radial-gradient(32rem_32rem_at_center,white,transparent)] stroke-white/10`
+- `overflow-visible fill-gray-800`
+- `absolute top-0 right-0 left-1/2 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48`
+- `aspect-801/1036 w-200.25 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30`
+- `overflow-hidden`
+- `mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32`
+- `mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center`
+- `relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl`
+- `text-5xl font-semibold tracking-tight text-pretty text-white sm:text-7xl`
+- `mt-8 text-lg font-medium text-pretty text-gray-400 sm:max-w-md sm:text-xl/8 lg:max-w-none`
+- `mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0`
+- `ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-0 xl:pt-80`
+- `relative`
+- `aspect-2/3 w-full rounded-xl bg-gray-700/5 object-cover shadow-lg`
+- `pointer-events-none absolute inset-0 rounded-xl ring-1 ring-white/10 ring-inset`
+- `mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36`
+- `w-44 flex-none space-y-8 pt-32 sm:pt-0`
+- `mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8`
+- `mx-auto max-w-2xl lg:mx-0 lg:max-w-none`
+- `text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl`
+- `mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row`
+- `lg:w-full lg:max-w-2xl lg:flex-auto`
+- `text-xl/8 text-gray-300`
+- `mt-10 max-w-xl text-base/7 text-gray-400`
+- `lg:flex lg:flex-auto lg:justify-center`
+- `w-64 space-y-8 xl:w-80`
+- `flex flex-col-reverse gap-y-4`
+- `text-base/7 text-gray-400`
+- `text-5xl font-semibold tracking-tight text-white`
+- `mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8`
+- `aspect-5/2 w-full object-cover outline-1 -outline-offset-1 outline-white/10 xl:rounded-3xl`
+- `mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8`
+- `mx-auto max-w-2xl lg:mx-0`
+- `mt-6 text-lg/8 text-gray-300`
+- `mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3`
+- `font-semibold text-white`
+- `mt-1 text-gray-400`
+- `relative isolate -z-10 mt-32 sm:mt-48`
+- `absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden mask-[radial-gradient(50%_45%_at_50%_55%,white,transparent)]`
+- `h-160 w-7xl flex-none stroke-white/10`
+- `mx-auto max-w-7xl px-6 lg:px-8`
+- `text-center text-lg/8 font-semibold text-white`
+- `mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5`
+- `col-span-2 max-h-12 w-full object-contain lg:col-span-1`
+- `col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1`
+- `col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1`
+- `mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8`
+- `mt-6 text-lg/8 text-gray-400`
+- `mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6`
+- `mx-auto size-24 rounded-full outline-1 -outline-offset-1 outline-white/10`
+- `mt-6 text-base/7 font-semibold tracking-tight text-white`
+- `text-sm/6 text-gray-400`
+- `text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl`
+- `mt-2 text-lg/8 text-gray-400`
+- `mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3`
+- `relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-800 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80`
+- `absolute inset-0 -z-10 size-full object-cover`
+- `absolute inset-0 -z-10 bg-linear-to-t from-black/80 via-black/40`
+- `absolute inset-0 -z-10 rounded-2xl inset-ring inset-ring-white/10`
+- `flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300`
+- `mr-8`
+- `-ml-4 flex items-center gap-x-4`
+- `-ml-0.5 size-0.5 flex-none fill-gray-300/50`
+- `flex gap-x-2.5`
+- `size-6 flex-none rounded-full bg-gray-800/10`
+- `mt-3 text-lg/6 font-semibold text-white`
+- `absolute inset-0`
+- `mt-16 sm:mt-32`
+- `mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8`
+- `-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6`
+- `text-gray-400 hover:text-white`
+- `mt-16 flex justify-center gap-x-10`
+- `mt-10 text-center text-sm/6 text-gray-400`
+- `relative isolate -z-10 overflow-hidden bg-linear-to-b from-indigo-950/10 pt-14`
+- `absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-gray-800/30 shadow-xl ring-1 shadow-indigo-400/10 ring-white/5 sm:-mr-80 lg:-mr-96`
+- `mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8`
+- `mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8`
+- `max-w-2xl text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl lg:col-span-2 xl:col-auto`
+- `mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1`
+- `text-lg font-medium text-pretty text-gray-400 sm:text-xl/8`
+- `mt-10 aspect-6/5 w-full max-w-lg rounded-2xl object-cover outline-1 -outline-offset-1 outline-white/10 sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36`
+- `absolute inset-x-0 bottom-0 -z-10 h-24 bg-linear-to-t from-gray-900 sm:h-32`
+- `mx-auto -mt-8 max-w-7xl px-6 lg:px-8`
+- `mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4`
+- `flex items-center text-sm/6 font-semibold text-indigo-400`
+- `mr-4 size-1 flex-none`
+- `absolute -ml-2 h-px w-screen -translate-x-full bg-white/15 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0`
+- `mt-6 text-lg/8 font-semibold tracking-tight text-white`
+- `mt-1 text-base/7 text-gray-400`
+- `mx-auto mt-32 max-w-7xl sm:mt-40 sm:px-6 lg:px-8`
+- `relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl`
+- `mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl`
+- `mx-auto mt-6 max-w-xl text-lg/8 text-gray-300`
+- `mx-auto mt-20 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:max-w-4xl lg:grid-cols-5`
+- `absolute -top-24 right-0 -z-10 transform-gpu blur-3xl`
+- `aspect-1404/767 w-351 bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-25`
+- `mt-32 overflow-hidden sm:mt-40`
+- `mx-auto max-w-7xl px-6 lg:flex lg:px-8`
+- `mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none lg:gap-y-8`
+- `lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8`
+- `text-4xl font-semibold tracking-tight text-white sm:text-5xl`
+- `mt-6 text-xl/8 text-gray-300`
+- `mt-6 text-base/7 text-gray-400`
+- `flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents`
+- `w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end`
+- `aspect-7/5 w-148 max-w-none rounded-2xl bg-gray-800 object-cover max-sm:w-120`
+- `contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-148 lg:items-start lg:justify-end lg:gap-x-8`
+- `order-first flex w-64 flex-none justify-end self-end max-sm:w-40 lg:w-auto`
+- `aspect-4/3 w-[24rem] max-w-none flex-none rounded-2xl bg-gray-800 object-cover`
+- `flex w-96 flex-auto justify-end lg:w-auto lg:flex-none`
+- `aspect-7/5 w-148 max-w-none flex-none rounded-2xl bg-gray-800 object-cover max-sm:w-120`
+- `hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none`
+- `aspect-4/3 w-[24rem] max-w-none rounded-2xl bg-gray-800 object-cover`
+- `mt-6 text-base/7 text-gray-300`
+- `mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end`
+- `flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-white/5 p-8 inset-ring inset-ring-white/10 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start`
+- `flex-none text-3xl font-bold tracking-tight text-white`
+- `sm:w-80 sm:shrink lg:w-auto lg:flex-none`
+- `text-lg font-semibold tracking-tight text-white`
+- `mt-2 text-base/7 text-gray-300`
+- `flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-700 p-8 inset-ring inset-ring-white/10 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44`
+- `flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-indigo-600 p-8 inset-ring inset-ring-white/10 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28`
+- `mt-2 text-base/7 text-indigo-100`
+- `mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row`
+- `w-full lg:max-w-lg lg:flex-auto`
+- `text-3xl font-semibold tracking-tight text-pretty text-white sm:text-4xl`
+- `mt-6 text-xl/8 text-gray-400`
+- `mt-16 aspect-6/5 w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-white/10 lg:aspect-auto lg:h-138`
+- `w-full lg:max-w-xl lg:flex-auto`
+- `-my-8 divide-y divide-gray-800`
+- `py-8`
+- `relative flex flex-wrap gap-x-3`
+- `w-full flex-none text-lg font-semibold tracking-tight text-white`
+- `mt-2 w-full flex-none text-base/7 text-gray-400`
+- `mt-4 text-base/7 font-semibold text-white`
+- `mt-4 flex items-center gap-x-3 text-base/7 text-gray-400`
+- `size-0.5 flex-none fill-gray-600`
+- `mt-8 flex border-t border-gray-800 pt-8`
+- `text-sm/6 font-semibold text-indigo-400 hover:text-indigo-300`
+- `border-t border-white/10 pt-20 pb-8 sm:pt-24`
+- `xl:grid xl:grid-cols-3 xl:gap-8`
+- `grid grid-cols-2 gap-8 xl:col-span-2`
+- `md:grid md:grid-cols-2 md:gap-8`
+- `mt-6 space-y-4`
+- `text-sm/6 text-gray-400 hover:text-white`
+- `mt-10 md:mt-0`
+- `mt-10 xl:mt-0`
+- `mt-2 text-sm/6 text-gray-400`
+- `mt-6 sm:flex sm:max-w-md`
+- `w-full min-w-0 rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-gray-700 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:w-64 sm:text-sm/6 xl:w-full`
+- `mt-4 sm:mt-0 sm:ml-4 sm:shrink-0`
+- `flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24`
+- `flex gap-x-6 md:order-2`
+- `mt-8 text-sm/6 text-gray-400 md:order-1 md:mt-0`
+- `relative isolate`
+- `absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl`
+- `aspect-1108/632 w-277 flex-none bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-25`
+- `px-6 pt-14 lg:px-8`
+- `mx-auto max-w-2xl pt-24 text-center sm:pt-40`
+- `text-5xl font-semibold tracking-tight text-white sm:text-7xl`
+- `mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8`
+- `mx-auto mt-20 max-w-7xl px-6 lg:px-8`
+- `grid max-w-xl grid-cols-1 gap-8 text-base/7 text-gray-300 lg:max-w-none lg:grid-cols-2`
+- `mt-8`
+- `mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4`
+- `flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6`
+- `text-base/7 text-gray-300`
+- `text-3xl font-semibold tracking-tight text-white`
+- `aspect-9/4 w-full object-cover outline-1 -outline-offset-1 outline-white/10 xl:rounded-3xl`
+- `mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-gray-400 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16`
+- `relative pl-9`
+- `inline font-semibold text-white`
+- `absolute top-1 left-1 size-5 text-indigo-500`
+- `inline`
+- `mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4`
+- `aspect-14/13 w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-white/10`
+- `text-sm/6 text-gray-500`
+- `relative isolate -z-10 mt-32 sm:mt-40`
+- `mx-auto max-w-7xl sm:px-6 lg:px-8`
+- `mx-auto flex max-w-2xl flex-col gap-16 bg-white/3 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20`
+- `h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm`
+- `w-full flex-auto`
+- `mt-6 text-lg/8 text-pretty text-gray-400`
+- `mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-gray-200 sm:grid-cols-2`
+- `flex gap-x-3`
+- `h-7 w-5 flex-none text-gray-200`
+- `mt-10 flex`
+- `absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl`
+- `aspect-1318/752 w-329.5 flex-none bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20`
+- `mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32`
+- `space-y-8`
+- `h-9`
+- `text-sm/6 text-balance text-gray-400`
+- `flex gap-x-6`
+- `text-gray-400 hover:text-gray-300`
+- `mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0`
+- `text-sm/6 text-gray-400 hover:text-gray-300`
+- `mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24`

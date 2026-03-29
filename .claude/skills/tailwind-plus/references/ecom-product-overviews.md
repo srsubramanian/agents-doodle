@@ -1,0 +1,183 @@
+# Ecommerce Product Overviews
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/product-overviews
+
+## Classes (179 unique)
+- `bg-white`
+- `pt-6 pb-16 sm:pb-24`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex items-center space-x-4`
+- `flex items-center`
+- `mr-4 text-sm font-medium text-gray-900`
+- `h-5 w-auto text-gray-300`
+- `text-sm`
+- `font-medium text-gray-500 hover:text-gray-600`
+- `mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8`
+- `lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8`
+- `lg:col-span-5 lg:col-start-8`
+- `flex justify-between`
+- `text-xl font-medium text-gray-900`
+- `mt-4`
+- `sr-only`
+- `text-sm text-gray-700`
+- `ml-1 flex items-center`
+- `size-5 shrink-0 text-yellow-400`
+- `size-5 shrink-0 text-gray-200`
+- `ml-4 text-sm text-gray-300`
+- `ml-4 flex`
+- `text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0`
+- `grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8`
+- `rounded-lg lg:col-span-2 lg:row-span-2`
+- `hidden rounded-lg lg:block`
+- `mt-8 lg:col-span-5`
+- `text-sm font-medium text-gray-900`
+- `mt-2`
+- `flex items-center gap-x-3`
+- `flex rounded-full outline -outline-offset-1 outline-black/10`
+- `size-8 appearance-none rounded-full bg-gray-900 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-900 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `size-8 appearance-none rounded-full bg-gray-400 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `mt-8`
+- `flex items-center justify-between`
+- `grid grid-cols-3 gap-3 sm:grid-cols-6`
+- `group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25`
+- `absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed`
+- `text-sm font-medium text-gray-900 uppercase group-has-checked:text-white`
+- `mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden`
+- `mt-10`
+- `mt-4 space-y-4 text-sm/6 text-gray-500`
+- `mt-8 border-t border-gray-200 pt-8`
+- `list-disc space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-300`
+- `pl-2`
+- `grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2`
+- `rounded-lg border border-gray-200 bg-gray-50 p-6 text-center`
+- `mx-auto size-6 shrink-0 text-gray-400`
+- `mt-4 text-sm font-medium text-gray-900`
+- `mt-1 text-sm text-gray-500`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8`
+- `flex flex-col-reverse`
+- `mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none`
+- `grid grid-cols-4 gap-6`
+- `relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium text-gray-900 uppercase hover:bg-gray-50 focus:ring-3 focus:ring-indigo-500/50 focus:ring-offset-4 focus:outline-hidden`
+- `absolute inset-0 overflow-hidden rounded-md`
+- `size-full object-cover`
+- `pointer-events-none absolute inset-0 rounded-md ring-2 ring-transparent ring-offset-2 in-aria-selected:ring-indigo-500`
+- `aspect-square w-full object-cover sm:rounded-lg`
+- `mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0`
+- `text-3xl font-bold tracking-tight text-gray-900`
+- `mt-3`
+- `text-3xl tracking-tight text-gray-900`
+- `size-5 shrink-0 text-indigo-500`
+- `size-5 shrink-0 text-gray-300`
+- `mt-6`
+- `space-y-6 text-base text-gray-700`
+- `text-sm font-medium text-gray-600`
+- `size-8 appearance-none rounded-full bg-gray-700 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-700 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `size-8 appearance-none rounded-full bg-white forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `size-8 appearance-none rounded-full bg-gray-500 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-500 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `mt-10 flex`
+- `flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden sm:w-full`
+- `ml-4 flex items-center justify-center rounded-md px-3 py-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500`
+- `size-6 shrink-0`
+- `mt-12`
+- `divide-y divide-gray-200 border-t border-gray-200`
+- `group relative flex w-full items-center justify-between py-6 text-left`
+- `text-sm font-medium not-in-aria-expanded:text-gray-900 in-aria-expanded:text-indigo-600`
+- `ml-6 flex items-center`
+- `size-6 text-gray-400 group-hover:text-gray-500 in-aria-expanded:hidden`
+- `size-6 text-indigo-400 not-in-aria-expanded:hidden group-hover:text-indigo-500`
+- `contents`
+- `pb-6`
+- `list-disc space-y-1 pl-5 text-sm/6 text-gray-700 marker:text-gray-300`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8`
+- `lg:max-w-lg lg:self-end`
+- `flex items-center space-x-2`
+- `flex items-center text-sm`
+- `font-medium text-gray-500 hover:text-gray-900`
+- `ml-2 size-5 shrink-0 text-gray-300`
+- `text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`
+- `text-lg text-gray-900 sm:text-xl`
+- `ml-4 border-l border-gray-300 pl-4`
+- `ml-2 text-sm text-gray-500`
+- `mt-4 space-y-6`
+- `text-base text-gray-500`
+- `mt-6 flex items-center`
+- `size-5 shrink-0 text-green-500`
+- `mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center`
+- `aspect-square w-full rounded-lg object-cover`
+- `mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start`
+- `sm:flex sm:justify-between`
+- `block text-sm font-medium text-gray-700`
+- `mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2`
+- `group relative flex rounded-lg border border-gray-300 bg-white p-4 has-checked:outline-2 has-checked:-outline-offset-2 has-checked:outline-indigo-600 has-focus-visible:outline-3 has-focus-visible:-outline-offset-1 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25`
+- `absolute inset-0 appearance-none focus:outline-none`
+- `flex-1`
+- `block text-base font-medium text-gray-900`
+- `mt-1 block text-sm text-gray-500`
+- `invisible size-5 text-indigo-600 group-has-checked:visible`
+- `group inline-flex text-sm text-gray-500 hover:text-gray-700`
+- `ml-2 size-5 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `mt-6 text-center`
+- `group inline-flex text-base font-medium`
+- `mr-2 size-6 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `text-gray-500 hover:text-gray-700`
+- `pt-6`
+- `mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8`
+- `mr-2 text-sm font-medium text-gray-900`
+- `h-5 w-4 text-gray-300`
+- `mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8`
+- `row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden`
+- `col-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden`
+- `col-start-2 row-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden`
+- `row-span-2 aspect-4/5 size-full object-cover sm:rounded-lg lg:aspect-3/4`
+- `mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24`
+- `lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8`
+- `text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl`
+- `mt-4 lg:row-span-3 lg:mt-0`
+- `size-5 shrink-0 text-gray-900`
+- `ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `size-8 appearance-none rounded-full bg-gray-200 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `grid grid-cols-4 gap-3`
+- `mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden`
+- `py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16`
+- `space-y-6`
+- `text-base text-gray-900`
+- `list-disc space-y-2 pl-4 text-sm`
+- `text-gray-400`
+- `text-gray-600`
+- `text-sm text-gray-600`
+- `mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16`
+- `lg:col-span-4 lg:row-end-1`
+- `aspect-4/3 w-full rounded-lg bg-gray-100 object-cover`
+- `mx-auto mt-14 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none`
+- `mt-2 text-sm text-gray-500`
+- `mt-6 text-gray-500`
+- `mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2`
+- `flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-50 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `mt-10 border-t border-gray-200 pt-10`
+- `mt-4 text-sm text-gray-500`
+- `font-medium text-indigo-600 hover:text-indigo-500`
+- `mt-4 flex items-center space-x-6`
+- `flex size-6 items-center justify-center text-gray-400 hover:text-gray-500`
+- `size-5`
+- `size-6`
+- `mx-auto mt-16 w-full max-w-2xl lg:col-span-4 lg:mt-0 lg:max-w-none`
+- `border-b border-gray-200`
+- `-mb-px flex space-x-8`
+- `border-b-2 border-transparent py-6 text-sm font-medium whitespace-nowrap text-gray-700 hover:border-gray-300 hover:text-gray-800 aria-selected:border-indigo-600 aria-selected:text-indigo-600`
+- `-mb-10`
+- `flex space-x-4 text-sm text-gray-500`
+- `flex-none py-10`
+- `size-10 rounded-full bg-gray-100`
+- `py-10`
+- `font-medium text-gray-900`
+- `mt-4 flex items-center`
+- `mt-4 text-sm/6 text-gray-500`
+- `border-t border-gray-200 py-10`
+- `text-sm text-gray-500`
+- `mt-10 font-medium text-gray-900`
+- `mt-2 text-sm/6 text-gray-500`
+- `pt-10`
+- `text-sm text-gray-500 [&_h4]:mt-5 [&_h4]:font-medium [&_h4]:text-gray-900 [&_li]:pl-2 [&_li::marker]:text-gray-300 [&_p]:my-2 [&_p]:text-sm/6 [&_ul]:my-4 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5 [&_ul]:text-sm/6 [&>:first-child]:mt-0`

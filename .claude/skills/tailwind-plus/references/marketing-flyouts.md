@@ -1,0 +1,70 @@
+# Marketing Flyout Menus
+Source: https://tailwindcss.com/plus/ui-blocks/marketing/elements/flyout-menus
+
+## Classes (66 unique)
+- `relative`
+- `inline-flex items-center gap-x-1 text-sm/6 font-semibold text-white`
+- `size-5`
+- `w-screen max-w-max overflow-visible bg-transparent px-4 transition transition-discrete [--anchor-gap:--spacing(5)] backdrop:bg-transparent open:flex data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-gray-800 text-sm/6 outline-1 -outline-offset-1 outline-white/10`
+- `p-4`
+- `group relative flex gap-x-6 rounded-lg p-4 hover:bg-white/5`
+- `mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700`
+- `size-6 text-gray-400 group-hover:text-white`
+- `font-semibold text-white`
+- `absolute inset-0`
+- `mt-1 text-gray-400`
+- `grid grid-cols-2 divide-x divide-white/10 bg-gray-700/50`
+- `flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-gray-700/50`
+- `size-5 flex-none text-gray-500`
+- `relative isolate z-50 shadow-sm`
+- `bg-gray-900 py-5`
+- `mx-auto max-w-7xl px-6 lg:px-8`
+- `absolute top-16 w-full overflow-visible bg-gray-900 transition transition-discrete backdrop:bg-transparent open:block data-closed:-translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `absolute inset-0 top-1/2 bg-gray-900 ring-1 ring-white/10`
+- `relative bg-gray-900`
+- `mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 py-10 lg:grid-cols-2 lg:px-8`
+- `grid grid-cols-2 gap-x-6 sm:gap-x-8`
+- `text-sm/6 font-medium text-gray-400`
+- `mt-6 flow-root`
+- `-my-2`
+- `flex gap-x-4 py-2 text-sm/6 font-semibold text-white`
+- `size-6 flex-none text-gray-500`
+- `grid grid-cols-1 gap-10 sm:gap-8 lg:grid-cols-2`
+- `sr-only`
+- `relative isolate flex max-w-2xl flex-col gap-x-8 gap-y-6 sm:flex-row sm:items-start lg:flex-col lg:items-stretch`
+- `relative flex-none`
+- `aspect-2/1 w-full rounded-lg bg-gray-800 object-cover sm:aspect-video sm:h-32 lg:h-auto`
+- `absolute inset-0 rounded-lg ring-1 ring-white/10 ring-inset`
+- `flex items-center gap-x-4`
+- `text-sm/6 text-gray-400`
+- `relative z-10 rounded-full bg-gray-800 px-3 py-1.5 text-xs font-medium text-gray-400 hover:bg-gray-700`
+- `mt-2 text-sm/6 font-semibold text-white`
+- `mt-2 text-sm/6 text-gray-400`
+- `w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-gray-900 text-sm/6 outline-1 -outline-offset-1 outline-white/10`
+- `bg-gray-800/50 p-8`
+- `flex justify-between`
+- `text-sm/6 font-semibold text-gray-400`
+- `text-sm/6 font-semibold text-indigo-400`
+- `mt-6 space-y-6`
+- `block text-xs/6 text-gray-400`
+- `block truncate text-sm/6 font-semibold text-white`
+- `absolute inset-0 top-1/2 bg-gray-900 ring-1 ring-white/15`
+- `mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8`
+- `group relative rounded-lg p-6 text-sm/6 hover:bg-white/5`
+- `flex size-11 items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700`
+- `mt-6 block font-semibold text-white`
+- `bg-gray-800/50`
+- `grid grid-cols-3 divide-x divide-white/5 border-x border-white/10`
+- `flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-800`
+- `w-screen max-w-sm flex-auto rounded-3xl bg-gray-800 p-4 text-sm/6 outline-1 -outline-offset-1 outline-white/10`
+- `relative rounded-lg p-4 hover:bg-white/5`
+- `w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-gray-800 text-sm/6 outline-1 -outline-offset-1 outline-white/10 lg:max-w-3xl`
+- `grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2`
+- `bg-gray-700/50 px-8 py-6`
+- `flex items-center gap-x-3`
+- `text-sm/6 font-semibold text-white`
+- `rounded-full bg-indigo-400/10 px-2.5 py-1.5 text-xs font-semibold text-indigo-400`
+- `w-screen max-w-min overflow-visible bg-transparent px-4 transition transition-discrete [--anchor-gap:--spacing(5)] backdrop:bg-transparent open:flex data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in`
+- `w-56 shrink rounded-xl bg-gray-800 p-4 text-sm/6 font-semibold text-white outline -outline-offset-1 outline-white/10`
+- `block p-2 hover:text-indigo-400`

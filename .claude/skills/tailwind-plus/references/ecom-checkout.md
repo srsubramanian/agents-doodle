@@ -1,0 +1,181 @@
+# Ecommerce Checkout Forms
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/checkout-forms
+
+## Classes (177 unique)
+- `bg-gray-50`
+- `mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 lg:max-w-7xl lg:px-8`
+- `sr-only`
+- `lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16`
+- `text-lg font-medium text-gray-900`
+- `mt-4`
+- `block text-sm/6 font-medium text-gray-700`
+- `mt-2`
+- `block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6`
+- `mt-10 border-t border-gray-200 pt-10`
+- `mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4`
+- `sm:col-span-2`
+- `mt-2 grid grid-cols-1`
+- `col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4`
+- `group relative flex rounded-lg border border-gray-300 bg-white p-4 has-checked:outline-2 has-checked:-outline-offset-2 has-checked:outline-indigo-600 has-focus-visible:outline-3 has-focus-visible:-outline-offset-1 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25`
+- `absolute inset-0 appearance-none focus:outline-none`
+- `flex-1`
+- `block text-sm font-medium text-gray-900`
+- `mt-1 block text-sm text-gray-500`
+- `mt-6 block text-sm font-medium text-gray-900`
+- `invisible size-5 text-indigo-600 group-has-checked:visible`
+- `space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10`
+- `flex items-center`
+- `relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden`
+- `ml-3 block text-sm/6 font-medium text-gray-700`
+- `mt-6 grid grid-cols-4 gap-x-4 gap-y-6`
+- `col-span-4`
+- `col-span-3`
+- `mt-10 lg:mt-0`
+- `mt-4 rounded-lg border border-gray-200 bg-white shadow-xs`
+- `divide-y divide-gray-200`
+- `flex px-4 py-6 sm:px-6`
+- `shrink-0`
+- `w-20 rounded-md`
+- `ml-6 flex flex-1 flex-col`
+- `flex`
+- `min-w-0 flex-1`
+- `text-sm`
+- `font-medium text-gray-700 hover:text-gray-800`
+- `mt-1 text-sm text-gray-500`
+- `ml-4 flow-root shrink-0`
+- `-m-2.5 flex items-center justify-center bg-white p-2.5 text-gray-400 hover:text-gray-500`
+- `size-5`
+- `flex flex-1 items-end justify-between pt-2`
+- `mt-1 text-sm font-medium text-gray-900`
+- `ml-4`
+- `grid grid-cols-1`
+- `space-y-6 border-t border-gray-200 px-4 py-6 sm:px-6`
+- `flex items-center justify-between`
+- `text-sm font-medium text-gray-900`
+- `flex items-center justify-between border-t border-gray-200 pt-6`
+- `text-base font-medium`
+- `text-base font-medium text-gray-900`
+- `border-t border-gray-200 px-4 py-6 sm:px-6`
+- `w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `bg-white`
+- `fixed top-0 left-0 hidden h-full w-1/2 bg-white lg:block`
+- `fixed top-0 right-0 hidden h-full w-1/2 bg-gray-50 lg:block`
+- `relative mx-auto grid max-w-7xl grid-cols-1 gap-x-16 lg:grid-cols-2 lg:px-8 xl:gap-x-48`
+- `bg-gray-50 px-4 pt-16 pb-10 sm:px-6 lg:col-start-2 lg:row-start-1 lg:bg-transparent lg:px-0 lg:pb-16`
+- `mx-auto max-w-lg lg:max-w-none`
+- `divide-y divide-gray-200 text-sm font-medium text-gray-900`
+- `flex items-start space-x-4 py-6`
+- `size-20 flex-none rounded-md object-cover`
+- `flex-auto space-y-1`
+- `text-gray-500`
+- `flex-none text-base font-medium`
+- `hidden space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-gray-900 lg:block`
+- `text-gray-600`
+- `text-base`
+- `fixed inset-x-0 bottom-0 flex flex-col-reverse text-sm font-medium text-gray-900 lg:hidden`
+- `relative z-10 border-t border-gray-200 bg-white px-4 sm:px-6`
+- `mx-auto max-w-lg`
+- `flex w-full items-center py-6 font-medium`
+- `mr-auto text-base`
+- `mr-2 text-base`
+- `size-5 text-gray-500`
+- `group/popover-panel pointer-events-none h-full w-screen items-end overflow-hidden border-b border-gray-200 bg-transparent transition transition-discrete duration-300 backdrop:bg-transparent open:flex`
+- `absolute inset-0 bg-black/25 transition-opacity duration-300 ease-linear group-data-closed/popover-panel:opacity-0`
+- `pointer-events-auto isolate w-full transform bg-white px-4 py-6 transition duration-300 ease-in-out group-data-closed/popover-panel:translate-y-full sm:px-6`
+- `mx-auto max-w-lg space-y-6`
+- `px-4 pt-16 pb-36 sm:px-6 lg:col-start-1 lg:row-start-1 lg:px-0 lg:pb-16`
+- `mt-6`
+- `mt-10`
+- `mt-6 grid grid-cols-3 gap-x-4 gap-y-6 sm:grid-cols-4`
+- `col-span-3 sm:col-span-4`
+- `block text-sm/6 font-medium text-gray-900`
+- `col-span-2 sm:col-span-3`
+- `mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-3`
+- `sm:col-span-3`
+- `mt-6 flex gap-3`
+- `flex h-6 shrink-0 items-center`
+- `group grid size-4 grid-cols-1`
+- `col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto`
+- `pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25`
+- `opacity-0 group-has-checked:opacity-100`
+- `opacity-0 group-has-indeterminate:opacity-100`
+- `text-sm/6 font-medium text-gray-900`
+- `mt-10 border-t border-gray-200 pt-6 sm:flex sm:items-center sm:justify-between`
+- `w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden sm:order-last sm:ml-6 sm:w-auto`
+- `mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-left`
+- `mx-auto max-w-7xl px-4 pt-4 pb-16 sm:px-6 sm:pt-8 sm:pb-24 lg:px-8 xl:px-2 xl:pt-14`
+- `mx-auto grid max-w-lg grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2`
+- `mx-auto w-full max-w-lg`
+- `flow-root`
+- `-my-6 divide-y divide-gray-200`
+- `flex space-x-6 py-6`
+- `size-24 flex-none rounded-md bg-gray-100 object-cover`
+- `flex-auto`
+- `space-y-1 sm:flex sm:items-start sm:justify-between sm:space-x-6`
+- `flex-auto space-y-1 text-sm font-medium`
+- `text-gray-900`
+- `hidden text-gray-500 sm:block`
+- `flex flex-none space-x-4`
+- `text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `flex border-l border-gray-300 pl-4`
+- `mt-10 space-y-6 text-sm font-medium text-gray-500`
+- `flex justify-between`
+- `flex justify-between border-t border-gray-200 pt-6 text-gray-900`
+- `flex w-full items-center justify-center rounded-md border border-transparent bg-black py-2 text-white hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 focus:outline-hidden`
+- `h-5 w-auto`
+- `relative mt-8`
+- `absolute inset-0 flex items-center`
+- `w-full border-t border-gray-200`
+- `relative flex justify-center`
+- `bg-white px-4 text-sm font-medium text-gray-500`
+- `flex h-5 shrink-0 items-center`
+- `text-sm text-gray-500`
+- `mt-6 w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-500`
+- `mt-10 divide-y divide-gray-200 border-t border-b border-gray-200`
+- `w-full cursor-auto py-6 text-left text-lg font-medium text-gray-500`
+- `h-full bg-white`
+- `h-full`
+- `lg:flex lg:min-h-full lg:flex-row-reverse lg:overflow-hidden`
+- `bg-gray-50 px-4 py-6 sm:px-6 lg:hidden`
+- `font-medium text-indigo-600 hover:text-indigo-500`
+- `not-in-aria-expanded:hidden`
+- `in-aria-expanded:hidden`
+- `block`
+- `divide-y divide-gray-200 border-b border-gray-200`
+- `size-40 flex-none rounded-md bg-gray-200 object-cover`
+- `flex flex-col justify-between space-y-4`
+- `space-y-1 text-sm font-medium`
+- `flex space-x-4`
+- `mt-2 flex space-x-4`
+- `rounded-md bg-gray-200 px-4 text-sm font-medium text-gray-600 hover:bg-gray-300 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `ml-2 rounded-full bg-gray-200 px-2 py-0.5 text-xs tracking-wide text-gray-600`
+- `mt-6 flex items-center justify-between border-t border-gray-200 pt-6 text-sm font-medium text-gray-900`
+- `hidden w-full max-w-md flex-col bg-gray-50 lg:flex`
+- `flex-auto divide-y divide-gray-200 overflow-y-auto px-6`
+- `sticky bottom-0 flex-none border-t border-gray-200 bg-gray-50 p-6`
+- `flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900`
+- `flex-auto overflow-y-auto px-4 pt-12 pb-16 sm:px-6 sm:pt-16 lg:px-8 lg:pt-0 lg:pb-24`
+- `mx-auto max-w-lg lg:pt-16`
+- `grid grid-cols-12 gap-x-4 gap-y-6`
+- `col-span-full`
+- `col-span-8 sm:col-span-9`
+- `col-span-4 sm:col-span-3`
+- `col-span-full sm:col-span-4`
+- `mt-6 w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden`
+- `mt-6 flex justify-center text-sm font-medium text-gray-500`
+- `mr-1.5 size-5 text-gray-400`
+- `fixed top-0 right-0 hidden h-full w-1/2 bg-indigo-900 lg:block`
+- `relative mx-auto grid max-w-7xl grid-cols-1 gap-x-16 lg:grid-cols-2 lg:px-8 lg:pt-16`
+- `bg-indigo-900 py-12 text-indigo-300 md:px-10 lg:col-start-2 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-lg lg:bg-transparent lg:px-0 lg:pt-0 lg:pb-24`
+- `mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0`
+- `text-sm font-medium`
+- `mt-1 text-3xl font-bold tracking-tight text-white`
+- `divide-y divide-white/10 text-sm font-medium`
+- `text-white`
+- `flex-none text-base font-medium text-white`
+- `space-y-6 border-t border-white/10 pt-6 text-sm font-medium`
+- `flex items-center justify-between border-t border-white/10 pt-6 text-white`
+- `py-16 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-lg lg:pt-0 lg:pb-24`
+- `mt-10 flex justify-end border-t border-gray-200 pt-6`
+- `rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`

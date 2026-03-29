@@ -33,7 +33,7 @@ export function MarkdownContent({ content }: Props) {
           }
           return (
             <code
-              className="bg-gray-700/50 px-1.5 py-0.5 rounded text-[0.8rem] text-gray-200"
+              className="bg-white/5 px-1.5 py-0.5 rounded text-[0.8rem] text-gray-200"
               {...props}
             >
               {children}
@@ -63,7 +63,7 @@ export function MarkdownContent({ content }: Props) {
         },
         blockquote({ children }) {
           return (
-            <blockquote className="border-l-2 border-gray-600 pl-3 my-2 text-gray-400 italic">
+            <blockquote className="border-l-2 border-white/10 pl-3 my-2 text-gray-400 italic">
               {children}
             </blockquote>
           );
@@ -77,19 +77,19 @@ export function MarkdownContent({ content }: Props) {
         },
         th({ children }) {
           return (
-            <th className="border border-gray-600 px-2 py-1 bg-gray-700/50 text-left font-medium">
+            <th className="border border-white/10 px-2 py-1 bg-white/5 text-left font-medium">
               {children}
             </th>
           );
         },
         td({ children }) {
           return (
-            <td className="border border-gray-700 px-2 py-1">{children}</td>
+            <td className="border border-white/10 px-2 py-1">{children}</td>
           );
         },
         a({ href, children }) {
           return (
-            <a href={href} className="text-blue-400 hover:underline" target="_blank" rel="noreferrer">
+            <a href={href} className="text-indigo-400 hover:underline" target="_blank" rel="noreferrer">
               {children}
             </a>
           );

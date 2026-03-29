@@ -87,7 +87,7 @@ export function Sidebar() {
               <div className="text-xs/6 font-semibold text-gray-400">My Agents</div>
               <button
                 onClick={handleNewAgent}
-                className="rounded-md bg-white/10 p-1 text-gray-400 hover:bg-white/20 hover:text-white"
+                className="rounded-md bg-white/10 p-1 text-gray-400 hover:bg-white/20 hover:text-white inset-ring inset-ring-white/5"
                 title="New agent"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-4">
@@ -111,7 +111,7 @@ export function Sidebar() {
                         : "text-gray-400 hover:bg-white/5 hover:text-white"
                     }`}
                   >
-                    <span className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
+                    <span className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
                       {agent.name.charAt(0).toUpperCase()}
                     </span>
                     <span className="truncate">{agent.name}</span>
@@ -196,7 +196,7 @@ export function Sidebar() {
               Settings
             </a>
             <div className="flex items-center gap-x-4 py-3 text-sm/6 font-semibold text-white">
-              <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gray-800 text-xs font-medium text-gray-300">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/5 text-xs font-medium text-gray-300">
                 U
               </div>
               <span className="sr-only">Your profile</span>

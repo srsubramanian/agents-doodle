@@ -1,0 +1,97 @@
+# Ecommerce Product Lists
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/product-lists
+
+## Classes (93 unique)
+- `bg-white`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `text-2xl font-bold tracking-tight text-gray-900`
+- `mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8`
+- `group relative`
+- `aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80`
+- `mt-4 flex justify-between`
+- `text-sm text-gray-700`
+- `absolute inset-0`
+- `mt-1 text-sm text-gray-500`
+- `text-sm font-medium text-gray-900`
+- `md:flex md:items-center md:justify-between`
+- `hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 md:block`
+- `mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8`
+- `h-56 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-72 xl:h-80`
+- `size-full object-cover`
+- `mt-4 text-sm text-gray-700`
+- `mt-1 text-sm font-medium text-gray-900`
+- `mt-8 text-sm md:hidden`
+- `font-medium text-indigo-600 hover:text-indigo-500`
+- `py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8`
+- `flex items-center justify-between px-4 sm:px-6 lg:px-0`
+- `hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block`
+- `relative mt-8`
+- `relative -mb-6 w-full overflow-x-auto pb-6`
+- `mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0`
+- `inline-flex w-64 flex-col text-center lg:w-auto`
+- `aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75`
+- `mt-6`
+- `text-sm text-gray-500`
+- `mt-1 font-semibold text-gray-900`
+- `mt-1 text-gray-900`
+- `sr-only`
+- `mt-auto flex items-center justify-center space-x-3 pt-6`
+- `size-4 rounded-full border border-black/10`
+- `mt-12 flex px-4 sm:hidden`
+- `text-sm font-semibold text-indigo-600 hover:text-indigo-500`
+- `grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8`
+- `group`
+- `aspect-square w-full overflow-hidden rounded-lg object-cover group-hover:opacity-75 sm:aspect-2/3`
+- `mt-4 flex items-center justify-between text-base font-medium text-gray-900`
+- `mt-1 text-sm text-gray-500 italic`
+- `text-xl font-bold text-gray-900`
+- `mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8`
+- `relative`
+- `relative h-72 w-full overflow-hidden rounded-lg`
+- `relative mt-4`
+- `absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4`
+- `absolute inset-x-0 bottom-0 h-36 bg-linear-to-t from-black opacity-50`
+- `relative text-lg font-semibold text-white`
+- `relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200`
+- `grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8`
+- `aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8`
+- `mt-1 text-lg font-medium text-gray-900`
+- `mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8`
+- `sm:flex sm:items-baseline sm:justify-between`
+- `mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 lg:gap-x-8`
+- `h-96 w-full rounded-lg object-cover group-hover:opacity-75 sm:aspect-2/3 sm:h-auto`
+- `mt-4 text-base font-semibold text-gray-900`
+- `mt-6 sm:hidden`
+- `block text-sm font-semibold text-indigo-600 hover:text-indigo-500`
+- `mx-auto max-w-7xl overflow-hidden sm:px-6 lg:px-8`
+- `-mx-px grid grid-cols-2 border-l border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4`
+- `group relative border-r border-b border-gray-200 p-4 sm:p-6`
+- `aspect-square rounded-lg bg-gray-200 object-cover group-hover:opacity-75`
+- `pt-10 pb-4 text-center`
+- `mt-3 flex flex-col items-center`
+- `flex items-center`
+- `size-5 shrink-0 text-yellow-400`
+- `mt-4 text-base font-medium text-gray-900`
+- `size-5 shrink-0 text-gray-200`
+- `mx-auto max-w-7xl overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8`
+- `grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8`
+- `group text-sm`
+- `aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75`
+- `mt-4 font-medium text-gray-900`
+- `text-gray-500 italic`
+- `mt-2 font-medium text-gray-900`
+- `flex items-center justify-between space-x-4`
+- `text-lg font-medium text-gray-900`
+- `text-sm font-medium whitespace-nowrap text-indigo-600 hover:text-indigo-500`
+- `mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4`
+- `aspect-4/3 w-full rounded-lg bg-gray-100 object-cover`
+- `absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100`
+- `w-full rounded-md bg-white/75 px-4 py-2 text-center text-sm font-medium text-gray-900 backdrop-blur-sm backdrop-filter`
+- `mt-4 flex items-center justify-between space-x-8 text-base font-medium text-gray-900`
+- `grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8`
+- `group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white`
+- `aspect-3/4 w-full bg-gray-200 object-cover group-hover:opacity-75 sm:aspect-auto sm:h-96`
+- `flex flex-1 flex-col space-y-2 p-4`
+- `flex flex-1 flex-col justify-end`
+- `text-sm text-gray-500 italic`
+- `text-base font-medium text-gray-900`

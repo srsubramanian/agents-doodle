@@ -1,0 +1,148 @@
+# Ecommerce Shopping Carts
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/shopping-carts
+
+## Classes (144 unique)
+- `bg-white`
+- `mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 lg:max-w-7xl lg:px-8`
+- `text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`
+- `mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16`
+- `lg:col-span-7`
+- `sr-only`
+- `divide-y divide-gray-200 border-t border-b border-gray-200`
+- `flex py-6 sm:py-10`
+- `shrink-0`
+- `size-24 rounded-md object-cover sm:size-48`
+- `ml-4 flex flex-1 flex-col justify-between sm:ml-6`
+- `relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0`
+- `flex justify-between`
+- `text-sm`
+- `font-medium text-gray-700 hover:text-gray-800`
+- `mt-1 flex text-sm`
+- `text-gray-500`
+- `ml-4 border-l border-gray-200 pl-4 text-gray-500`
+- `mt-1 text-sm font-medium text-gray-900`
+- `mt-4 sm:mt-0 sm:pr-9`
+- `grid w-full max-w-16 grid-cols-1`
+- `col-start-1 row-start-1 appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4`
+- `absolute top-0 right-0`
+- `-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500`
+- `size-5`
+- `mt-4 flex space-x-2 text-sm text-gray-700`
+- `size-5 shrink-0 text-green-500`
+- `size-5 shrink-0 text-gray-300`
+- `mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8`
+- `text-lg font-medium text-gray-900`
+- `mt-6 space-y-4`
+- `flex items-center justify-between`
+- `text-sm text-gray-600`
+- `text-sm font-medium text-gray-900`
+- `flex items-center justify-between border-t border-gray-200 pt-4`
+- `flex items-center text-sm text-gray-600`
+- `ml-2 shrink-0 text-gray-400 hover:text-gray-500`
+- `flex text-sm text-gray-600`
+- `text-base font-medium text-gray-900`
+- `mt-6`
+- `w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:px-0`
+- `text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`
+- `mt-12`
+- `flex py-6`
+- `size-24 rounded-md object-cover sm:size-32`
+- `ml-4 flex flex-1 flex-col sm:ml-6`
+- `ml-4 text-sm font-medium text-gray-900`
+- `mt-1 text-sm text-gray-500`
+- `mt-4 flex flex-1 items-end justify-between`
+- `flex items-center space-x-2 text-sm text-gray-700`
+- `ml-4`
+- `text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `mt-10`
+- `space-y-4`
+- `ml-4 text-base font-medium text-gray-900`
+- `mt-6 text-center text-sm`
+- `font-medium text-indigo-600 hover:text-indigo-500`
+- `mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8`
+- `text-3xl font-bold tracking-tight text-gray-900`
+- `size-24 rounded-lg object-cover sm:size-32`
+- `relative ml-4 flex flex-1 flex-col justify-between sm:ml-6`
+- `flex justify-between sm:grid sm:grid-cols-2`
+- `pr-6`
+- `text-right text-sm font-medium text-gray-900`
+- `mt-4 flex items-center sm:absolute sm:top-0 sm:left-1/2 sm:mt-0 sm:block`
+- `inline-grid w-full max-w-16 grid-cols-1`
+- `ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:mt-3 sm:ml-0`
+- `mt-10 sm:ml-32 sm:pl-6`
+- `rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:p-8`
+- `flow-root`
+- `-my-4 divide-y divide-gray-200 text-sm`
+- `flex items-center justify-between py-4`
+- `text-gray-600`
+- `font-medium text-gray-900`
+- `mt-6 text-center text-sm text-gray-500`
+- `rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10`
+- `fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent`
+- `absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0`
+- `absolute inset-0 pl-10 focus:outline-none sm:pl-16`
+- `ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700`
+- `flex h-full flex-col overflow-y-auto bg-white shadow-xl`
+- `flex-1 overflow-y-auto px-4 py-6 sm:px-6`
+- `flex items-start justify-between`
+- `ml-3 flex h-7 items-center`
+- `relative -m-2 p-2 text-gray-400 hover:text-gray-500`
+- `absolute -inset-0.5`
+- `size-6`
+- `mt-8`
+- `-my-6 divide-y divide-gray-200`
+- `size-24 shrink-0 overflow-hidden rounded-md border border-gray-200`
+- `size-full object-cover`
+- `ml-4 flex flex-1 flex-col`
+- `flex justify-between text-base font-medium text-gray-900`
+- `flex flex-1 items-end justify-between text-sm`
+- `flex`
+- `border-t border-gray-200 px-4 py-6 sm:px-6`
+- `mt-0.5 text-sm text-gray-500`
+- `flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700`
+- `mt-6 flex justify-center text-center text-sm text-gray-500`
+- `fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent`
+- `fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in`
+- `flex min-h-full items-stretch justify-center text-center focus:outline-none sm:items-center sm:px-6 lg:px-8`
+- `flex w-full transform text-left text-base transition data-closed:scale-105 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:max-w-3xl`
+- `relative flex w-full flex-col overflow-hidden bg-white pt-6 pb-8 sm:rounded-lg sm:pb-6 lg:py-8`
+- `flex items-center justify-between px-4 sm:px-6 lg:px-8`
+- `text-gray-400 hover:text-gray-500`
+- `divide-y divide-gray-200 px-4 sm:px-6 lg:px-8`
+- `flex py-8 text-sm sm:items-center`
+- `size-24 flex-none rounded-lg border border-gray-200 sm:size-32`
+- `ml-4 grid flex-auto grid-cols-1 grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0`
+- `row-end-1 flex-auto sm:pr-6`
+- `mt-1 text-gray-500`
+- `row-span-2 row-end-2 font-medium text-gray-900 sm:order-1 sm:ml-6 sm:w-1/3 sm:flex-none sm:text-right`
+- `flex items-center sm:block sm:flex-none sm:text-center`
+- `ml-4 font-medium text-indigo-600 hover:text-indigo-500 sm:mt-2 sm:ml-0`
+- `mt-auto sm:px-6 lg:px-8`
+- `bg-gray-50 p-6 sm:rounded-lg sm:p-8`
+- `mt-8 flex justify-end px-4 sm:px-6 lg:px-8`
+- `rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `relative bg-white`
+- `mx-auto max-w-7xl sm:px-6 lg:px-8`
+- `relative border-b border-gray-200 px-4 pb-14 sm:static sm:px-0 sm:pb-0`
+- `flex h-16 items-center justify-between`
+- `flex flex-1`
+- `h-8 w-auto`
+- `absolute inset-x-0 bottom-0 overflow-x-auto border-t border-gray-200 sm:static sm:border-t-0`
+- `flex h-14 items-center space-x-8 px-4 sm:h-auto`
+- `text-sm font-medium text-gray-700 hover:text-gray-800`
+- `flex flex-1 items-center justify-end`
+- `p-2 text-gray-400 hover:text-gray-500`
+- `ml-4 flow-root text-sm lg:relative lg:ml-8`
+- `group -m-2 flex items-center p-2`
+- `size-6 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800`
+- `w-full overflow-visible bg-white pb-6 shadow-lg transition transition-discrete backdrop:bg-transparent open:block data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in max-lg:[--anchor-gap:--spacing(3.5)] sm:px-2 lg:-mr-1.5 lg:w-80 lg:rounded-lg lg:ring-1 lg:ring-black/5 lg:[--anchor-gap:--spacing(1)]`
+- `mx-auto max-w-2xl px-4`
+- `divide-y divide-gray-200`
+- `flex items-center py-6`
+- `size-16 flex-none rounded-md border border-gray-200`
+- `ml-4 flex-auto`
+- `w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `mt-6 text-center`

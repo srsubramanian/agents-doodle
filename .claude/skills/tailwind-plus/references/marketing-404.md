@@ -1,0 +1,90 @@
+# Marketing 404 Pages
+Source: https://tailwindcss.com/plus/ui-blocks/marketing/feedback/404-pages
+
+## Classes (86 unique)
+- `h-full`
+- `grid min-h-full place-items-center bg-gray-900 px-6 py-24 sm:py-32 lg:px-8`
+- `text-center`
+- `text-base font-semibold text-indigo-400`
+- `mt-4 text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl`
+- `mt-6 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8`
+- `mt-10 flex items-center justify-center gap-x-6`
+- `rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `text-sm font-semibold text-white`
+- `grid min-h-full grid-cols-1 grid-rows-[1fr_auto_1fr] bg-gray-900 lg:grid-cols-[max(50%,36rem)_1fr]`
+- `mx-auto w-full max-w-7xl px-6 pt-6 sm:pt-10 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:px-8`
+- `sr-only`
+- `h-10 w-auto sm:h-12`
+- `mx-auto w-full max-w-7xl px-6 py-24 sm:py-32 lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:px-8`
+- `max-w-lg`
+- `text-base/8 font-semibold text-indigo-400`
+- `mt-4 text-5xl font-semibold tracking-tight text-pretty text-white sm:text-6xl`
+- `mt-10`
+- `text-sm/7 font-semibold text-indigo-400`
+- `self-end lg:col-span-2 lg:col-start-1 lg:row-start-3`
+- `border-t border-white/10 bg-gray-800/50 py-10`
+- `mx-auto flex w-full max-w-7xl items-center gap-x-4 px-6 text-sm/7 text-gray-400 lg:px-8`
+- `size-0.5 fill-gray-600`
+- `hidden lg:relative lg:col-start-2 lg:row-start-1 lg:row-end-4 lg:block`
+- `absolute inset-0 size-full object-cover`
+- `bg-gray-900`
+- `mx-auto w-full max-w-7xl px-6 pt-10 pb-16 sm:pb-24 lg:px-8`
+- `mx-auto h-10 w-auto sm:h-12`
+- `mx-auto mt-20 max-w-2xl text-center sm:mt-24`
+- `mt-4 text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl`
+- `mx-auto mt-16 flow-root max-w-lg sm:mt-20`
+- `-mt-6 divide-y divide-white/10 border-b border-white/10`
+- `relative flex gap-x-6 py-6`
+- `flex size-10 flex-none items-center justify-center rounded-lg bg-gray-800/50 shadow-xs outline-1 -outline-offset-1 outline-white/10`
+- `size-6 text-indigo-400`
+- `flex-auto`
+- `text-sm/6 font-semibold text-white`
+- `absolute inset-0`
+- `mt-2 text-sm/6 text-gray-400`
+- `flex-none self-center`
+- `size-5 text-gray-500`
+- `mt-10 flex justify-center`
+- `text-sm/6 font-semibold text-indigo-400`
+- `border-t border-white/10 py-6 sm:py-10`
+- `mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 sm:flex-row lg:px-8`
+- `text-sm/7 text-gray-500`
+- `hidden sm:block sm:h-7 sm:w-px sm:flex-none sm:bg-gray-700`
+- `flex gap-x-4`
+- `text-gray-500 hover:text-gray-400`
+- `size-6`
+- `relative isolate min-h-full`
+- `absolute inset-0 -z-10 size-full object-cover object-top`
+- `mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8`
+- `text-base/8 font-semibold text-white`
+- `mt-6 text-lg font-medium text-pretty text-white/70 sm:text-xl/8`
+- `text-sm/7 font-semibold text-white hover:text-white/90`
+- `flex min-h-full flex-col`
+- `mx-auto w-full max-w-7xl px-6 pt-6 lg:px-8`
+- `flex items-center justify-between`
+- `flex lg:flex-1`
+- `-m-1.5 p-1.5`
+- `h-8`
+- `flex lg:hidden`
+- `-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400`
+- `hidden lg:flex lg:gap-x-12`
+- `hidden lg:flex lg:flex-1 lg:justify-end`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 focus:outline-none`
+- `fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10`
+- `-m-2.5 rounded-md p-2.5 text-gray-400`
+- `mt-6 flow-root`
+- `-my-6 divide-y divide-white/10`
+- `space-y-2 py-6`
+- `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5`
+- `py-6`
+- `-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-white hover:bg-white/5`
+- `mx-auto flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-24 sm:py-64 lg:px-8`
+- `border-t border-white/10`
+- `mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32`
+- `xl:grid xl:grid-cols-3 xl:gap-8`
+- `h-7`
+- `mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0`
+- `md:grid md:grid-cols-2 md:gap-8`
+- `mt-6 space-y-4`
+- `text-sm/6 text-gray-400 hover:text-white`
+- `mt-10 md:mt-0`

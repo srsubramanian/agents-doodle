@@ -1,0 +1,131 @@
+# Ecommerce Order Summaries
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/order-summaries
+
+## Classes (127 unique)
+- `h-full bg-white`
+- `h-full`
+- `relative lg:min-h-full`
+- `h-80 overflow-hidden lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12`
+- `size-full object-cover`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 xl:gap-x-24`
+- `lg:col-start-2`
+- `text-sm font-medium text-indigo-600`
+- `mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl`
+- `mt-2 text-base text-gray-500`
+- `mt-16 text-sm font-medium`
+- `text-gray-900`
+- `mt-2 text-indigo-600`
+- `mt-6 divide-y divide-gray-200 border-t border-gray-200 text-sm font-medium text-gray-500`
+- `flex space-x-6 py-6`
+- `size-24 flex-none rounded-md bg-gray-100 object-cover`
+- `flex-auto space-y-1`
+- `flex-none font-medium text-gray-900`
+- `space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-gray-500`
+- `flex justify-between`
+- `flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900`
+- `text-base`
+- `mt-16 grid grid-cols-2 gap-x-4 text-sm text-gray-600`
+- `font-medium text-gray-900`
+- `mt-2`
+- `not-italic`
+- `block`
+- `mt-2 space-y-2 sm:flex sm:space-y-0 sm:space-x-4`
+- `flex-none`
+- `h-6 w-auto`
+- `sr-only`
+- `flex-auto`
+- `mt-16 border-t border-gray-200 py-6 text-right`
+- `text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `bg-gray-50`
+- `mx-auto max-w-2xl pt-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `space-y-2 px-4 sm:flex sm:items-baseline sm:justify-between sm:space-y-0 sm:px-0`
+- `flex sm:items-baseline sm:space-x-4`
+- `text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl`
+- `hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:block`
+- `text-sm text-gray-600`
+- `text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:hidden`
+- `mt-6`
+- `space-y-8`
+- `border-t border-b border-gray-200 bg-white shadow-xs sm:rounded-lg sm:border`
+- `px-4 py-6 sm:px-6 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:p-8`
+- `sm:flex lg:col-span-7`
+- `aspect-square w-full shrink-0 rounded-lg object-cover sm:size-40`
+- `mt-6 sm:mt-0 sm:ml-6`
+- `text-base font-medium text-gray-900`
+- `mt-2 text-sm font-medium text-gray-900`
+- `mt-3 text-sm text-gray-500`
+- `mt-6 lg:col-span-5 lg:mt-0`
+- `grid grid-cols-2 gap-x-6 text-sm`
+- `mt-3 text-gray-500`
+- `mt-3 space-y-3 text-gray-500`
+- `font-medium text-indigo-600 hover:text-indigo-500`
+- `border-t border-gray-200 px-4 py-6 sm:px-6 lg:p-8`
+- `text-sm font-medium text-gray-900`
+- `overflow-hidden rounded-full bg-gray-200`
+- `h-2 rounded-full bg-indigo-600`
+- `mt-6 hidden grid-cols-4 text-sm font-medium text-gray-600 sm:grid`
+- `text-indigo-600`
+- `text-center text-indigo-600`
+- `text-center`
+- `text-right`
+- `mt-16`
+- `bg-gray-100 px-4 py-6 sm:rounded-lg sm:px-6 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8 lg:py-8`
+- `grid grid-cols-2 gap-6 text-sm md:gap-x-8 lg:col-span-7`
+- `-mt-1 -ml-4 flex flex-wrap`
+- `mt-4 ml-4 shrink-0`
+- `mt-4 ml-4`
+- `text-gray-600`
+- `mt-8 divide-y divide-gray-200 text-sm lg:col-span-5 lg:mt-0`
+- `flex items-center justify-between pb-4`
+- `flex items-center justify-between py-4`
+- `flex items-center justify-between pt-4`
+- `font-medium text-indigo-600`
+- `bg-white`
+- `mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8`
+- `text-3xl font-bold tracking-tight text-gray-900`
+- `mt-2 border-b border-gray-200 pb-5 text-sm sm:flex sm:justify-between`
+- `flex`
+- `text-gray-500`
+- `mx-2 text-gray-400`
+- `mt-4 sm:mt-0`
+- `mt-8`
+- `space-y-24`
+- `grid grid-cols-1 text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:gap-x-8 lg:gap-x-8`
+- `sm:col-span-4 md:col-span-5 md:row-span-2 md:row-end-2`
+- `aspect-square w-full rounded-lg bg-gray-50 object-cover`
+- `mt-6 sm:col-span-7 sm:mt-0 md:row-end-1`
+- `text-lg font-medium text-gray-900`
+- `mt-1 font-medium text-gray-900`
+- `sm:col-span-12 md:col-span-7`
+- `grid grid-cols-1 gap-y-8 border-b border-gray-200 py-8 sm:grid-cols-2 sm:gap-x-6 sm:py-6 md:py-10`
+- `mt-6 font-medium text-gray-900 md:mt-10`
+- `mt-6 hidden grid-cols-4 font-medium text-gray-600 sm:grid`
+- `mt-24`
+- `rounded-lg bg-gray-50 px-6 py-6 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-0 lg:py-8`
+- `grid grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-x-8 lg:col-span-5 lg:pl-8`
+- `mt-3 flex`
+- `ml-4`
+- `mt-8 divide-y divide-gray-200 text-sm lg:col-span-7 lg:mt-0 lg:pr-8`
+- `mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8`
+- `max-w-xl`
+- `text-base font-medium text-indigo-600`
+- `mt-2 text-4xl font-bold tracking-tight sm:text-5xl`
+- `mt-12 text-sm font-medium`
+- `mt-10 border-t border-gray-200`
+- `flex space-x-6 border-b border-gray-200 py-10`
+- `size-20 flex-none rounded-lg bg-gray-100 object-cover sm:size-40`
+- `flex flex-auto flex-col`
+- `mt-2 text-sm text-gray-600`
+- `mt-6 flex flex-1 items-end`
+- `flex divide-x divide-gray-200 text-sm`
+- `flex pr-4 sm:pr-6`
+- `ml-2 text-gray-700`
+- `flex pl-4 sm:pl-6`
+- `sm:ml-40 sm:pl-6`
+- `grid grid-cols-2 gap-x-6 py-10 text-sm`
+- `mt-2 text-gray-700`
+- `grid grid-cols-2 gap-x-6 border-t border-gray-200 py-10 text-sm`
+- `space-y-6 border-t border-gray-200 pt-10 text-sm`
+- `text-gray-700`
+- `flex font-medium text-gray-900`
+- `ml-2 rounded-full bg-gray-200 px-2 py-0.5 text-xs text-gray-600`

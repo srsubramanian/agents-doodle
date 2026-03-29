@@ -128,7 +128,7 @@ export function EditorChatPanel({ onHide }: Props) {
       {messages.length === 0 && !isStreaming ? (
         <div className="flex-1 flex items-center justify-center px-4">
           <div className="text-center">
-            <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-sm font-medium text-gray-300 mx-auto mb-3">
+            <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-sm font-medium text-gray-300 mx-auto mb-3">
               {agent.name.charAt(0).toUpperCase()}
             </span>
             <h3 className="text-sm font-semibold text-white">Chat with {agent.name}</h3>

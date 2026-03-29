@@ -24,15 +24,15 @@ export function MessageBubble({ role, content, isStreaming, toolCalls, todos }: 
         {/* Todo panel for assistant messages */}
         {!isUser && todos && todos.length > 0 && (
           <div className="px-4 pt-3 pb-1">
-            <div className="border border-gray-700 rounded-lg p-2.5 bg-gray-900/50 mb-2">
+            <div className="border border-white/10 rounded-lg p-2.5 bg-gray-900/50 mb-2">
               <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
                 Agent Plan
               </div>
               {todos.map((todo, i) => (
                 <div key={i} className="flex items-center gap-1.5 text-xs py-0.5">
-                  <span className="text-[10px]">
-                    {todo.status === "completed" ? "\u2705" : todo.status === "in_progress" ? "\u23f3" : "\u2b1c"}
-                  </span>
+                  <span className={`inline-block size-2 rounded-full ${
+                    todo.status === "completed" ? "bg-green-500" : todo.status === "in_progress" ? "bg-amber-500" : "bg-gray-600"
+                  }`} />
                   <span className={todo.status === "completed" ? "text-gray-500 line-through" : "text-gray-300"}>
                     {todo.content}
                   </span>
@@ -72,16 +72,16 @@ function ToolCallCard({ toolCall }: { toolCall: ToolCallInfo }) {
   const isLoading = toolCall.status === "calling" || toolCall.status === "streaming_args" || toolCall.status === "executing";
 
   return (
-    <details className="my-1.5 border border-gray-700 rounded-lg overflow-hidden bg-gray-900/50 group">
+    <details className="my-1.5 border border-white/10 rounded-lg overflow-hidden bg-gray-900/50 group">
       <summary className="flex items-center gap-2 px-3 py-2 text-xs text-gray-300 cursor-pointer hover:bg-gray-700/30 list-none">
-        <span className="text-[10px]">{isLoading ? "\u23f3" : "\u2705"}</span>
+        <span className={`inline-block size-2 rounded-full ${isLoading ? "bg-amber-500" : "bg-green-500"}`} />
         <span className="font-mono font-medium text-blue-400">{toolCall.name}</span>
         {toolCall.args_partial && isLoading && (
           <span className="text-gray-600 truncate max-w-[200px]">{toolCall.args_partial}</span>
         )}
         <span className="text-gray-600 ml-auto text-[10px]">click to expand</span>
       </summary>
-      <div className="px-3 py-2 border-t border-gray-700 text-xs space-y-2">
+      <div className="px-3 py-2 border-t border-white/10 text-xs space-y-2">
         {toolCall.args && Object.keys(toolCall.args).length > 0 && (
           <div>
             <span className="text-gray-500">Arguments:</span>

@@ -28,7 +28,7 @@ export function ToolboxNode({ data, selected }: NodeProps) {
           <span className="inline-flex items-center text-[10px] text-blue-400 cursor-pointer hover:text-blue-300 transition-all">
             + Add
           </span>
-          <span className="text-[10px] px-1.5 py-0.5 bg-gray-700/50 rounded text-gray-400">
+          <span className="text-[10px] px-1.5 py-0.5 bg-white/5 rounded text-gray-400">
             MCP
           </span>
         </div>

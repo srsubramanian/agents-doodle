@@ -1,0 +1,65 @@
+# Ecommerce Category Previews
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/category-previews
+
+## Classes (61 unique)
+- `bg-gray-50`
+- `mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8`
+- `sm:flex sm:items-baseline sm:justify-between`
+- `text-2xl font-bold tracking-tight text-gray-900`
+- `hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block`
+- `mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8`
+- `group relative aspect-2/1 overflow-hidden rounded-lg sm:row-span-2 sm:aspect-square`
+- `absolute size-full object-cover group-hover:opacity-75`
+- `absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50`
+- `absolute inset-0 flex items-end p-6`
+- `font-semibold text-white`
+- `absolute inset-0`
+- `mt-1 text-sm text-white`
+- `group relative aspect-2/1 overflow-hidden rounded-lg sm:aspect-auto`
+- `mt-6 sm:hidden`
+- `block text-sm font-semibold text-indigo-600 hover:text-indigo-500`
+- `bg-gray-100`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32`
+- `text-2xl font-bold text-gray-900`
+- `mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6`
+- `group relative`
+- `w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square`
+- `mt-6 text-sm text-gray-500`
+- `text-base font-semibold text-gray-900`
+- `bg-white`
+- `mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl`
+- `relative overflow-hidden rounded-lg lg:h-96`
+- `size-full object-cover`
+- `relative h-96 w-full lg:hidden`
+- `relative h-32 w-full lg:hidden`
+- `absolute inset-x-0 bottom-0 rounded-br-lg rounded-bl-lg bg-black/75 p-6 backdrop-blur-sm backdrop-filter sm:flex sm:items-center sm:justify-between lg:inset-x-auto lg:inset-y-0 lg:w-96 lg:flex-col lg:items-start lg:rounded-tl-lg lg:rounded-br-none`
+- `text-xl font-bold text-white`
+- `mt-1 text-sm text-gray-300`
+- `mt-6 flex shrink-0 items-center justify-center rounded-md border border-white/25 px-4 py-3 text-base font-medium text-white hover:bg-white/10 sm:mt-0 sm:ml-8 lg:ml-0 lg:w-full`
+- `mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8`
+- `mt-4 text-base text-gray-500`
+- `mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-8`
+- `group block`
+- `aspect-3/2 w-full rounded-lg object-cover group-hover:opacity-75 lg:aspect-5/6`
+- `mt-4 text-base font-semibold text-gray-900`
+- `mt-2 text-sm text-gray-500`
+- `py-16 sm:py-24 xl:mx-auto xl:max-w-7xl xl:px-8`
+- `px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0`
+- `mt-4 flow-root`
+- `-my-2`
+- `relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible`
+- `absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0`
+- `relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto`
+- `absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-gray-800 opacity-50`
+- `relative mt-auto text-center text-xl font-bold text-white`
+- `mt-6 px-4 sm:hidden`
+- `h-full bg-gray-50`
+- `h-full`
+- `grid min-h-full grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1`
+- `relative flex`
+- `absolute inset-0 size-full object-cover`
+- `relative flex w-full flex-col items-start justify-end bg-black/40 p-8 sm:p-12`
+- `text-lg font-medium text-white/75`
+- `mt-1 text-2xl font-medium text-white`
+- `mt-4 rounded-md bg-white px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50`

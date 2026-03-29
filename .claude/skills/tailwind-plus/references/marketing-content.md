@@ -1,0 +1,114 @@
+# Marketing Content Sections
+Source: https://tailwindcss.com/plus/ui-blocks/marketing/sections/content-sections
+
+## Classes (110 unique)
+- `relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0`
+- `absolute inset-0 -z-10 overflow-hidden`
+- `absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-800`
+- `overflow-visible fill-gray-800/50`
+- `mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10`
+- `lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8`
+- `lg:pr-4`
+- `lg:max-w-lg`
+- `text-base/7 font-semibold text-indigo-400`
+- `mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl`
+- `mt-6 text-xl/8 text-gray-300`
+- `-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden`
+- `w-3xl max-w-none rounded-xl bg-gray-800 shadow-xl ring-1 ring-white/10 sm:w-228`
+- `lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8`
+- `max-w-xl text-base/7 text-gray-400 lg:max-w-lg`
+- `mt-8 space-y-8 text-gray-400`
+- `flex gap-x-3`
+- `mt-1 size-5 flex-none text-indigo-400`
+- `font-semibold text-white`
+- `mt-8`
+- `mt-16 text-2xl font-bold tracking-tight text-white`
+- `mt-6`
+- `relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32`
+- `absolute -top-80 left-[max(6rem,33%)] -z-10 transform-gpu blur-3xl sm:left-1/2 md:top-20 lg:ml-20 xl:top-3 xl:ml-56`
+- `aspect-801/1036 w-200.25 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20`
+- `mx-auto max-w-7xl px-6 lg:px-8`
+- `mx-auto max-w-2xl lg:mx-0`
+- `mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-10 lg:max-w-none lg:grid-cols-12`
+- `relative lg:order-last lg:col-span-5`
+- `absolute -top-160 left-1 -z-10 h-256 w-702 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_111.5rem_0%,white,transparent)] stroke-white/10`
+- `border-l border-indigo-400 pl-8`
+- `text-xl/8 font-semibold tracking-tight text-white`
+- `mt-8 flex gap-x-4`
+- `mt-1 size-10 flex-none rounded-full bg-gray-800`
+- `text-sm/6`
+- `text-gray-400`
+- `max-w-xl text-base/7 text-gray-400 lg:col-span-7`
+- `mt-8 max-w-xl space-y-8 text-gray-400`
+- `overflow-hidden bg-gray-900 py-24 sm:py-32`
+- `mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8`
+- `max-w-4xl`
+- `mt-6 text-xl/8 text-balance text-gray-300`
+- `mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16`
+- `lg:pr-8`
+- `text-2xl font-semibold tracking-tight text-pretty text-white`
+- `mt-6 text-base/7 text-gray-400`
+- `mt-8 text-base/7 text-gray-400`
+- `pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto`
+- `-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8`
+- `aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-white/10`
+- `block size-full object-cover`
+- `-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-white/10 lg:-mt-40`
+- `max-lg:mt-16 lg:col-span-1`
+- `text-base/7 font-semibold text-gray-400`
+- `mt-6 border-t border-gray-700`
+- `mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2`
+- `flex flex-col gap-y-2 border-b border-dotted border-gray-700 pb-4`
+- `text-sm/6 text-gray-400`
+- `order-first text-6xl font-semibold tracking-tight text-white`
+- `flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-700 max-sm:pb-4`
+- `flex flex-col gap-y-2`
+- `bg-gray-900 py-24 sm:py-32`
+- `mx-auto max-w-2xl lg:mx-0 lg:max-w-none`
+- `mt-10 grid max-w-xl grid-cols-1 gap-8 text-base/7 text-gray-300 lg:max-w-none lg:grid-cols-2`
+- `mt-10 flex`
+- `rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `relative overflow-hidden pt-16 lg:pt-20`
+- `mb-[-12%] rounded-xl shadow-xl ring-1 ring-white/10`
+- `relative`
+- `absolute -inset-x-20 bottom-0 bg-linear-to-t from-gray-900 pt-[7%]`
+- `mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2`
+- `relative overflow-hidden rounded-3xl bg-gray-800 px-6 pt-64 pb-9 after:pointer-events-none after:absolute after:inset-0 after:rounded-3xl after:inset-ring after:inset-ring-white/10 sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10`
+- `absolute inset-0 size-full rounded-3xl object-cover brightness-125 saturate-0`
+- `absolute inset-0 bg-gray-900 mix-blend-multiply`
+- `absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl`
+- `aspect-1097/845 w-274.25 bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-40`
+- `relative isolate`
+- `absolute -top-4 -left-2 -z-10 h-32 stroke-white/20`
+- `h-12 w-auto`
+- `mt-6 text-xl/8 font-semibold text-white`
+- `mt-6 text-sm/6 text-gray-300`
+- `text-base/7 text-gray-400 lg:max-w-lg`
+- `max-w-xl`
+- `mt-10 grid grid-cols-2 gap-8 border-t border-gray-800 pt-10 sm:grid-cols-4`
+- `text-sm/6 font-semibold text-gray-400`
+- `mt-2 text-3xl/10 font-bold tracking-tight text-white`
+- `text-base/7 font-semibold text-indigo-400 hover:text-indigo-300`
+- `relative bg-gray-900`
+- `mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end`
+- `lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2`
+- `relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0`
+- `absolute inset-0 size-full bg-gray-800 object-cover`
+- `px-6 lg:contents`
+- `mx-auto max-w-2xl pt-16 pb-24 sm:pt-20 sm:pb-32 lg:mr-0 lg:ml-8 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2`
+- `mt-10 max-w-xl text-base/7 text-gray-400 lg:max-w-none`
+- `bg-gray-900 px-6 py-32 lg:px-8`
+- `mx-auto max-w-3xl text-base/7 text-gray-300`
+- `mt-6 text-xl/8`
+- `mt-10 max-w-2xl text-gray-400`
+- `mt-16 text-3xl font-semibold tracking-tight text-pretty text-white`
+- `mt-10 border-l border-indigo-400 pl-9`
+- `mt-6 flex gap-x-4`
+- `size-6 flex-none rounded-full bg-gray-800`
+- `mt-10`
+- `mt-16`
+- `aspect-video rounded-xl bg-gray-800 object-cover`
+- `mt-4 flex gap-x-2 text-sm/6 text-gray-400`
+- `mt-0.5 size-5 flex-none text-gray-600`
+- `mt-16 max-w-2xl text-gray-400`
+- `text-3xl font-semibold tracking-tight text-pretty text-white`

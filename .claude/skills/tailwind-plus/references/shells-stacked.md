@@ -1,0 +1,454 @@
+# Stacked Layouts
+Source: https://tailwindcss.com/plus/ui-blocks/application-ui/application-shells/stacked
+Components: 9
+
+## Variant: With bottom border
+### Classes
+- `h-full`
+- `min-h-full`
+- `border-b border-white/10 bg-gray-900`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 justify-between`
+- `flex`
+- `flex shrink-0 items-center`
+- `h-8 w-auto`
+- `hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8`
+- `inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-white`
+- `inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-400 hover:border-white/20 hover:text-gray-200`
+- `hidden sm:ml-6 sm:flex sm:items-center`
+- `relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden`
+- `-mr-2 flex items-center sm:hidden`
+- `relative inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block sm:hidden`
+- `space-y-1 pt-2 pb-3`
+- `block border-l-4 border-indigo-500 bg-indigo-600/10 py-2 pr-4 pl-3 text-base font-medium text-indigo-300`
+- `block border-l-4 border-transparent py-2 pr-4 pl-3 text-base font-medium text-gray-400 hover:border-gray-500 hover:bg-white/5 hover:text-gray-200`
+- `border-t border-gray-700 pt-4 pb-3`
+- `flex items-center px-4`
+- `shrink-0`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base font-medium text-white`
+- `text-sm font-medium text-gray-400`
+- `relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `mt-3 space-y-1`
+- `block px-4 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-gray-200`
+- `py-10`
+- `text-3xl font-bold tracking-tight text-white`
+- `mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8`
+
+## Variant: On subtle background
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `border-b border-white/10 bg-gray-800/50`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 justify-between`
+- `flex`
+- `flex shrink-0 items-center`
+- `h-8 w-auto`
+- `hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8`
+- `inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-white`
+- `inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-400 hover:border-white/20 hover:text-gray-200`
+- `hidden sm:ml-6 sm:flex sm:items-center`
+- `relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-300 focus:bg-gray-700 focus:outline-hidden`
+- `-mr-2 flex items-center sm:hidden`
+- `relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block sm:hidden`
+- `space-y-1 pt-2 pb-3`
+- `block border-l-4 border-indigo-500 bg-indigo-600/10 py-2 pr-4 pl-3 text-base font-medium text-indigo-300`
+- `block border-l-4 border-transparent py-2 pr-4 pl-3 text-base font-medium text-gray-400 hover:border-white/20 hover:bg-white/5 hover:text-gray-200`
+- `border-t border-gray-700 pt-4 pb-3`
+- `flex items-center px-4`
+- `shrink-0`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base font-medium text-white`
+- `text-sm font-medium text-gray-400`
+- `relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `mt-3 space-y-1`
+- `block px-4 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-gray-200`
+- `py-10`
+- `text-3xl font-bold tracking-tight text-white`
+- `mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8`
+
+## Variant: With lighter page header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `bg-gray-800/50`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 items-center justify-between`
+- `flex items-center`
+- `shrink-0`
+- `size-8`
+- `hidden md:block`
+- `ml-10 flex items-baseline space-x-4`
+- `rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white`
+- `rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white`
+- `ml-4 flex items-center md:ml-6`
+- `relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden`
+- `-mr-2 flex md:hidden`
+- `relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block md:hidden`
+- `space-y-1 px-2 pt-2 pb-3 sm:px-3`
+- `block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white`
+- `border-t border-white/10 pt-4 pb-3`
+- `flex items-center px-5`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base/5 font-medium text-white`
+- `text-sm font-medium text-gray-400`
+- `relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `mt-3 space-y-1 px-2`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white`
+- `relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10`
+- `mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8`
+- `text-3xl font-bold tracking-tight text-white`
+
+## Variant: Branded nav with compact lighter page header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `bg-indigo-800`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 items-center justify-between`
+- `flex items-center`
+- `shrink-0`
+- `size-8`
+- `hidden md:block`
+- `ml-10 flex items-baseline space-x-4`
+- `rounded-md bg-indigo-950/40 px-3 py-2 text-sm font-medium text-white`
+- `rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700/75`
+- `ml-4 flex items-center md:ml-6`
+- `relative rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-200 focus:bg-white/5 focus:outline-hidden`
+- `-mr-2 flex md:hidden`
+- `relative inline-flex items-center justify-center rounded-md bg-indigo-800 p-2 text-indigo-200 hover:bg-indigo-700/75 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block md:hidden`
+- `space-y-1 px-2 pt-2 pb-3 sm:px-3`
+- `block rounded-md bg-indigo-950/40 px-3 py-2 text-base font-medium text-white`
+- `block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-indigo-700/75`
+- `border-t border-indigo-800 pt-4 pb-3`
+- `flex items-center px-5`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base font-medium text-white`
+- `text-sm font-medium text-indigo-300`
+- `relative ml-auto shrink-0 rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `mt-3 space-y-1 px-2`
+- `relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10`
+- `mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8`
+- `text-lg/6 font-semibold text-white`
+- `mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8`
+
+## Variant: With overlap
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `relative bg-gray-800/50 pb-32`
+- `bg-transparent`
+- `mx-auto max-w-7xl sm:px-6 lg:px-8`
+- `border-b border-white/10`
+- `flex h-16 items-center justify-between px-4 sm:px-0`
+- `flex items-center`
+- `shrink-0`
+- `size-8`
+- `hidden md:block`
+- `ml-10 flex items-baseline space-x-4`
+- `rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white`
+- `rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white`
+- `ml-4 flex items-center md:ml-6`
+- `relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden`
+- `-mr-2 flex md:hidden`
+- `relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block border-b border-white/10 md:hidden`
+- `space-y-1 px-2 py-3 sm:px-3`
+- `block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white`
+- `border-t border-white/10 pt-4 pb-3`
+- `flex items-center px-5`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base/5 font-medium text-white`
+- `text-sm font-medium text-gray-400`
+- `relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `mt-3 space-y-1 px-2`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white`
+- `py-10`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `text-3xl font-bold tracking-tight text-white`
+- `relative -mt-32`
+- `mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8`
+- `rounded-lg bg-gray-800 px-5 py-6 outline -outline-offset-1 outline-white/10 sm:px-6`
+
+## Variant: Brand nav with overlap
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `bg-indigo-800 pb-32`
+- `border-b border-indigo-400/25 bg-indigo-800 lg:border-none`
+- `mx-auto max-w-7xl px-2 sm:px-4 lg:px-8`
+- `relative flex h-16 items-center justify-between lg:border-b lg:border-indigo-400/25`
+- `flex items-center px-2 lg:px-0`
+- `shrink-0`
+- `block size-8`
+- `hidden lg:ml-10 lg:block`
+- `flex space-x-4`
+- `rounded-md bg-indigo-950/40 px-3 py-2 text-sm font-medium text-white`
+- `rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700/75`
+- `flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end`
+- `grid w-full max-w-lg grid-cols-1 lg:max-w-xs`
+- `col-start-1 row-start-1 block w-full rounded-md bg-indigo-700/50 py-1.5 pr-3 pl-10 text-base text-white outline-1 -outline-offset-1 outline-indigo-400/25 placeholder:text-white/50 focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-white/50`
+- `flex lg:hidden`
+- `relative inline-flex items-center justify-center rounded-md bg-indigo-800 p-2 text-indigo-200 hover:bg-indigo-700/75 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `absolute -inset-0.5`
+- `sr-only`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `hidden lg:ml-4 lg:block`
+- `flex items-center`
+- `relative shrink-0 rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `absolute -inset-1.5`
+- `size-6`
+- `relative ml-3 shrink-0`
+- `relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-200 focus:bg-white/5 focus:outline-hidden`
+- `block lg:hidden`
+- `space-y-1 px-2 pt-2 pb-3`
+- `block rounded-md bg-indigo-950/40 px-3 py-2 text-base font-medium text-white`
+- `block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-indigo-700/75`
+- `border-t border-indigo-800 pt-4 pb-3`
+- `flex items-center px-5`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base font-medium text-white`
+- `text-sm font-medium text-indigo-300`
+- `relative ml-auto shrink-0 rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `mt-3 space-y-1 px-2`
+- `py-10`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `text-3xl font-bold tracking-tight text-white`
+- `-mt-32`
+- `mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8`
+- `rounded-lg bg-gray-800 px-5 py-6 outline-1 -outline-offset-1 outline-white/10 sm:px-6`
+
+## Variant: Branded nav with lighter page header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `bg-indigo-800`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 items-center justify-between`
+- `flex items-center`
+- `shrink-0`
+- `size-8`
+- `hidden md:block`
+- `ml-10 flex items-baseline space-x-4`
+- `rounded-md bg-indigo-950/40 px-3 py-2 text-sm font-medium text-white`
+- `rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700/75`
+- `ml-4 flex items-center md:ml-6`
+- `relative rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-200 focus:bg-white/5 focus:outline-hidden`
+- `-mr-2 flex md:hidden`
+- `relative inline-flex items-center justify-center rounded-md bg-indigo-800 p-2 text-indigo-200 hover:bg-indigo-700/75 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block md:hidden`
+- `space-y-1 px-2 pt-2 pb-3 sm:px-3`
+- `block rounded-md bg-indigo-950/40 px-3 py-2 text-base font-medium text-white`
+- `block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-indigo-700/75`
+- `border-t border-indigo-800 pt-4 pb-3`
+- `flex items-center px-5`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base font-medium text-white`
+- `text-sm font-medium text-indigo-300`
+- `relative ml-auto shrink-0 rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `mt-3 space-y-1 px-2`
+- `relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10`
+- `mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8`
+- `text-3xl font-bold tracking-tight text-white`
+
+## Variant: With compact lighter page header
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `bg-gray-800/50`
+- `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`
+- `flex h-16 items-center justify-between`
+- `flex items-center`
+- `shrink-0`
+- `size-8`
+- `hidden md:block`
+- `ml-10 flex items-baseline space-x-4`
+- `rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white`
+- `rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white`
+- `ml-4 flex items-center md:ml-6`
+- `relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-1.5`
+- `sr-only`
+- `size-6`
+- `relative ml-3`
+- `relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in`
+- `block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden`
+- `-mr-2 flex md:hidden`
+- `relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `absolute -inset-0.5`
+- `size-6 in-aria-expanded:hidden`
+- `size-6 not-in-aria-expanded:hidden`
+- `block md:hidden`
+- `space-y-1 px-2 pt-2 pb-3 sm:px-3`
+- `block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white`
+- `border-t border-white/10 pt-4 pb-3`
+- `flex items-center px-5`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3`
+- `text-base font-medium text-white`
+- `text-sm font-medium text-gray-400`
+- `relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500`
+- `mt-3 space-y-1 px-2`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white`
+- `relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:bottom-0 after:border-y after:border-white/10`
+- `mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8`
+- `text-lg/6 font-semibold text-white`
+- `mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8`
+
+## Variant: Two-row navigation with overlap
+### Classes
+- `h-full bg-gray-900`
+- `h-full`
+- `min-h-full`
+- `bg-indigo-800 pb-24`
+- `mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8`
+- `relative flex items-center justify-center py-5 lg:justify-between`
+- `absolute left-0 shrink-0 lg:static`
+- `sr-only`
+- `h-8 w-auto`
+- `hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5`
+- `relative shrink-0 rounded-full p-1 text-indigo-200 hover:text-white focus:outline-2 focus:outline-white`
+- `absolute -inset-1.5`
+- `size-6`
+- `relative ml-4 shrink-0`
+- `relative flex max-w-xs items-center rounded-full bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`
+- `size-8 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg outline -outline-offset-1 outline-white/10 [--anchor-gap:--spacing(2)] data-leave:transition data-leave:duration-75 data-leave:ease-in data-closed:data-leave:scale-95 data-closed:data-leave:transform data-closed:data-leave:opacity-0`
+- `block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden`
+- `min-w-0 flex-1 px-12 lg:hidden`
+- `mx-auto grid w-full max-w-xs grid-cols-1`
+- `col-start-1 row-start-1 block w-full rounded-md bg-indigo-700/50 py-1.5 pr-3 pl-10 text-base text-white outline-1 -outline-offset-1 outline-indigo-400/25 placeholder:text-white/50 focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6`
+- `pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-white/50`
+- `absolute right-0 shrink-0 lg:hidden`
+- `relative inline-flex items-center justify-center rounded-md bg-transparent p-2 text-indigo-200 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white`
+- `absolute -inset-0.5`
+- `hidden border-t border-white/10 py-5 lg:block`
+- `grid grid-cols-3 items-center gap-8`
+- `col-span-2`
+- `flex space-x-4`
+- `rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700/75`
+- `rounded-md px-3 py-2 text-sm font-medium text-indigo-100 hover:bg-indigo-700/75`
+- `mx-auto grid w-full max-w-md grid-cols-1`
+- `backdrop:bg-transparent lg:hidden`
+- `fixed inset-0 bg-black/25 duration-150 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in`
+- `fixed inset-0 focus:outline-none`
+- `absolute inset-x-0 top-0 mx-auto w-full max-w-3xl origin-top transform p-2 transition duration-150 data-closed:scale-95 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in`
+- `divide-y divide-white/10 rounded-lg bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `pt-3 pb-2`
+- `flex items-center justify-between px-4`
+- `-mr-2`
+- `relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-white`
+- `mt-3 space-y-1 px-2`
+- `block rounded-md px-3 py-2 text-base font-medium text-gray-100 hover:bg-white/5 hover:text-white`
+- `pt-4 pb-2`
+- `flex items-center px-5`
+- `shrink-0`
+- `size-10 rounded-full outline -outline-offset-1 outline-white/10`
+- `ml-3 min-w-0 flex-1`
+- `truncate text-base font-medium text-gray-200`
+- `truncate text-sm font-medium text-gray-400`
+- `relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-white`
+- `-mt-24 pb-8`
+- `grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8`
+- `grid grid-cols-1 gap-4 lg:col-span-2`
+- `overflow-hidden rounded-lg bg-gray-800 outline -outline-offset-1 outline-white/10`
+- `p-6`
+- `grid grid-cols-1 gap-4`
+- `overflow-hidden rounded-lg bg-gray-800 inset-ring inset-ring-white/10`
+- `border-t border-gray-700 py-8 text-center text-sm text-gray-400 sm:text-left`
+- `block sm:inline`

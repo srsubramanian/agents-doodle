@@ -1,0 +1,73 @@
+# Ecommerce Product Features
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/product-features
+
+## Classes (69 unique)
+- `bg-gray-50`
+- `mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8`
+- `flex flex-col items-center text-center`
+- `text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`
+- `mt-3 max-w-3xl text-lg text-gray-600`
+- `mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8`
+- `aspect-3/2 w-full rounded-lg object-cover`
+- `mt-8 text-base text-gray-500`
+- `bg-white`
+- `relative`
+- `h-96 w-full object-cover`
+- `absolute inset-0 bg-linear-to-t from-white`
+- `relative mx-auto -mt-12 max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8`
+- `mx-auto max-w-2xl text-center lg:max-w-4xl`
+- `mt-4 text-gray-500`
+- `mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8`
+- `border-t border-gray-200 pt-4`
+- `font-medium text-gray-900`
+- `mt-2 text-sm text-gray-500`
+- `mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8`
+- `mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8`
+- `grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8`
+- `rounded-lg bg-gray-100`
+- `mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4`
+- `mx-auto max-w-2xl px-4 lg:max-w-none`
+- `max-w-3xl`
+- `font-semibold text-gray-500`
+- `mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`
+- `mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16`
+- `flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8`
+- `mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4`
+- `text-lg font-medium text-gray-900`
+- `flex-auto lg:col-span-7 xl:col-span-8`
+- `aspect-5/2 w-full rounded-lg bg-gray-100 object-cover`
+- `aspect-3/2 w-full object-cover sm:aspect-5/2 lg:absolute lg:aspect-auto lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16`
+- `mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32`
+- `lg:col-start-2`
+- `font-medium text-gray-500`
+- `mt-4 text-4xl font-bold tracking-tight text-gray-900`
+- `mt-10 grid grid-cols-1 gap-x-8 gap-y-10 text-sm sm:grid-cols-2`
+- `mt-2 text-gray-500`
+- `mx-auto max-w-7xl py-32 sm:px-2 lg:px-8`
+- `mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0`
+- `mt-4 block`
+- `-mx-4 flex overflow-x-auto sm:mx-0`
+- `flex-auto border-b border-gray-200 px-4 sm:px-0`
+- `-mb-px flex space-x-10`
+- `border-b-2 border-transparent py-6 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700 aria-selected:border-indigo-500 aria-selected:text-indigo-600`
+- `space-y-16 pt-10 lg:pt-16`
+- `flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8`
+- `mt-6 lg:col-span-5 lg:mt-0`
+- `lg:col-span-7`
+- `aspect-2/1 w-full rounded-lg bg-gray-100 object-cover sm:aspect-5/2`
+- `mx-auto max-w-3xl text-center`
+- `mt-16 space-y-16`
+- `mt-6 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:mt-0 xl:col-span-4`
+- `flex-auto lg:col-span-7 lg:col-start-6 lg:row-start-1 xl:col-span-8 xl:col-start-5`
+- `mt-6 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:mt-0 xl:col-span-4 xl:col-start-9`
+- `flex-auto lg:col-span-7 lg:col-start-1 lg:row-start-1 xl:col-span-8`
+- `mt-11 grid grid-cols-1 items-start gap-x-6 gap-y-16 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8`
+- `flex flex-col-reverse`
+- `mt-6`
+- `text-sm font-medium text-gray-900`
+- `aspect-square w-full rounded-lg bg-gray-100 object-cover`
+- `grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2`
+- `border-b border-gray-200 pb-10`
+- `mt-10 space-y-10`
+- `mt-3 text-sm text-gray-500`
+- `mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8`

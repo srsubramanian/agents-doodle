@@ -1,0 +1,88 @@
+# Ecommerce Product Quickviews
+Source: https://tailwindcss.com/plus/ui-blocks/ecommerce/components/product-quickviews
+
+## Classes (84 unique)
+- `relative z-10 backdrop:bg-transparent`
+- `fixed inset-0 hidden bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in md:block`
+- `fixed inset-0 z-10 w-screen overflow-y-auto focus:outline-none`
+- `flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4`
+- `hidden md:inline-block md:h-screen md:align-middle`
+- `flex w-full transform text-left text-base transition data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in md:my-8 md:max-w-2xl md:px-4 data-closed:md:translate-y-0 data-closed:md:scale-95 lg:max-w-4xl`
+- `relative flex w-full items-center overflow-hidden bg-white px-4 pt-14 pb-8 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8`
+- `absolute top-4 right-4 text-gray-400 hover:text-gray-500 sm:top-8 sm:right-6 md:top-6 md:right-6 lg:top-8 lg:right-8`
+- `sr-only`
+- `size-6`
+- `grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:items-center lg:gap-x-8`
+- `aspect-2/3 w-full rounded-lg bg-gray-100 object-cover sm:col-span-4 lg:col-span-5`
+- `sm:col-span-8 lg:col-span-7`
+- `text-xl font-medium text-gray-900 sm:pr-12`
+- `mt-1`
+- `font-medium text-gray-900`
+- `mt-4`
+- `flex items-center`
+- `text-sm text-gray-700`
+- `ml-1 flex items-center`
+- `size-5 shrink-0 text-yellow-400`
+- `size-5 shrink-0 text-gray-200`
+- `ml-4 hidden lg:flex lg:items-center`
+- `text-gray-300`
+- `ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `mt-8`
+- `text-sm font-medium text-gray-900`
+- `mt-2 flex items-center gap-x-3`
+- `flex rounded-full outline -outline-offset-1 outline-black/10`
+- `size-8 appearance-none rounded-full bg-gray-900 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-900 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `size-8 appearance-none rounded-full bg-gray-400 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `flex items-center justify-between`
+- `text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `mt-2 grid grid-cols-4 gap-3`
+- `group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25`
+- `absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed`
+- `text-sm font-medium text-gray-900 uppercase group-has-checked:text-white`
+- `mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden`
+- `absolute top-4 left-4 text-center sm:static sm:mt-8`
+- `font-medium text-indigo-600 hover:text-indigo-500`
+- `grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8`
+- `text-2xl font-bold text-gray-900 sm:pr-12`
+- `mt-2`
+- `text-2xl text-gray-900`
+- `mt-6`
+- `size-5 shrink-0 text-gray-900`
+- `ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500`
+- `mt-10`
+- `mt-4 flex items-center gap-x-3`
+- `size-8 appearance-none rounded-full bg-white forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `size-8 appearance-none rounded-full bg-gray-200 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden`
+- `sm:col-span-4 lg:col-span-5`
+- `aspect-square w-full rounded-lg bg-gray-100 object-cover`
+- `absolute top-4 left-4 text-center sm:static sm:mt-6`
+- `text-lg text-gray-900 sm:text-xl`
+- `ml-4 border-l border-gray-300 pl-4`
+- `size-5 shrink-0 text-gray-300`
+- `mt-6 flex items-center`
+- `size-5 shrink-0 text-green-500`
+- `ml-2 font-medium text-gray-500`
+- `sm:flex sm:justify-between`
+- `block text-sm font-medium text-gray-700`
+- `mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2`
+- `group relative flex rounded-lg border border-gray-300 bg-white p-4 has-checked:outline-2 has-checked:-outline-offset-2 has-checked:outline-indigo-600 has-focus-visible:outline-3 has-focus-visible:-outline-offset-1 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25`
+- `absolute inset-0 appearance-none focus:outline-none`
+- `flex-1`
+- `block text-base font-medium text-gray-900`
+- `mt-1 block text-sm text-gray-500`
+- `invisible size-5 text-indigo-600 group-has-checked:visible`
+- `mt-4 flex`
+- `group flex text-sm text-gray-500 hover:text-gray-700`
+- `ml-2 size-5 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden`
+- `mt-6 text-center`
+- `group inline-flex text-base font-medium`
+- `mr-2 size-6 shrink-0 text-gray-400 group-hover:text-gray-500`
+- `text-gray-500 group-hover:text-gray-700`
+- `mt-3`
+- `size-5 shrink-0 text-gray-400`
+- `text-sm font-medium text-gray-600`
+- `flex items-center gap-x-3`
+- `size-8 appearance-none rounded-full bg-gray-700 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-700 focus-visible:outline-3 focus-visible:outline-offset-3`
+- `size-8 appearance-none rounded-full bg-gray-500 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-500 focus-visible:outline-3 focus-visible:outline-offset-3`
