@@ -89,7 +89,16 @@ cd frontend && npm run build       # production build
 | GET | `/api/agents/{id}/conversations` | List conversations |
 | GET | `/api/conversations/{id}/messages` | Get messages |
 | POST | `/api/conversations/{id}/messages` | Send message (returns SSE stream) |
+| POST | `/api/conversations/{id}/approve` | Approve/reject pending tool call (returns SSE stream) |
 | GET | `/api/agents/tools` | List available tools |
+| POST | `/api/skills` | Create skill |
+| GET | `/api/skills` | List all skills |
+| GET | `/api/skills/{id}` | Get skill |
+| PUT | `/api/skills/{id}` | Update skill |
+| DELETE | `/api/skills/{id}` | Delete skill |
+| GET | `/api/skills/agent/{agent_id}` | List skills for agent |
+| POST | `/api/skills/agent/{agent_id}/{skill_id}` | Attach skill to agent |
+| DELETE | `/api/skills/agent/{agent_id}/{skill_id}` | Detach skill from agent |
 
 ## SSE Event Protocol
 
@@ -101,6 +110,7 @@ cd frontend && npm run build       # production build
 | `tool_call_end` | `{id, name, args}` | Complete tool call |
 | `tool_result` | `{id, name, content}` | Tool execution result |
 | `todos` | `{todos: [{content, status}]}` | Agent planning state |
+| `interrupt` | `{tool_calls: [{id, name, args}]}` | Agent paused for approval |
 | `done` | `{full_content, tool_calls?, todos?}` | Stream complete |
 | `error` | `{detail}` | Error occurred |
 
@@ -116,6 +126,8 @@ cd frontend && npm run build       # production build
 - **State management**: Zustand store holds agents, conversations, messages, streaming text, streaming tool calls, and todos.
 - **Markdown**: Assistant messages rendered with `react-markdown` + `remark-gfm` + `react-syntax-highlighter`.
 - **DB migrations**: Startup migration helper uses `PRAGMA table_info` + `ALTER TABLE ADD COLUMN` for schema evolution.
+- **Human-in-the-loop**: `MemorySaver` checkpointer persists agent state during interrupts. `interrupt_on` configurable per agent via `interrupt_config` JSON. `thread_id` = `conversation_id` for checkpoint resume. `POST /approve` resumes with `Command(resume=...)`.
+- **Skills**: Stored in SQLite `skills` table, linked to agents via `agent_skills` join table. Passed to deepagents as SKILL.md files via StateBackend `files` dict at invocation.
 
 ## Phase 1 Status: COMPLETE
 
@@ -198,13 +210,14 @@ src/components/graph/
 
 Upgraded all components from hand-rolled Tailwind to **Tailwind Plus** (tailwindcss.com/plus) dark theme patterns. Reverse-engineered Fleet's exact CSS values for the graph canvas.
 
-### Tailwind Plus Patterns Applied
-- **Sidebar Navigation** (Dark) — Heroicon SVGs (`size-6 shrink-0`), nav items with `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold`, active: `bg-white/5 text-white`, inactive: `text-gray-400 hover:bg-white/5 hover:text-white`. Letter avatars: `rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem]`. Section labels: `text-xs/6 font-semibold text-gray-400`.
-- **Badges** — Ring-based pills: `inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset`. Editing: `bg-green-500/10 text-green-400 ring-green-500/20`. Private: `bg-gray-400/10 text-gray-400 ring-gray-400/20`.
-- **Buttons** — Primary: `rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400`. Secondary: `bg-white/10 hover:bg-white/20`. Saved: `bg-green-500/10 text-green-400 ring-1 ring-green-500/20`.
+### Tailwind Plus Patterns Applied (v4 syntax — scraped from real source)
+- **Sidebar Navigation** (Dark) — Heroicon SVGs (`size-6 shrink-0`), nav items with `group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold`, active: `bg-white/5 text-white`, inactive: `text-gray-400 hover:bg-white/5 hover:text-white`. Letter avatars: `rounded-lg border border-white/10 bg-white/5 text-[0.625rem]`. Section labels: `text-xs/6 font-semibold text-gray-400`.
+- **Badges** — Ring-based pills: `inline-flex items-center rounded-md bg-{color}-400/10 px-2 py-1 text-xs font-medium text-{color}-400 inset-ring inset-ring-{color}-400/20`. Note: use `inset-ring` (v4), NOT `ring-1 ring-inset` (v3).
+- **Buttons** — Primary: `rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`. Secondary: `bg-white/10 inset-ring inset-ring-white/5 hover:bg-white/20`. Soft: `bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30`. No `shadow-xs` on buttons.
 - **Inputs** — `block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6`
-- **Empty States** — SVG icon `mx-auto size-12 text-gray-500`, heading `text-sm font-semibold text-white`, description `text-sm text-gray-500`, CTA button with indigo styling
-- **Cards** — Tool/sub-agent cards: `bg-white/5 rounded-lg ring-1 ring-white/10`
+- **Empty States** — SVG icon `mx-auto size-12 text-gray-500`, heading `text-sm font-semibold text-white`, description `text-sm text-gray-400`, CTA button with indigo styling
+- **Cards** — `bg-white/5 rounded-lg inset-ring inset-ring-white/10`. Selected: add `inset-ring-indigo-500/50`
+- **Full skill reference**: `.claude/skills/tailwind-plus/SKILL.md` + 97 reference files (776KB) covering all 111 Tailwind Plus pages
 
 ### Fleet CSS Values (reverse-engineered from DOM inspection)
 - Node background: `#09090f`, header: `#12121a`, border: `#393f55`
