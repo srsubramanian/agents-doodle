@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import String, Text, DateTime, ForeignKey, Table, Column
+from sqlalchemy import Boolean, String, Text, DateTime, ForeignKey, Table, Column
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
@@ -36,6 +36,8 @@ class Agent(Base):
     tools_config: Mapped[str] = mapped_column(Text, default="[]")
     subagents_config: Mapped[str] = mapped_column(Text, default="[]")
     interrupt_config: Mapped[str] = mapped_column(Text, default="{}")
+    agents_md_content: Mapped[str] = mapped_column(Text, default="")
+    memory_enabled: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
 

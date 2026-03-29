@@ -107,6 +107,10 @@ async def send_message(conv_id: str, body: SendMessageRequest, db: AsyncSession 
         skill_md = f"---\nname: {skill.name}\ndescription: {skill.description}\n---\n\n{skill.content}"
         skills_files[skill_path] = {"type": "file", "data": {"content": skill_md}}
 
+    # Add AGENTS.md if configured
+    if agent_config.agents_md_content:
+        skills_files["/AGENTS.md"] = {"type": "file", "data": {"content": agent_config.agents_md_content}}
+
     # Stream response, persisting the assistant message when done
     async def generate():
         full_content = ""
@@ -232,3 +236,41 @@ async def approve_tool_call(conv_id: str, body: ApprovalRequest, db: AsyncSessio
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "Connection": "keep-alive", "X-Accel-Buffering": "no"},
     )
+
+
+# --- Memory browsing endpoints ---
+
+
+@router.get("/api/agents/{agent_id}/memory")
+async def list_agent_memory(agent_id: str):
+    """List persistent memory files for an agent."""
+    from app.services.chat_service import _store
+
+    memories = []
+    try:
+        # Search store for items in the agent's namespace
+        items = _store.search(("filesystem",))
+        for item in items:
+            key = item.key
+            if key.startswith("/memories/"):
+                memories.append({
+                    "key": key,
+                    "preview": str(item.value.get("data", {}).get("content", ""))[:200],
+                })
+    except Exception:
+        pass
+
+    return {"files": memories}
+
+
+@router.delete("/api/agents/{agent_id}/memory/{filename:path}")
+async def delete_agent_memory(agent_id: str, filename: str):
+    """Delete a persistent memory file."""
+    from app.services.chat_service import _store
+
+    try:
+        _store.delete(("filesystem",), f"/memories/{filename}")
+    except Exception:
+        pass
+
+    return {"status": "deleted"}

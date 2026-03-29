@@ -20,6 +20,8 @@ export interface Agent {
   model: string;
   tools_config: ToolConfig[];
   subagents_config: SubAgentConfig[];
+  agents_md_content: string;
+  memory_enabled: boolean;
   created_at: string;
   updated_at: string;
 }

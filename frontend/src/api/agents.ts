@@ -25,7 +25,7 @@ export async function createAgent(data: {
 
 export async function updateAgent(
   id: string,
-  data: Partial<Pick<Agent, "name" | "description" | "system_prompt" | "model" | "tools_config" | "subagents_config">>
+  data: Partial<Pick<Agent, "name" | "description" | "system_prompt" | "model" | "tools_config" | "subagents_config" | "agents_md_content" | "memory_enabled">>
 ): Promise<Agent> {
   const res = await fetch(`${BASE}/${id}`, {
     method: "PUT",

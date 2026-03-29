@@ -30,6 +30,11 @@ interface Props {
   addSubAgent: () => void;
   removeSubAgent: (index: number) => void;
   updateSubAgent: (index: number, field: keyof SubAgentConfig, value: string) => void;
+  // Memory
+  agentsMdContent: string;
+  setAgentsMdContent: (v: string) => void;
+  memoryEnabled: boolean;
+  setMemoryEnabled: (v: boolean) => void;
   // Callback when skills change
   onSkillsChange?: () => void;
 }
@@ -119,6 +124,8 @@ export function InspectorPanel({
   systemPrompt, setSystemPrompt,
   availableTools, toggleTool, isToolEnabled,
   subagentsConfig, addSubAgent, removeSubAgent, updateSubAgent,
+  agentsMdContent, setAgentsMdContent,
+  memoryEnabled, setMemoryEnabled,
   onSkillsChange,
 }: Props) {
   const nodeId = selectedNodeId || "agent";
@@ -173,6 +180,33 @@ export function InspectorPanel({
                   placeholder="You are a helpful assistant..."
                 />
               </div>
+            </div>
+
+            {/* Memory section */}
+            <div className="border-t border-white/10 pt-4 mt-4">
+              <div className="flex items-center justify-between mb-3">
+                <label className={labelClass}>Memory</label>
+                <label className="group relative inline-flex w-9 shrink-0 cursor-pointer rounded-full bg-white/5 p-0.5 inset-ring inset-ring-white/10 transition-colors duration-200 ease-in-out has-checked:bg-indigo-500">
+                  <input
+                    type="checkbox"
+                    checked={memoryEnabled}
+                    onChange={(e) => setMemoryEnabled(e.target.checked)}
+                    className="absolute inset-0 size-full appearance-none focus:outline-hidden"
+                  />
+                  <span className="size-4 rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-4" />
+                </label>
+              </div>
+              <p className="text-xs text-gray-400 mb-3">When enabled, the agent remembers context across conversations by writing to /memories/.</p>
+
+              <label className={labelClass}>AGENTS.md</label>
+              <p className="text-xs text-gray-400 mt-0.5 mb-2">Agent self-description loaded at startup for context.</p>
+              <textarea
+                value={agentsMdContent}
+                onChange={(e) => setAgentsMdContent(e.target.value)}
+                rows={5}
+                className={`${inputClass} font-mono resize-y`}
+                placeholder={"# Agent Name\nCapabilities, preferences, context..."}
+              />
             </div>
           </>
         )}

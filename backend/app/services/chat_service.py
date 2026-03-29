@@ -4,6 +4,7 @@ from typing import AsyncGenerator
 
 from deepagents import create_deep_agent
 from langgraph.checkpoint.memory import MemorySaver
+from langgraph.store.memory import InMemoryStore
 
 from app.models import Agent as AgentModel
 from app.services.tool_registry import resolve_tools, resolve_subagents
@@ -15,6 +16,9 @@ _agent_cache: dict[str, object] = {}
 
 # Global checkpointer — shared across all agents for thread state
 _checkpointer = MemorySaver()
+
+# Global store for persistent memory across conversations
+_store = InMemoryStore()
 
 
 def get_or_create_agent(agent_config: AgentModel):
@@ -41,6 +45,23 @@ def get_or_create_agent(agent_config: AgentModel):
             if enabled
         }
 
+        # Memory configuration
+        memory_paths = None
+        agents_md = getattr(agent_config, 'agents_md_content', '') or ''
+        if agents_md:
+            memory_paths = ["/AGENTS.md"]
+
+        # Build backend — use CompositeBackend for memory support
+        backend = None
+        try:
+            from deepagents.backends import CompositeBackend, StateBackend, StoreBackend
+            backend = lambda rt: CompositeBackend(
+                default=StateBackend(rt),
+                routes={"/memories/": StoreBackend(rt)},
+            )
+        except ImportError:
+            backend = None  # Fall back to default StateBackend
+
         agent = create_deep_agent(
             model=agent_config.model,
             system_prompt=agent_config.system_prompt,
@@ -49,6 +70,9 @@ def get_or_create_agent(agent_config: AgentModel):
             skills=["/skills/"],
             interrupt_on=interrupt_on or None,
             checkpointer=_checkpointer,
+            backend=backend,
+            store=_store,
+            memory=memory_paths,
         )
         _agent_cache[cache_key] = agent
 

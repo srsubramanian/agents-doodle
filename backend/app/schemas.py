@@ -31,6 +31,8 @@ class AgentCreate(BaseModel):
     tools_config: list[ToolConfig] = []
     subagents_config: list[SubAgentConfig] = []
     interrupt_config: dict[str, bool] = {}
+    agents_md_content: str = ""
+    memory_enabled: bool = True
 
 
 class AgentUpdate(BaseModel):
@@ -41,6 +43,8 @@ class AgentUpdate(BaseModel):
     tools_config: list[ToolConfig] | None = None
     subagents_config: list[SubAgentConfig] | None = None
     interrupt_config: dict[str, bool] | None = None
+    agents_md_content: str | None = None
+    memory_enabled: bool | None = None
 
 
 class AgentResponse(BaseModel):
@@ -52,6 +56,8 @@ class AgentResponse(BaseModel):
     tools_config: list[ToolConfig] = []
     subagents_config: list[SubAgentConfig] = []
     interrupt_config: dict[str, bool] = {}
+    agents_md_content: str = ""
+    memory_enabled: bool = True
     created_at: datetime
     updated_at: datetime
 

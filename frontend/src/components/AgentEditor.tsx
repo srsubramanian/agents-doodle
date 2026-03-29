@@ -22,6 +22,8 @@ export function AgentEditor() {
   const [subagentsConfig, setSubagentsConfig] = useState<SubAgentConfig[]>([]);
   const [availableTools, setAvailableTools] = useState<AvailableTool[]>([]);
   const [agentSkills, setAgentSkills] = useState<Array<{ name: string; description: string }>>([]);
+  const [agentsMdContent, setAgentsMdContent] = useState("");
+  const [memoryEnabled, setMemoryEnabled] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
@@ -66,6 +68,8 @@ export function AgentEditor() {
       setModel(agent.model);
       setToolsConfig(agent.tools_config || []);
       setSubagentsConfig(agent.subagents_config || []);
+      setAgentsMdContent(agent.agents_md_content || "");
+      setMemoryEnabled(agent.memory_enabled ?? true);
       setSaved(false);
       setInitialized(false);
     }
@@ -166,6 +170,8 @@ export function AgentEditor() {
         model,
         tools_config: toolsConfig,
         subagents_config: subagentsConfig,
+        agents_md_content: agentsMdContent,
+        memory_enabled: memoryEnabled,
       });
       updateAgentInList(updated);
       setSaved(true);
@@ -274,6 +280,8 @@ export function AgentEditor() {
           toggleTool={toggleTool} isToolEnabled={isToolEnabled}
           subagentsConfig={subagentsConfig}
           addSubAgent={addSubAgent} removeSubAgent={removeSubAgent} updateSubAgent={updateSubAgent}
+          agentsMdContent={agentsMdContent} setAgentsMdContent={setAgentsMdContent}
+          memoryEnabled={memoryEnabled} setMemoryEnabled={setMemoryEnabled}
           onSkillsChange={loadAgentSkills}
         />
         </div>
