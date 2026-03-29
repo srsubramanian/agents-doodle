@@ -35,6 +35,7 @@ class Agent(Base):
     model: Mapped[str] = mapped_column(String(100), default="anthropic:claude-sonnet-4-6")
     tools_config: Mapped[str] = mapped_column(Text, default="[]")
     subagents_config: Mapped[str] = mapped_column(Text, default="[]")
+    interrupt_config: Mapped[str] = mapped_column(Text, default="{}")
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
 

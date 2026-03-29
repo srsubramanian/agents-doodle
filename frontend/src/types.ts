@@ -75,4 +75,12 @@ export interface Skill {
   updated_at: string;
 }
 
+export interface InterruptEvent {
+  tool_calls: Array<{
+    id: string;
+    name: string;
+    args: Record<string, unknown>;
+  }>;
+}
+
 export type View = "editor" | "chat" | "skills";

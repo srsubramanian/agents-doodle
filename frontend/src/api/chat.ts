@@ -1,5 +1,5 @@
 import { fetchEventSource } from "@microsoft/fetch-event-source";
-import type { Conversation, Message, ToolCallInfo, TodoItem } from "../types";
+import type { Conversation, Message, ToolCallInfo, TodoItem, InterruptEvent } from "../types";
 
 export async function createConversation(agentId: string): Promise<Conversation> {
   const res = await fetch(`/api/agents/${agentId}/conversations`, { method: "POST" });
@@ -26,6 +26,7 @@ export interface StreamCallbacks {
   onToolCallEnd: (id: string, name: string, args: Record<string, unknown>) => void;
   onToolResult: (id: string, name: string, content: string) => void;
   onTodos: (todos: TodoItem[]) => void;
+  onInterrupt: (interrupt: InterruptEvent) => void;
   onDone: (data: {
     full_content: string;
     tool_calls?: ToolCallInfo[];
@@ -34,19 +35,9 @@ export interface StreamCallbacks {
   onError: (error: string) => void;
 }
 
-export async function sendMessageStream(
-  conversationId: string,
-  content: string,
-  callbacks: StreamCallbacks
-): Promise<void> {
-  const ctrl = new AbortController();
-
-  await fetchEventSource(`/api/conversations/${conversationId}/messages`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ content }),
-    signal: ctrl.signal,
-    onmessage(ev) {
+function createSSEHandler(callbacks: StreamCallbacks) {
+  return {
+    onmessage(ev: { event: string; data: string }) {
       const data = JSON.parse(ev.data);
       switch (ev.event) {
         case "token":
@@ -67,6 +58,9 @@ export async function sendMessageStream(
         case "todos":
           callbacks.onTodos(data.todos);
           break;
+        case "interrupt":
+          callbacks.onInterrupt(data);
+          break;
         case "done":
           callbacks.onDone(data);
           break;
@@ -75,6 +69,46 @@ export async function sendMessageStream(
           break;
       }
     },
+  };
+}
+
+export async function sendMessageStream(
+  conversationId: string,
+  content: string,
+  callbacks: StreamCallbacks
+): Promise<void> {
+  const ctrl = new AbortController();
+  const handler = createSSEHandler(callbacks);
+
+  await fetchEventSource(`/api/conversations/${conversationId}/messages`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ content }),
+    signal: ctrl.signal,
+    onmessage: handler.onmessage,
+    onerror(err) {
+      callbacks.onError("Connection lost");
+      ctrl.abort();
+      throw err;
+    },
+    openWhenHidden: true,
+  });
+}
+
+export async function sendApproval(
+  conversationId: string,
+  decision: "approve" | "reject",
+  callbacks: StreamCallbacks
+): Promise<void> {
+  const ctrl = new AbortController();
+  const handler = createSSEHandler(callbacks);
+
+  await fetchEventSource(`/api/conversations/${conversationId}/approve`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ decision }),
+    signal: ctrl.signal,
+    onmessage: handler.onmessage,
     onerror(err) {
       callbacks.onError("Connection lost");
       ctrl.abort();

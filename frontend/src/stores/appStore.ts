@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Agent, Conversation, Message, View, ToolCallInfo, TodoItem } from "../types";
+import type { Agent, Conversation, Message, View, ToolCallInfo, TodoItem, InterruptEvent } from "../types";
 
 interface AppState {
   // Agents
@@ -46,6 +46,10 @@ interface AppState {
   // Streaming todos
   streamingTodos: TodoItem[];
   setStreamingTodos: (todos: TodoItem[]) => void;
+
+  // Interrupt / approval
+  pendingInterrupt: InterruptEvent | null;
+  setPendingInterrupt: (interrupt: InterruptEvent | null) => void;
 
   // Clear all streaming state
   clearStreamingState: () => void;
@@ -120,7 +124,11 @@ export const useAppStore = create<AppState>((set) => ({
   streamingTodos: [],
   setStreamingTodos: (todos) => set({ streamingTodos: todos }),
 
+  // Interrupt
+  pendingInterrupt: null,
+  setPendingInterrupt: (interrupt) => set({ pendingInterrupt: interrupt }),
+
   // Clear
   clearStreamingState: () =>
-    set({ streamingContent: "", streamingToolCalls: {}, streamingTodos: [], isStreaming: false }),
+    set({ streamingContent: "", streamingToolCalls: {}, streamingTodos: [], isStreaming: false, pendingInterrupt: null }),
 }));

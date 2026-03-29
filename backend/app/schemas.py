@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, field_validator, model_validator
 
@@ -30,6 +30,7 @@ class AgentCreate(BaseModel):
     model: str = "anthropic:claude-sonnet-4-6"
     tools_config: list[ToolConfig] = []
     subagents_config: list[SubAgentConfig] = []
+    interrupt_config: dict[str, bool] = {}
 
 
 class AgentUpdate(BaseModel):
@@ -39,6 +40,7 @@ class AgentUpdate(BaseModel):
     model: str | None = None
     tools_config: list[ToolConfig] | None = None
     subagents_config: list[SubAgentConfig] | None = None
+    interrupt_config: dict[str, bool] | None = None
 
 
 class AgentResponse(BaseModel):
@@ -49,12 +51,20 @@ class AgentResponse(BaseModel):
     model: str
     tools_config: list[ToolConfig] = []
     subagents_config: list[SubAgentConfig] = []
+    interrupt_config: dict[str, bool] = {}
     created_at: datetime
     updated_at: datetime
 
     @field_validator("tools_config", "subagents_config", mode="before")
     @classmethod
     def parse_json_string(cls, v):
+        if isinstance(v, str):
+            return json.loads(v)
+        return v
+
+    @field_validator("interrupt_config", mode="before")
+    @classmethod
+    def parse_interrupt_json(cls, v):
         if isinstance(v, str):
             return json.loads(v)
         return v
@@ -119,6 +129,13 @@ class MessageResponse(BaseModel):
         return data
 
     model_config = {"from_attributes": True}
+
+
+# --- Approval schemas ---
+
+class ApprovalRequest(BaseModel):
+    decision: Literal["approve", "reject"]
+    tool_call_id: str = ""
 
 
 # --- Skill schemas ---

@@ -212,7 +212,34 @@ Upgraded all components from hand-rolled Tailwind to **Tailwind Plus** (tailwind
 - Handles: 6px circles, `bg: #1a192b`, `border: #8790ab`
 - Canvas: transparent background (no grid)
 
+## Phase 4 Status: COMPLETE
+
+### Skills Management
+- Skills CRUD API (`/api/skills`) with SQLite persistence
+- Agent-skill association via join table (`/api/skills/agent/{id}`)
+- Skills passed to deepagents as SKILL.md files via StateBackend at invocation
+- SkillsPage with Fleet-style layout: card grid + Explorer panel (Preview/Source tabs)
+- Syntax-highlighted Source view using Prism oneDark theme
+- Skills attachable to agents via graph inspector panel
+- Skills node in graph editor shows attached skills
+
+### Human-in-the-Loop Approvals
+- `interrupt_on` parameter configurable per agent via `interrupt_config` JSON column
+- `MemorySaver` checkpointer for LangGraph state persistence across interrupts
+- `thread_id` (= conversation_id) passed to agent for checkpoint resume
+- `POST /api/conversations/{id}/approve` endpoint resumes agent with `Command(resume=...)`
+- New SSE `interrupt` event emitted when agent pauses for approval
+- `ApprovalDialog` component: yellow warning card with tool name + args preview + Approve/Reject buttons
+- After approval, agent resumes streaming from checkpoint; after rejection, agent skips tool
+- Chat input disabled during pending interrupt
+
+### Tailwind Plus Skill (Claude Code)
+- Comprehensive `.claude/skills/tailwind-plus/` skill with 97 reference files (776KB)
+- All 111 Tailwind Plus pages scraped via Chrome DevTools (Application UI, Marketing, Ecommerce, Documentation)
+- SKILL.md v3.0 with real Tailwind CSS v4 class strings, JSX examples, and troubleshooting guide
+- Full UI audit applied: all components fixed to use correct v4 patterns (`inset-ring`, `bg-*-400/10`, `size-*`, etc.)
+
 ## Future Phases (Not Yet Implemented)
 
-- Phase 4: Chat+Graph simultaneous split view, channels (Slack, Gmail triggers), schedules
-- Phase 5: Human-in-the-loop approvals, skills (SKILL.md), memory/AGENTS.md, traces/observability
+- Phase 5: Channels (Slack, Gmail triggers), schedules (cron-based agent runs)
+- Phase 6: Memory (AGENTS.md persistent context), traces/observability

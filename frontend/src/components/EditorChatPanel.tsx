@@ -72,6 +72,7 @@ export function EditorChatPanel({ onHide }: Props) {
         onToolCallEnd: (id, name, args) => finalizeToolCall(id, name, args),
         onToolResult: (id, name, resultContent) => setToolCallResult(id, name, resultContent),
         onTodos: (todos) => setStreamingTodos(todos),
+        onInterrupt: () => { /* handled by ChatView */ },
         onDone: (data) => {
           const assistantMsg = {
             id: crypto.randomUUID(),

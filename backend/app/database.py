@@ -18,6 +18,7 @@ async def run_migrations():
         ("agents", "tools_config", "TEXT DEFAULT '[]'"),
         ("agents", "subagents_config", "TEXT DEFAULT '[]'"),
         ("messages", "metadata_json", "TEXT DEFAULT NULL"),
+        ("agents", "interrupt_config", "TEXT DEFAULT '{}'"),
     ]
 
     async with engine.begin() as conn:

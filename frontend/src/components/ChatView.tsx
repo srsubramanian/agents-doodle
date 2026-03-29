@@ -4,9 +4,11 @@ import {
   createConversation,
   fetchMessages,
   sendMessageStream,
+  sendApproval,
 } from "../api/chat";
 import { MessageList } from "./MessageList";
 import { ChatInput } from "./ChatInput";
+import { ApprovalDialog } from "./ApprovalDialog";
 
 export function ChatView() {
   const {
@@ -29,6 +31,8 @@ export function ChatView() {
     setToolCallResult,
     setStreamingTodos,
     clearStreamingState,
+    pendingInterrupt,
+    setPendingInterrupt,
   } = useAppStore();
 
   const agent = agents.find((a) => a.id === selectedAgentId);
@@ -73,6 +77,10 @@ export function ChatView() {
         onToolCallEnd: (id, name, args) => finalizeToolCall(id, name, args),
         onToolResult: (id, name, resultContent) => setToolCallResult(id, name, resultContent),
         onTodos: (todos) => setStreamingTodos(todos),
+        onInterrupt: (interrupt) => {
+          setPendingInterrupt(interrupt);
+          setIsStreaming(false);
+        },
         onDone: (data) => {
           const assistantMsg = {
             id: crypto.randomUUID(),
@@ -111,6 +119,57 @@ export function ChatView() {
       setToolCallResult,
       setStreamingTodos,
       clearStreamingState,
+      setPendingInterrupt,
+    ]
+  );
+
+  const handleApproval = useCallback(
+    async (decision: "approve" | "reject") => {
+      const convId = selectedConversationId;
+      if (!convId) return;
+
+      setPendingInterrupt(null);
+      setIsStreaming(true);
+
+      await sendApproval(convId, decision, {
+        onToken: (token) => appendStreamingContent(token),
+        onToolCallStart: (id, name) => addStreamingToolCall(id, name),
+        onToolCallArgs: (id, argsDelta) => appendToolCallArgs(id, argsDelta),
+        onToolCallEnd: (id, name, args) => finalizeToolCall(id, name, args),
+        onToolResult: (id, name, resultContent) => setToolCallResult(id, name, resultContent),
+        onTodos: (todos) => setStreamingTodos(todos),
+        onInterrupt: (interrupt) => {
+          setPendingInterrupt(interrupt);
+          setIsStreaming(false);
+        },
+        onDone: (data) => {
+          const assistantMsg = {
+            id: crypto.randomUUID(),
+            conversation_id: convId,
+            role: "assistant" as const,
+            content: data.full_content,
+            metadata: data.tool_calls || data.todos
+              ? {
+                  tool_calls: (data.tool_calls || []).map((tc) => ({ ...tc, status: "done" as const })),
+                  todos: data.todos || [],
+                }
+              : undefined,
+            created_at: new Date().toISOString(),
+          };
+          addMessage(assistantMsg);
+          clearStreamingState();
+        },
+        onError: (error) => {
+          console.error("Approval stream error:", error);
+          clearStreamingState();
+        },
+      });
+    },
+    [
+      selectedConversationId, setPendingInterrupt, setIsStreaming,
+      appendStreamingContent, addStreamingToolCall, appendToolCallArgs,
+      finalizeToolCall, setToolCallResult, setStreamingTodos,
+      addMessage, clearStreamingState,
     ]
   );
 
@@ -178,7 +237,16 @@ export function ChatView() {
         <MessageList />
       )}
 
-      <ChatInput onSend={handleSend} disabled={isStreaming} />
+      {pendingInterrupt && (
+        <ApprovalDialog
+          interrupt={pendingInterrupt}
+          onApprove={() => handleApproval("approve")}
+          onReject={() => handleApproval("reject")}
+          isProcessing={isStreaming}
+        />
+      )}
+
+      <ChatInput onSend={handleSend} disabled={isStreaming || !!pendingInterrupt} />
     </div>
   );
 }

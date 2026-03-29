@@ -9,8 +9,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db, async_session
 from app.models import Agent, Conversation, Message, Skill, agent_skills as agent_skills_table
-from app.schemas import ConversationResponse, MessageResponse, SendMessageRequest
-from app.services.chat_service import get_or_create_agent, stream_agent_response
+from app.schemas import ApprovalRequest, ConversationResponse, MessageResponse, SendMessageRequest
+from app.services.chat_service import check_for_interrupt, get_or_create_agent, stream_agent_response
 
 router = APIRouter(tags=["chat"])
 
@@ -112,7 +112,9 @@ async def send_message(conv_id: str, body: SendMessageRequest, db: AsyncSession 
         full_content = ""
         metadata_json = None
 
-        async for event in stream_agent_response(agent, messages, conv_id, skills_files=skills_files or None):
+        async for event in stream_agent_response(
+            agent, messages, conv_id, skills_files=skills_files or None, thread_id=conv_id
+        ):
             # Capture done payload for persistence
             if event.startswith("event: done"):
                 data_line = event.split("\n")[1]
@@ -130,8 +132,87 @@ async def send_message(conv_id: str, body: SendMessageRequest, db: AsyncSession 
 
             yield event
 
-        # Persist assistant message (even if empty content, if there were tool calls)
-        if full_content or metadata_json:
+        # Check for pending interrupt
+        interrupt = await check_for_interrupt(agent, conv_id)
+        if interrupt:
+            yield f"event: interrupt\ndata: {json.dumps(interrupt)}\n\n"
+        elif full_content or metadata_json:
+            # Only persist assistant message if no interrupt
+            async with async_session() as session:
+                assistant_msg = Message(
+                    id=str(uuid.uuid4()),
+                    conversation_id=conv_id,
+                    role="assistant",
+                    content=full_content,
+                    metadata_json=metadata_json,
+                )
+                session.add(assistant_msg)
+                conv_update = await session.get(Conversation, conv_id)
+                if conv_update:
+                    conv_update.updated_at = datetime.now(timezone.utc)
+                await session.commit()
+
+    return StreamingResponse(
+        generate(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "Connection": "keep-alive", "X-Accel-Buffering": "no"},
+    )
+
+
+# --- Approval endpoint for Human-in-the-Loop ---
+
+
+@router.post("/api/conversations/{conv_id}/approve")
+async def approve_tool_call(conv_id: str, body: ApprovalRequest, db: AsyncSession = Depends(get_db)):
+    conv = await db.get(Conversation, conv_id)
+    if not conv:
+        raise HTTPException(status_code=404, detail="Conversation not found")
+
+    agent_config = await db.get(Agent, conv.agent_id)
+    if not agent_config:
+        raise HTTPException(status_code=404, detail="Agent not found")
+
+    agent = get_or_create_agent(agent_config)
+
+    from langgraph.types import Command
+
+    # Build decision
+    if body.decision == "approve":
+        decisions = [{"type": "approve"}]
+    else:
+        decisions = [{"type": "reject"}]
+
+    resume_command = Command(resume={"decisions": decisions})
+
+    async def generate():
+        full_content = ""
+        metadata_json = None
+
+        async for event in stream_agent_response(
+            agent, conversation_id=conv_id, thread_id=conv_id, resume_command=resume_command
+        ):
+            # Capture done payload for persistence
+            if event.startswith("event: done"):
+                data_line = event.split("\n")[1]
+                data = json.loads(data_line.replace("data: ", ""))
+                full_content = data.get("full_content", "")
+
+                # Build metadata from tool calls and todos
+                metadata = {}
+                if data.get("tool_calls"):
+                    metadata["tool_calls"] = data["tool_calls"]
+                if data.get("todos"):
+                    metadata["todos"] = data["todos"]
+                if metadata:
+                    metadata_json = json.dumps(metadata)
+
+            yield event
+
+        # Check for another interrupt
+        interrupt = await check_for_interrupt(agent, conv_id)
+        if interrupt:
+            yield f"event: interrupt\ndata: {json.dumps(interrupt)}\n\n"
+        elif full_content or metadata_json:
             async with async_session() as session:
                 assistant_msg = Message(
                     id=str(uuid.uuid4()),

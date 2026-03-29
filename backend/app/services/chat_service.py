@@ -3,6 +3,7 @@ import logging
 from typing import AsyncGenerator
 
 from deepagents import create_deep_agent
+from langgraph.checkpoint.memory import MemorySaver
 
 from app.models import Agent as AgentModel
 from app.services.tool_registry import resolve_tools, resolve_subagents
@@ -11,6 +12,9 @@ logger = logging.getLogger(__name__)
 
 # Cache compiled agents: key = "{agent_id}:{updated_at_iso}"
 _agent_cache: dict[str, object] = {}
+
+# Global checkpointer — shared across all agents for thread state
+_checkpointer = MemorySaver()
 
 
 def get_or_create_agent(agent_config: AgentModel):
@@ -25,9 +29,17 @@ def get_or_create_agent(agent_config: AgentModel):
 
         tools_config = json.loads(agent_config.tools_config or "[]")
         subagents_config = json.loads(agent_config.subagents_config or "[]")
+        interrupt_config = json.loads(agent_config.interrupt_config or "{}")
 
         tools = resolve_tools(tools_config) or None
         subagents = resolve_subagents(subagents_config, tools_config) or None
+
+        # Build interrupt_on dict: only include tools that require approval
+        interrupt_on = {
+            tool_name: True
+            for tool_name, enabled in interrupt_config.items()
+            if enabled
+        }
 
         agent = create_deep_agent(
             model=agent_config.model,
@@ -35,6 +47,8 @@ def get_or_create_agent(agent_config: AgentModel):
             tools=tools,
             subagents=subagents,
             skills=["/skills/"],
+            interrupt_on=interrupt_on or None,
+            checkpointer=_checkpointer,
         )
         _agent_cache[cache_key] = agent
 
@@ -57,7 +71,12 @@ def _extract_text(content) -> str:
 
 
 async def stream_agent_response(
-    agent, messages: list[dict], conversation_id: str, skills_files: dict | None = None
+    agent,
+    messages: list[dict] | None = None,
+    conversation_id: str = "",
+    skills_files: dict | None = None,
+    thread_id: str | None = None,
+    resume_command=None,
 ) -> AsyncGenerator[str, None]:
     """Stream deepagent response as SSE events including tool calls."""
     full_content = ""
@@ -65,12 +84,18 @@ async def stream_agent_response(
     active_tool_call_ids: set[str] = set()
     latest_todos: list[dict] | None = None
 
+    config = {"configurable": {"thread_id": thread_id or conversation_id}}
+
     try:
-        astream_input = {"messages": messages}
-        if skills_files:
-            astream_input["files"] = skills_files
+        if resume_command is not None:
+            astream_input = resume_command
+        else:
+            astream_input = {"messages": messages or []}
+            if skills_files:
+                astream_input["files"] = skills_files
         async for chunk in agent.astream(
             astream_input,
+            config=config,
             stream_mode="messages",
             version="v2",
         ):
@@ -146,8 +171,8 @@ async def stream_agent_response(
                     yield f"event: tool_result\ndata: {json.dumps({'id': tool_call_id, 'name': tc_name, 'content': tool_content[:3000]})}\n\n"
 
         # Fallback: if no text was streamed and no tool calls, try invoke
-        if not full_content and not tool_calls_seen:
-            result = await agent.ainvoke(astream_input)
+        if not full_content and not tool_calls_seen and not resume_command:
+            result = await agent.ainvoke(astream_input, config=config)
             for msg in reversed(result.get("messages", [])):
                 if getattr(msg, "type", None) == "ai" and not getattr(msg, "tool_calls", None):
                     text = _extract_text(msg.content)
@@ -176,3 +201,29 @@ async def stream_agent_response(
     except Exception as e:
         logger.exception("Error streaming agent response")
         yield f"event: error\ndata: {json.dumps({'detail': str(e)})}\n\n"
+
+
+async def check_for_interrupt(agent, thread_id: str) -> dict | None:
+    """Check if the agent has a pending interrupt after streaming."""
+    config = {"configurable": {"thread_id": thread_id}}
+    try:
+        state = await agent.aget_state(config)
+        if state and state.next:
+            # If there's a next step, it means we're interrupted
+            # Extract the pending tool calls from the state
+            messages = state.values.get("messages", [])
+            for msg in reversed(messages):
+                if hasattr(msg, "tool_calls") and msg.tool_calls:
+                    return {
+                        "tool_calls": [
+                            {
+                                "id": tc.get("id", "") if isinstance(tc, dict) else getattr(tc, "id", ""),
+                                "name": tc.get("name", "") if isinstance(tc, dict) else getattr(tc, "name", ""),
+                                "args": tc.get("args", {}) if isinstance(tc, dict) else getattr(tc, "args", {}),
+                            }
+                            for tc in msg.tool_calls
+                        ]
+                    }
+    except Exception:
+        logger.exception("Error checking for interrupt state")
+    return None
